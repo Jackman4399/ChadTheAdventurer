@@ -7,9 +7,7 @@ using Ink.Runtime;
 
 public class DialogueMenu : MonoBehaviour {
 
-    [SerializeField] private TMP_Text nameText;
-
-    [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private TMP_Text nameText, dialogueText;
 
     [SerializeField] private Button[] choiceButtons;
 
