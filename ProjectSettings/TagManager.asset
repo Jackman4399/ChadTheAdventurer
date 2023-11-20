@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Water
+    uniqueID: 9453871
+    locked: 0
+  - name: Objects
+    uniqueID: 177022759
+    locked: 0
   - name: Avatars
     uniqueID: 319458377
     locked: 0
