@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3678243026555943554}
-  - component: {fileID: 4779513422575666019}
+  - component: {fileID: 2836856744006831422}
   m_Layer: 0
-  m_Name: SceneLoader
+  m_Name: LevelLoader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +33,7 @@ Transform:
   - {fileID: 881600550659512184}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4779513422575666019
+--- !u!114 &2836856744006831422
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4220841918349386234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f5f738c2fc54fc47825bdaccd10f279, type: 3}
+  m_Script: {fileID: 11500000, guid: 638afb93f56d2224fb2f04bff44f2d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 3271393892090456211}

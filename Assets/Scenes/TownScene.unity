@@ -4281,7 +4281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4220841918349386234, guid: ce41e4c8a7e521840b791475dc18d2fd, type: 3}
       propertyPath: m_Name
-      value: SceneLoader
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220841918349386234, guid: ce41e4c8a7e521840b791475dc18d2fd, type: 3}
+      propertyPath: m_TagString
+      value: LevelLoader
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

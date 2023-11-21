@@ -14,6 +14,10 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+
+        var agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+		agent.updateRotation = false;
+		agent.updateUpAxis = false;
     }
 
     // Call from other scripts to hurt enemy.
