@@ -18734,17 +18734,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4220841918349386234, guid: ce41e4c8a7e521840b791475dc18d2fd, type: 3}
       propertyPath: m_Name
-      value: SceneLoader
+      value: LevelLoader
       objectReference: {fileID: 0}
     - target: {fileID: 4220841918349386234, guid: ce41e4c8a7e521840b791475dc18d2fd, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220841918349386234, guid: ce41e4c8a7e521840b791475dc18d2fd, type: 3}
+      propertyPath: m_TagString
+      value: LevelLoader
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce41e4c8a7e521840b791475dc18d2fd, type: 3}
+--- !u!114 &1069282449 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2836856744006831422, guid: ce41e4c8a7e521840b791475dc18d2fd, type: 3}
+  m_PrefabInstance: {fileID: 1069282448}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 638afb93f56d2224fb2f04bff44f2d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1290992137
 GameObject:
   m_ObjectHideFlags: 0
@@ -30705,6 +30720,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 500833021589479847, guid: a4aabaf458906b74eab1202ebf994342, type: 3}
+      propertyPath: levelLoader
+      value: 
+      objectReference: {fileID: 1069282449}
     - target: {fileID: 4479663660329810916, guid: a4aabaf458906b74eab1202ebf994342, type: 3}
       propertyPath: m_Name
       value: NextSceneTrigger
