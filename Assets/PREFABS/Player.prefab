@@ -412,7 +412,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 2048
-  attackDuration: 500
+  attackDuration: 10
 --- !u!1 &6627606873804402039
 GameObject:
   m_ObjectHideFlags: 0

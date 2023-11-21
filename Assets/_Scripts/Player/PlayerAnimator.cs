@@ -15,9 +15,9 @@ public class PlayerAnimator : Player {
     protected override void Awake() {
         base.Awake();
 
-        playerAttacker = transform.root.GetComponentInChildren<PlayerAttacker>();
-
         animator = GetComponent<Animator>();
+
+        playerAttacker = transform.root.GetComponentInChildren<PlayerAttacker>();
     }
 
     protected override void Update() {
