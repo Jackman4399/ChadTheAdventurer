@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6383096bde96fc84e8b675f86e3a48a6
+guid: 8295d8eeee898704aa6b744ba56de5c3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,28 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player-idle-front-0
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.09375}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b52c2a18ad7c554d8b837c8d1cbc9b6
-      internalID: -1618452522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player-idle-left-0
+      name: player-walk-down-0
       rect:
         serializedVersion: 2
         x: 0
@@ -158,17 +137,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 584541b52bc264d43ad5ee50cb0fa954
-      internalID: -84546984
+      spriteID: 4a76bb4456ae0e249b23c0e752c9b0d9
+      internalID: 1483294033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-idle-right-0
+      name: player-walk-down-1
       rect:
         serializedVersion: 2
-        x: 192
+        x: 16
         y: 0
         width: 16
         height: 32
@@ -179,17 +158,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f1f4e0208b6f8489dc3d97c97ce3f5
-      internalID: 172042740
+      spriteID: 7b523b8cfafc3ec4a8a63896e4a83e3e
+      internalID: 1395910472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-idle-back-0
+      name: player-walk-down-2
       rect:
         serializedVersion: 2
-        x: 288
+        x: 32
         y: 0
         width: 16
         height: 32
@@ -200,8 +179,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5c5244a6dc2bc04cafbcbee096f1845
-      internalID: 1343805209
+      spriteID: 4bc447e6a507dc446bf891a472bc9136
+      internalID: 911812791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player-walk-down-3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0742fda9e3d436b449e6ce8506ceaa69
+      internalID: -219040422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player-walk-down-4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a119b4a2eadbff548b78d00a9debcfd0
+      internalID: 758777405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player-walk-down-5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391372ff9ef22144b9d1326d41c5eb98
+      internalID: 125777133
       vertices: []
       indices: 
       edges: []
@@ -217,14 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hero_idle_16x16_2: -1023373636
-      hero_idle_16x16_3: 1637821164
-      hero_idle_16x16_4: -396326906
-      hero_idle_16x16_5: -2092843175
-      player-idle-back-0: 1343805209
-      player-idle-front-0: -1618452522
-      player-idle-left-0: -84546984
-      player-idle-right-0: 172042740
+      player-walk-down-0: 1483294033
+      player-walk-down-1: 1395910472
+      player-walk-down-2: 911812791
+      player-walk-down-3: -219040422
+      player-walk-down-4: 758777405
+      player-walk-down-5: 125777133
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
