@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4741050070607620826}
   - component: {fileID: 5117303486188267445}
   - component: {fileID: 8324739576138232202}
+  - component: {fileID: 8471249369615487307}
   m_Layer: 0
   m_Name: BlueSlime
   m_TagString: Untagged
@@ -157,3 +158,30 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.15}
   m_Size: {x: 1.3, y: 0.91}
   m_Direction: 1
+--- !u!50 &8471249369615487307
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4741050070607620805}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
