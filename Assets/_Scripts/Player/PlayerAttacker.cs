@@ -10,8 +10,8 @@ public class PlayerAttacker : Player {
 
     [SerializeField] private LayerMask enemyMask;
 
-    [SerializeField, Tooltip("How long should the attack trigger be enabled in milliseconds.")] 
-    private float attackDuration = 10;
+    [SerializeField, Tooltip("How long should the attack trigger be enabled in frames.")] 
+    private int attackDuration = 3;
 
     protected override void Awake() {
         base.Awake();
@@ -22,8 +22,8 @@ public class PlayerAttacker : Player {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.layer == enemyMask.value) {
-            
+        if ((int)Mathf.Pow(2, other.gameObject.layer) == enemyMask) {
+            //TODO: damage enemy here
         }
     }
 
@@ -32,7 +32,7 @@ public class PlayerAttacker : Player {
     private IEnumerator AttackCoroutine(int direction) {
         transform.GetChild(direction).gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(attackDuration / 1000);
+        for (int i = 0; i < attackDuration; i++) yield return null;
 
         transform.GetChild(direction).gameObject.SetActive(false);
     }
