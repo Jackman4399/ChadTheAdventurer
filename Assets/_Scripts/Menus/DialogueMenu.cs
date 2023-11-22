@@ -16,12 +16,8 @@ public class DialogueMenu : MonoBehaviour {
     public IEnumerator SetDialogue(Story story) {
         dialogueText.text = story.Continue();
 
-        if (story.currentChoices.Count > choiceButtons.Length) {
-            Debug.LogWarning("Number of choices in dialogue exceeds choice buttons in dialogue menu." + 
-            "Reduce the number of choices or add choice buttons to dialogue menu.");
-            yield break;
-        } else if (story.currentChoices.Count == 0) {
-            Debug.Log("No choice to render.");
+        if (story.currentChoices.Count > choiceButtons.Length) yield break;
+        else if (story.currentChoices.Count == 0) {
             foreach (var choiceButton in choiceButtons) choiceButton.gameObject.SetActive(false);
             yield return new WaitForInput(InputManager.Instance.userInput.Dialogue.Next);
         } else {
