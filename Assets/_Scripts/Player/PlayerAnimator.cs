@@ -9,7 +9,7 @@ public class PlayerAnimator : Player {
     
     private Vector2 lastMove = Vector2.right;
 
-    [SerializeField] private string moveVerticalName = "moveVertical", moveHorizontalName = "moveHorizontal",
+    [SerializeField] private string moveXName = "moveX", moveYName = "moveY",
     speedName = "speed", attackName = "attack";
 
     protected override void Awake() {
@@ -25,8 +25,8 @@ public class PlayerAnimator : Player {
 
         if (move != Vector2.zero && !Mathf.Approximately(Mathf.Abs(move.x), Mathf.Abs(move.y))) lastMove = move;
 
-        animator.SetFloat(moveVerticalName, lastMove.y);
-        animator.SetFloat(moveHorizontalName, lastMove.x);
+        animator.SetFloat(moveYName, lastMove.y);
+        animator.SetFloat(moveXName, lastMove.x);
         animator.SetFloat(speedName, move.magnitude);
     }
 
