@@ -17,6 +17,8 @@ public class NPCAnimator : MonoBehaviour {
     private void Awake() {
         animator = GetComponent<Animator>();
 
+		animator.SetInteger("ID", NPCID);
+
         switch (idleDirection) {
             case Direction.Up:
 				animator.SetFloat(moveYName, 1);
