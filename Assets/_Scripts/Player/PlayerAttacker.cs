@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttacker : Player {
 
-    public Action<int> OnAttack { get; private set; }
+    public Action<Direction> OnAttack { get; private set; }
 
     [SerializeField] private LayerMask enemyMask;
 
@@ -27,14 +27,15 @@ public class PlayerAttacker : Player {
         }
     }
 
-    private void Attack(int direction) => StartCoroutine(AttackCoroutine(direction));
+    private void Attack(Direction direction) => 
+	StartCoroutine(AttackCoroutine(transform.Find("Attack" + direction.ToString()).gameObject));
 
-    private IEnumerator AttackCoroutine(int direction) {
-        transform.GetChild(direction).gameObject.SetActive(true);
+    private IEnumerator AttackCoroutine(GameObject direction) {
+        direction.SetActive(true);
 
         for (int i = 0; i < attackDuration; i++) yield return null;
 
-        transform.GetChild(direction).gameObject.SetActive(false);
+        direction.SetActive(false);
     }
 
 }

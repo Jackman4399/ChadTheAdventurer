@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Ink.Runtime;
 
 public class DialogueManager : Singleton<DialogueManager> {
