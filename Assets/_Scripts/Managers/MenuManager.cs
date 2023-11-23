@@ -15,14 +15,12 @@ public class MenuManager : Singleton<MenuManager> {
     }
 
     private void OnDestroy() {
-        SceneManager.sceneLoaded -= OnSceneChanged; 
+        SceneManager.sceneLoaded -= OnSceneChanged;
     }
 
     private void OnSceneChanged(Scene scene, LoadSceneMode loadSceneMode) {
         menus = FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         menus = menus.Where(menu => menu.renderMode != RenderMode.WorldSpace).ToArray();
-
-
     }
 
     public void ChangeMenu(Menu menu) {
@@ -33,15 +31,14 @@ public class MenuManager : Singleton<MenuManager> {
     }
 
     public Canvas FindMenu(Menu menu) {
-        return Array.Find(menus, menuCanvas => menuCanvas.name.Equals(menu.ToString() + "Menu"));
+        return Array.Find(menus, menuCanvas => 
+		menuCanvas.name.Equals(menu.ToString() + "Menu"));
     }
 
-    public void EnableMenu(Menu menu) {
-        Array.Find(menus, menuCanvas => menuCanvas.name.Equals(menu.ToString() + "Menu")).gameObject.SetActive(true);
-    }
+    public void EnableMenu(Menu menu) => Array.Find(menus, menuCanvas => 
+	menuCanvas.name.Equals(menu.ToString() + "Menu")).gameObject.SetActive(true);
 
-    public void DisableMenu(Menu menu) {
-        Array.Find(menus, menuCanvas => menuCanvas.name.Equals(menu.ToString() + "Menu")).gameObject.SetActive(false);
-    }
+    public void DisableMenu(Menu menu) => Array.Find(menus, menuCanvas => 
+	menuCanvas.name.Equals(menu.ToString() + "Menu")).gameObject.SetActive(false);
 
 }

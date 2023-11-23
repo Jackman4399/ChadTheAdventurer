@@ -5,7 +5,7 @@ public class PlayerAnimator : Player {
 
     private Animator animator;
 
-    private PlayerAttacker playerAttacker;
+    private PlayerAttacker attacker;
     
     private Vector2 lastMove = Vector2.right;
 
@@ -17,7 +17,15 @@ public class PlayerAnimator : Player {
 
         animator = GetComponent<Animator>();
 
-        playerAttacker = transform.root.GetComponentInChildren<PlayerAttacker>();
+        attacker = transform.root.GetComponentInChildren<PlayerAttacker>();
+    }
+
+	private void OnEnable() {
+        userInput.Gameplay.Attack.performed += OnAttack;
+    }
+
+    private void OnDisable() {
+        userInput.Gameplay.Attack.performed -= OnAttack;
     }
 
     protected override void Update() {
@@ -30,8 +38,9 @@ public class PlayerAnimator : Player {
         animator.SetFloat(speedName, move.magnitude);
     }
 
-    protected override void Attack(InputAction.CallbackContext context) => animator.SetTrigger(attackName);
+    private void OnAttack(InputAction.CallbackContext context) => animator.SetTrigger(attackName);
 
-    private void OnAttack(int direction) => playerAttacker.OnAttack?.Invoke(direction);
+	// Use from within the animation events
+    private void AttackDirection(Direction direction) => attacker.OnAttack?.Invoke(direction);
 
 }
