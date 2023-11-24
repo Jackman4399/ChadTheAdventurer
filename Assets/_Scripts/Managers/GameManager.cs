@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class GameManager : PersistentSingleton<GameManager> {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	[SerializeField] private bool isTesting;
+
+	private void Start() {
+		if (isTesting) return;
+
+		InputManager.Instance.ChangeActionMap(InputState.Menu);
+		MenuManager.Instance.ChangeMenu(Menu.Main);
+	}
+
 }
