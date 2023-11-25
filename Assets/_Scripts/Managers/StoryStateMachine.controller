@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f51bd82c73de3349b2cebe26daf6b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storyState: 0
 --- !u!1101 &-8316511995103949190
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -20,8 +21,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: currentStoryState
+  - m_ConditionMode: 1
+    m_ConditionEvent: proceed
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8448176889567162456}
@@ -61,25 +62,25 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -2264697370211555888}
-    m_Position: {x: 140, y: 150, z: 0}
+    m_Position: {x: 140, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -194259647612228831}
-    m_Position: {x: 140, y: 220, z: 0}
+    m_Position: {x: 140, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -292789380491389868}
-    m_Position: {x: 140, y: 290, z: 0}
+    m_Position: {x: 140, y: 310, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8448176889567162456}
-    m_Position: {x: 140, y: 360, z: 0}
+    m_Position: {x: 140, y: 380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3891633888859656830}
-    m_Position: {x: 10, y: 430, z: 0}
+    m_Position: {x: 10, y: 450, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7960456213232257764}
-    m_Position: {x: 270, y: 430, z: 0}
+    m_Position: {x: 270, y: 450, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8158432078832382151}
-    m_Position: {x: 270, y: 500, z: 0}
+    m_Position: {x: 270, y: 520, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -123,8 +124,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: currentStoryState
+  - m_ConditionMode: 1
+    m_ConditionEvent: proceed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -194259647612228831}
@@ -220,7 +221,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3435136478130726280}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 7090310999025901223}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -244,18 +246,18 @@ AnimatorController:
   m_Name: StoryStateMachine
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: currentStoryState
-    m_Type: 3
+  - m_Name: proceed
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: choice0
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -277,8 +279,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: currentStoryState
+  - m_ConditionMode: 1
+    m_ConditionEvent: proceed
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8158432078832382151}
@@ -327,8 +329,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: currentStoryState
+  - m_ConditionMode: 1
+    m_ConditionEvent: proceed
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -292789380491389868}
@@ -383,6 +385,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+--- !u!114 &7090310999025901223
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f51bd82c73de3349b2cebe26daf6b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storyState: 1
 --- !u!1102 &7960456213232257764
 AnimatorState:
   serializedVersion: 6
