@@ -61,33 +61,33 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -2264697370211555888}
-    m_Position: {x: 110, y: 230, z: 0}
+    m_Position: {x: 140, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -194259647612228831}
-    m_Position: {x: 340, y: 230, z: 0}
+    m_Position: {x: 140, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -292789380491389868}
-    m_Position: {x: 570, y: 230, z: 0}
+    m_Position: {x: 140, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8448176889567162456}
-    m_Position: {x: 800, y: 230, z: 0}
+    m_Position: {x: 140, y: 360, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3891633888859656830}
-    m_Position: {x: 1030, y: 160, z: 0}
+    m_Position: {x: 10, y: 430, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7960456213232257764}
-    m_Position: {x: 1030, y: 300, z: 0}
+    m_Position: {x: 270, y: 430, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8158432078832382151}
-    m_Position: {x: 1260, y: 300, z: 0}
+    m_Position: {x: 270, y: 500, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: -100, y: 270, z: 0}
-  m_EntryPosition: {x: -100, y: 230, z: 0}
-  m_ExitPosition: {x: -100, y: 190, z: 0}
+  m_AnyStatePosition: {x: -10, y: 110, z: 0}
+  m_EntryPosition: {x: 160, y: 110, z: 0}
+  m_ExitPosition: {x: 330, y: 110, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -2264697370211555888}
 --- !u!1101 &-3197362100270838394
@@ -249,13 +249,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: choice0
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
