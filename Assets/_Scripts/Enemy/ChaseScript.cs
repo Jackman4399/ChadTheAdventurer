@@ -12,11 +12,12 @@ public class ChaseScript : MonoBehaviour
 
      private NavMeshAgent agent;
 
+     private Transform player;
+
     // Start is called before the first frame update
     void Start () {
 
         agent = GetComponent<NavMeshAgent>();
-        
 
     }
 
@@ -27,7 +28,26 @@ public class ChaseScript : MonoBehaviour
         // }
 
         animator.SetFloat("Speed", agent.velocity.magnitude);
-        agent.destination = goal.position;
+        animator.SetFloat("Xaxis", agent.velocity.x);
+
+        if(player != null) {
+            
+            agent.destination = player.position;
+
+        } else if(goal != null){
+
+            agent.destination = goal.position;
+        }
+            
+        
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        
+        if(other.gameObject.layer.Equals("Player")) {
+            player = other.gameObject.transform;
+        }
 
     }
 
