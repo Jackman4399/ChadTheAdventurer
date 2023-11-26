@@ -2,11 +2,13 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public enum InputState { Menu, Gameplay, Dialogue }
+public enum InputState { None, Menu, Gameplay, Dialogue }
 
 public class InputManager : Singleton<InputManager> {
 
     public UserInput userInput { get; private set; }
+
+	public InputState currentInputState { get; private set; }
 
     protected override void Awake() {
         base.Awake();
@@ -17,10 +19,16 @@ public class InputManager : Singleton<InputManager> {
     public void ChangeActionMap(InputState inputState) {
         userInput.Disable();
 
-        InputActionMap actionMap = 
-        Array.Find(userInput.asset.actionMaps.ToArray(), actionMap => actionMap.name.Equals(inputState.ToString()));
+        InputActionMap actionMap = null;
+		if (inputState != InputState.None) {
+			actionMap = 
+        	Array.Find(userInput.asset.actionMaps.ToArray(), 
+			actionMap => actionMap.name.Equals(inputState.ToString()));
+		}
 
-        actionMap.Enable();
+		currentInputState = inputState;
+
+        actionMap?.Enable();
     }
 
 }
