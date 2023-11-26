@@ -16,6 +16,8 @@ public class MenuManager : Singleton<MenuManager> {
     protected override void Awake() {
         base.Awake();
 
+		Debug.Log("Still went into menu manager awake");
+
 		menusPrefab = GameObject.Find(menusPrefab.name) ? 
 		GameObject.Find(menusPrefab.name) : Instantiate(menusPrefab);
 		DontDestroyOnLoad(menusPrefab);
@@ -47,6 +49,9 @@ public class MenuManager : Singleton<MenuManager> {
 	public void Crossfade(SceneState sceneState) => StartCoroutine(CrossfadeCoroutine(sceneState));
 
 	private IEnumerator CrossfadeCoroutine(SceneState sceneState) {
+		InputState currentInputState = InputManager.Instance.currentInputState;
+
+		InputManager.Instance.ChangeActionMap(InputState.None);
 		EnableMenu(MenuState.Crossfade);
 
 		// Fade In
@@ -68,6 +73,7 @@ public class MenuManager : Singleton<MenuManager> {
 		crossfadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(crossfadeImage.color.a));
 
 		DisableMenu(MenuState.Crossfade);
+		InputManager.Instance.ChangeActionMap(currentInputState);
 	}
 
 }
