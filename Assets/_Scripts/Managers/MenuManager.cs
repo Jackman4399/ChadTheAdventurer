@@ -7,20 +7,15 @@ public enum Menu { Main, Gameplay, Dialogue, Win, Lose }
 
 public class MenuManager : Singleton<MenuManager> {
 
+	[SerializeField] private GameObject menusPrefab;
     [SerializeField] private Canvas[] menus;
 
     protected override void Awake() {
         base.Awake();
-        SceneManager.sceneLoaded += OnSceneChanged;
-    }
 
-    private void OnDestroy() {
-        SceneManager.sceneLoaded -= OnSceneChanged;
-    }
-
-    private void OnSceneChanged(Scene scene, LoadSceneMode loadSceneMode) {
-        menus = FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-        menus = menus.Where(menu => menu.renderMode != RenderMode.WorldSpace).ToArray();
+		menusPrefab = GameObject.Find(menusPrefab.name) ? 
+		GameObject.Find(menusPrefab.name) : Instantiate(menusPrefab);
+		DontDestroyOnLoad(menusPrefab);
     }
 
     public void ChangeMenu(Menu menu) {

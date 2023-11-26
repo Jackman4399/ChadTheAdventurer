@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5452050118715914677}
   - component: {fileID: 2347329707256932898}
-  - component: {fileID: 2089186348607846481}
-  - component: {fileID: 8748857896534466194}
+  - component: {fileID: 2347758753718956841}
+  - component: {fileID: 6763434984210058267}
   - component: {fileID: 2873579439693867739}
   - component: {fileID: 2964856164721253087}
   - component: {fileID: 305123876428434449}
@@ -49,7 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b4650949ca84d4b9e0af71afbca11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2089186348607846481
+  InitialiseInput: 0
+  InitialiseMenu: 0
+--- !u!114 &2347758753718956841
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a9982bf6a1b68841b755193da30bf2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8748857896534466194
+--- !u!114 &6763434984210058267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb459f25472865a45a78c261576d5d47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menusPrefab: {fileID: 7992915553360804508, guid: 6852eb3471f8b514c95441189acf35b7, type: 3}
   menus: []
 --- !u!114 &2873579439693867739
 MonoBehaviour:
@@ -98,9 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7278cbbd46417894facac1e4531f992e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentStoryStateName: currentStoryState
+  proceedName: proceed
   choiceName: choice
-  choiceIDs: 00000000
+  choices: 
+  currentStoryState: 0
 --- !u!95 &305123876428434449
 Animator:
   serializedVersion: 5
