@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : PersistentSingleton<GameManager> {
-
-	[SerializeField] private bool isTesting;
+	
+	[SerializeField] private InputState InitialiseInput;
+	[SerializeField] private MenuState InitialiseMenu;
+	[SerializeField] private SceneState InitialiseScene;
 
 	private void Start() {
-		if (isTesting) return;
-
-		InputManager.Instance.ChangeActionMap(InputState.Menu);
-		MenuManager.Instance.ChangeMenu(Menu.Main);
+		InputManager.Instance.ChangeActionMap(InitialiseInput);
+		MenuManager.Instance.ChangeMenu(InitialiseMenu);
+		SceneLoader.Instance.LoadScene(InitialiseScene);
 	}
 
 }
