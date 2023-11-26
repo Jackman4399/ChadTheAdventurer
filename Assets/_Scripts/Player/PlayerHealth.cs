@@ -11,6 +11,8 @@ public class PlayerHealth : Player {
     //NOTE: Use this for death animation or any game end triggers
     private bool isDead = false;
 
+    public AudioSource hurtSound;
+
     private void Start() {
 
         //Start with the maximum health
@@ -32,6 +34,8 @@ public class PlayerHealth : Player {
     }
 
     public void Hurt(int hp) {
+
+        if(hp > 0) hurtSound.Play();
 
         //Hurt the player
         currentHealth -= hp;
