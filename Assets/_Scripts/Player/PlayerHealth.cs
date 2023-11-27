@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : Player {
 
-    public int maxHealth = 100;
+    [SerializeField] private int maxHealth = 100;
 
     private int currentHealth;
 
@@ -13,7 +13,8 @@ public class PlayerHealth : Player {
 
     public AudioSource hurtSound;
 
-    private void Start() {
+    protected override void Awake() {
+        base.Awake();
 
         //Start with the maximum health
         currentHealth = maxHealth;
@@ -25,11 +26,7 @@ public class PlayerHealth : Player {
         currentHealth += hp;
 
         //Prevent overhealing
-        if(currentHealth > maxHealth) {
-
-            currentHealth = maxHealth;
-
-        }
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
     }
 
