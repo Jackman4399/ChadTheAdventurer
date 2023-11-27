@@ -8131,8 +8131,8 @@ TextureImporter:
         y: 440
         width: 32
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8152,8 +8152,8 @@ TextureImporter:
         y: 440
         width: 16
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8908,8 +8908,8 @@ TextureImporter:
         y: 408
         width: 32
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8929,8 +8929,8 @@ TextureImporter:
         y: 408
         width: 16
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10476,15 +10476,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_678
+      name: drawers
       rect:
         serializedVersion: 2
         x: 112
-        y: 264
+        y: 248
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10770,15 +10770,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_695
+      name: bookshelf
       rect:
         serializedVersion: 2
         x: 480
         y: 264
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10954,27 +10954,6 @@ TextureImporter:
       bones: []
       spriteID: 2c35efbec0361dc4d937e8edfede38c9
       internalID: 1580159496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_704
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 248
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 849ed95e665ccce4fa54283e6dc41c15
-      internalID: -1037661869
       vertices: []
       indices: 
       edges: []
@@ -13107,7 +13086,6 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_675: 165822741
       PixelFlow_Fantasy_tileset_16x16_676: 746225527
       PixelFlow_Fantasy_tileset_16x16_677: -15191733
-      PixelFlow_Fantasy_tileset_16x16_678: -1542894476
       PixelFlow_Fantasy_tileset_16x16_679: -807387024
       PixelFlow_Fantasy_tileset_16x16_68: 1391356247
       PixelFlow_Fantasy_tileset_16x16_680: 666176432
@@ -13126,7 +13104,6 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_692: 1390946854
       PixelFlow_Fantasy_tileset_16x16_693: 610168249
       PixelFlow_Fantasy_tileset_16x16_694: -72647353
-      PixelFlow_Fantasy_tileset_16x16_695: -1350129973
       PixelFlow_Fantasy_tileset_16x16_696: -910345152
       PixelFlow_Fantasy_tileset_16x16_697: 482529971
       PixelFlow_Fantasy_tileset_16x16_698: 1589676131
@@ -13308,9 +13285,11 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_98: -1725180185
       PixelFlow_Fantasy_tileset_16x16_99: -1903111446
       bed: 1038650263
+      bookshelf: -1350129973
       carpet: -2097663286
       chimney-0: -1106428167
       chimney-1: -1677975986
+      drawers: -1542894476
       guild: -365813710
       house-0: -475220463
       house-1: 1376653183
