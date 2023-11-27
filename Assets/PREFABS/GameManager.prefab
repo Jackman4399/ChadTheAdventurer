@@ -50,9 +50,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b4650949ca84d4b9e0af71afbca11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialiseInput: 0
-  InitialiseMenu: 0
-  InitialiseScene: 1
+  InitialiseInput: 2
+  InitialiseMenu: 2
+  InitialiseScene: 0
 --- !u!114 &2347758753718956841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,10 +116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7278cbbd46417894facac1e4531f992e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentStoryState: 0
   proceedName: proceed
   choiceName: choice
   choices: 
-  currentStoryState: 0
 --- !u!95 &305123876428434449
 Animator:
   serializedVersion: 5

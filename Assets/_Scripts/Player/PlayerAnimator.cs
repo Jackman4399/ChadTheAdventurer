@@ -17,7 +17,7 @@ public class PlayerAnimator : Player {
 
         animator = GetComponent<Animator>();
 
-        attacker = transform.root.GetComponentInChildren<PlayerAttacker>();
+        attacker = transform.parent.GetComponentInChildren<PlayerAttacker>();
     }
 
 	private void OnEnable() {
