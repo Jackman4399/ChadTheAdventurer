@@ -5,11 +5,11 @@ public class PlayerAnimator : Player {
 
     private Animator animator;
 
-    private PlayerAttacker playerAttacker;
+    private PlayerAttacker attacker;
     
     private Vector2 lastMove = Vector2.right;
 
-    [SerializeField] private string moveVerticalName = "moveVertical", moveHorizontalName = "moveHorizontal",
+    [SerializeField] private string moveXName = "moveX", moveYName = "moveY",
     speedName = "speed", attackName = "attack";
 
     protected override void Awake() {
@@ -17,7 +17,15 @@ public class PlayerAnimator : Player {
 
         animator = GetComponent<Animator>();
 
-        playerAttacker = transform.root.GetComponentInChildren<PlayerAttacker>();
+        attacker = transform.parent.GetComponentInChildren<PlayerAttacker>();
+    }
+
+	private void OnEnable() {
+        userInput.Gameplay.Attack.performed += OnAttack;
+    }
+
+    private void OnDisable() {
+        userInput.Gameplay.Attack.performed -= OnAttack;
     }
 
     protected override void Update() {
@@ -25,13 +33,14 @@ public class PlayerAnimator : Player {
 
         if (move != Vector2.zero && !Mathf.Approximately(Mathf.Abs(move.x), Mathf.Abs(move.y))) lastMove = move;
 
-        animator.SetFloat(moveVerticalName, lastMove.y);
-        animator.SetFloat(moveHorizontalName, lastMove.x);
+        animator.SetFloat(moveYName, lastMove.y);
+        animator.SetFloat(moveXName, lastMove.x);
         animator.SetFloat(speedName, move.magnitude);
     }
 
-    protected override void Attack(InputAction.CallbackContext context) => animator.SetTrigger(attackName);
+    private void OnAttack(InputAction.CallbackContext context) => animator.SetTrigger(attackName);
 
-    private void OnAttack(int direction) => playerAttacker.OnAttack?.Invoke(direction);
+	// Use from within the animation events
+    private void AttackDirection(Direction direction) => attacker.OnAttack?.Invoke(direction);
 
 }

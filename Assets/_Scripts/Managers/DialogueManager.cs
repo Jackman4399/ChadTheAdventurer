@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Ink.Runtime;
 
 public class DialogueManager : Singleton<DialogueManager> {
@@ -18,13 +17,13 @@ public class DialogueManager : Singleton<DialogueManager> {
 
     private IEnumerator ProcessDialogueCoroutine() {
         InputManager.Instance.ChangeActionMap(InputState.Dialogue);
-        MenuManager.Instance.ChangeMenu(Menu.Dialogue);
-        dialogueMenu = MenuManager.Instance.FindMenu(Menu.Dialogue).GetComponent<DialogueMenu>();
+        MenuManager.Instance.ChangeMenu(MenuState.Dialogue);
+        dialogueMenu = MenuManager.Instance.FindMenu(MenuState.Dialogue).GetComponent<DialogueMenu>();
 
         while (story.canContinue) yield return StartCoroutine(dialogueMenu.SetDialogue(story));
 
         InputManager.Instance.ChangeActionMap(InputState.Gameplay);
-        MenuManager.Instance.ChangeMenu(Menu.Gameplay);
+        MenuManager.Instance.ChangeMenu(MenuState.Gameplay);
     }
 
 }
