@@ -53,6 +53,42 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AttackUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""bfb2c52f-6cc7-4dff-95ed-6c194c6f3bbf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AttackDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""b227a208-3959-405f-8aae-d563af07f362"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AttackLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""d0c533c4-f33c-4b49-ab43-6b60ca6afbb4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AttackRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""96db014e-3e0c-4b26-b480-a37611f002f7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -130,6 +166,50 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""49a4ab0e-a624-496f-bc89-931745e48664"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttackUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cf939a95-699a-4541-8975-bffcfdd1175a"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttackDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f74e8ee1-e0a5-428f-84ef-f2e37e007ae5"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttackLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bd18541e-c0b3-4abd-b326-07efa43c1c44"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttackRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -530,6 +610,10 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
         m_Gameplay_Movement = m_Gameplay.FindAction("Movement", throwIfNotFound: true);
         m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
         m_Gameplay_Attack = m_Gameplay.FindAction("Attack", throwIfNotFound: true);
+        m_Gameplay_AttackUp = m_Gameplay.FindAction("AttackUp", throwIfNotFound: true);
+        m_Gameplay_AttackDown = m_Gameplay.FindAction("AttackDown", throwIfNotFound: true);
+        m_Gameplay_AttackLeft = m_Gameplay.FindAction("AttackLeft", throwIfNotFound: true);
+        m_Gameplay_AttackRight = m_Gameplay.FindAction("AttackRight", throwIfNotFound: true);
         // Dialogue
         m_Dialogue = asset.FindActionMap("Dialogue", throwIfNotFound: true);
         m_Dialogue_Next = m_Dialogue.FindAction("Next", throwIfNotFound: true);
@@ -608,6 +692,10 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Movement;
     private readonly InputAction m_Gameplay_Interact;
     private readonly InputAction m_Gameplay_Attack;
+    private readonly InputAction m_Gameplay_AttackUp;
+    private readonly InputAction m_Gameplay_AttackDown;
+    private readonly InputAction m_Gameplay_AttackLeft;
+    private readonly InputAction m_Gameplay_AttackRight;
     public struct GameplayActions
     {
         private @UserInput m_Wrapper;
@@ -615,6 +703,10 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Gameplay_Movement;
         public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
         public InputAction @Attack => m_Wrapper.m_Gameplay_Attack;
+        public InputAction @AttackUp => m_Wrapper.m_Gameplay_AttackUp;
+        public InputAction @AttackDown => m_Wrapper.m_Gameplay_AttackDown;
+        public InputAction @AttackLeft => m_Wrapper.m_Gameplay_AttackLeft;
+        public InputAction @AttackRight => m_Wrapper.m_Gameplay_AttackRight;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -633,6 +725,18 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
+            @AttackUp.started += instance.OnAttackUp;
+            @AttackUp.performed += instance.OnAttackUp;
+            @AttackUp.canceled += instance.OnAttackUp;
+            @AttackDown.started += instance.OnAttackDown;
+            @AttackDown.performed += instance.OnAttackDown;
+            @AttackDown.canceled += instance.OnAttackDown;
+            @AttackLeft.started += instance.OnAttackLeft;
+            @AttackLeft.performed += instance.OnAttackLeft;
+            @AttackLeft.canceled += instance.OnAttackLeft;
+            @AttackRight.started += instance.OnAttackRight;
+            @AttackRight.performed += instance.OnAttackRight;
+            @AttackRight.canceled += instance.OnAttackRight;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -646,6 +750,18 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
+            @AttackUp.started -= instance.OnAttackUp;
+            @AttackUp.performed -= instance.OnAttackUp;
+            @AttackUp.canceled -= instance.OnAttackUp;
+            @AttackDown.started -= instance.OnAttackDown;
+            @AttackDown.performed -= instance.OnAttackDown;
+            @AttackDown.canceled -= instance.OnAttackDown;
+            @AttackLeft.started -= instance.OnAttackLeft;
+            @AttackLeft.performed -= instance.OnAttackLeft;
+            @AttackLeft.canceled -= instance.OnAttackLeft;
+            @AttackRight.started -= instance.OnAttackRight;
+            @AttackRight.performed -= instance.OnAttackRight;
+            @AttackRight.canceled -= instance.OnAttackRight;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -833,6 +949,10 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnAttackUp(InputAction.CallbackContext context);
+        void OnAttackDown(InputAction.CallbackContext context);
+        void OnAttackLeft(InputAction.CallbackContext context);
+        void OnAttackRight(InputAction.CallbackContext context);
     }
     public interface IDialogueActions
     {
