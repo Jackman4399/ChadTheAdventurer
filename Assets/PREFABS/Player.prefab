@@ -369,6 +369,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   attackDuration: 3
+  _attackDelay: 0.3
   slashSound: {fileID: 7754809998419655707}
 --- !u!50 &2373958665339442858
 Rigidbody2D:
