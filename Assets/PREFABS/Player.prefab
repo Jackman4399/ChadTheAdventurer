@@ -684,7 +684,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  hurtSound: {fileID: 1822256248154935445}
 --- !u!50 &6863936759489084731
 Rigidbody2D:
   serializedVersion: 4

@@ -38,7 +38,7 @@ public class PlayerAttacker : Player {
 
         direction.SetActive(true);
 
-        slashSound.Play();
+        FindObjectOfType<AudioManager>().Play("Slash");
 
         for (int i = 0; i < attackDuration; i++) yield return null;
 
