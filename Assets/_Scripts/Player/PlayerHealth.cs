@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Ink.Parsed;
 using UnityEngine;
 
 public class PlayerHealth : Player {
 
     [SerializeField] private int maxHealth = 100;
 
-    private int currentHealth;
+    //Purely for testing
+    [SerializeField] private int currentHealth;
 
     //NOTE: Use this for death animation or any game end triggers
     private bool isDead = false;
@@ -56,6 +58,13 @@ public class PlayerHealth : Player {
             Hurt(10);
 
         }
+
+    }
+
+    //Fetch the player's current HP
+    public int GetCurrentHP(){
+
+        return currentHealth;
 
     }
 	
