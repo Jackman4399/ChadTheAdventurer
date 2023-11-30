@@ -22,8 +22,8 @@ public class HealthBar : MonoBehaviour
     //Will sync the hp with the player's
     private void UpdateHealth(){
         double bias = 0.5;
-        double temp = playerHealth.GetCurrentHP() + bias;
-        healthPoints = (int) Math.Round(temp/20);
+        double temp = playerHealth.GetCurrentHP();
+        healthPoints = (int) Math.Round(temp/20 + bias);
     }
 
     void FixedUpdate() {
@@ -36,19 +36,23 @@ public class HealthBar : MonoBehaviour
         
         for (int i = 0; i < hearts.Length; i++){
             
-            if(i < healthPoints) {
-                hearts[i].sprite = fullHeart;
-            } else {
+            if(healthPoints == 0) {
                 hearts[i].sprite = emptyHeart;
-            }
-
-            if (i < numOfHearts)
-            {
-                hearts[i].enabled = true;
             } else {
-                hearts[i].enabled = false;
-            }
 
+                if(i < healthPoints) {
+                    hearts[i].sprite = fullHeart;
+                } else {
+                    hearts[i].sprite = emptyHeart;
+                }
+
+                if (i < numOfHearts)
+                {
+                    hearts[i].enabled = true;
+                } else {
+                    hearts[i].enabled = false;
+                }
+            }
         }
 
     }
