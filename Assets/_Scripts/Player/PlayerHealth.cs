@@ -11,9 +11,9 @@ public class PlayerHealth : Player {
     [SerializeField] private int currentHealth;
 
     //NOTE: Use this for death animation or any game end triggers
-    private bool isDead = false;
+    //private bool isDead = false;
 
-    public AudioSource hurtSound;
+    //public AudioSource hurtSound;
 
     protected override void Awake() {
         base.Awake();
@@ -34,7 +34,7 @@ public class PlayerHealth : Player {
 
     public void Hurt(int hp) {
 
-        if(hp > 0) hurtSound.Play();
+        //if(hp > 0) hurtSound.Play();
 
         //Hurt the player
         currentHealth -= hp;
@@ -42,7 +42,7 @@ public class PlayerHealth : Player {
         //Prevent negative health
         if(currentHealth <= 0) {
 
-            isDead = true;
+            //isDead = true;
 
         }
 

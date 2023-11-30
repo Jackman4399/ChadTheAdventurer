@@ -13,8 +13,6 @@ public class PlayerAttacker : Player {
     [SerializeField, Tooltip("How long should the attack trigger be enabled in frames.")] 
     private int attackDuration = 3;
 
-    public AudioSource slashSound;
-
     protected override void Awake() {
         base.Awake();
 
@@ -36,7 +34,7 @@ public class PlayerAttacker : Player {
 
         direction.SetActive(true);
 
-        slashSound.Play();
+        FindObjectOfType<AudioManager>().Play("Slash");
 
         for (int i = 0; i < attackDuration; i++) yield return null;
 

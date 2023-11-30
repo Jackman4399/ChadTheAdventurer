@@ -369,7 +369,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   attackDuration: 3
-  slashSound: {fileID: 7754809998419655707}
 --- !u!50 &2373958665339442858
 Rigidbody2D:
   serializedVersion: 4
@@ -683,7 +682,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  hurtSound: {fileID: 1822256248154935445}
 --- !u!50 &6863936759489084731
 Rigidbody2D:
   serializedVersion: 4
