@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
   animator: {fileID: 578174064665111293}
 --- !u!195 &3791715272348567016
 NavMeshAgent:
