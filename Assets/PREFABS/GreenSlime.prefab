@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6096034040510176261}
   - component: {fileID: 3791715272348567016}
   - component: {fileID: 8534772402735570168}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: GreenSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,3 +276,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fbcf1df7ea37e34286ba3176ba0ee02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 20

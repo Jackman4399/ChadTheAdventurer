@@ -543,6 +543,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveXName: moveX
   moveYName: moveY
+  attackXName: attackX
+  attackYName: attackY
   speedName: speed
   attackName: attack
 --- !u!212 &6935513086043137993
@@ -854,7 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8aa18620d121b4583a0f48de588979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 0
+  healthPoints: 100
   numOfHearts: 5
   hearts:
   - {fileID: 0}
