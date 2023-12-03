@@ -10,16 +10,11 @@ public class ChaseScript : MonoBehaviour
 
      public Animator animator;
 
-     private NavMeshAgent agent;
+     public NavMeshAgent agent;
 
      private Transform player;
 
-    // Start is called before the first frame update
-    void Start () {
-
-        agent = GetComponent<NavMeshAgent>();
-
-    }
+     public LayerMask playerMask;
 
     private void FixedUpdate() {
 
@@ -46,6 +41,7 @@ public class ChaseScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         
         if(other.gameObject.layer.Equals("Player")) {
+            Debug.Log("Player FOUND!");
             player = other.gameObject.transform;
         }
 

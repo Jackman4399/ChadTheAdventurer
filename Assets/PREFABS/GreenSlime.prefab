@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6096034040510176261}
   - component: {fileID: 3791715272348567016}
   - component: {fileID: 8534772402735570168}
+  - component: {fileID: 5779133891075801958}
   m_Layer: 11
   m_Name: GreenSlime
   m_TagString: Untagged
@@ -125,6 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goal: {fileID: 0}
   animator: {fileID: 578174064665111293}
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!114 &6096034040510176261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +201,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4
+--- !u!50 &5779133891075801958
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4643724335760938635}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &5473747681346274399
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +239,7 @@ GameObject:
   - component: {fileID: 7413766031592736987}
   - component: {fileID: 8356784706903465808}
   - component: {fileID: 5670629844343930257}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}

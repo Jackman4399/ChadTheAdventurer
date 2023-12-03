@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
 
         //Play hurt animation
-        animator.SetTrigger("Hurt");
+        //animator.SetTrigger("Hurt");
 
         if(currentHealth <= 0) {
 
@@ -42,6 +42,8 @@ public class Enemy : MonoBehaviour
         //Disable the enemy
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+
+        Destroy(this.gameObject);
     }
 
 }
