@@ -6,7 +6,7 @@ public class HeartScript : MonoBehaviour
 {
     public AudioSource heal;
 
-    public int healAmount = 20;
+    public int healAmount = 1;
 
     private void OnTriggerEnter2D(Collider2D other) {
         
