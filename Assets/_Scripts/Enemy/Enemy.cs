@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public int maxHealth = 100;
+    public int maxHealth = 3;
     [SerializeField] private int currentHealth;
 
     public Animator animator;
@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
         if(currentHealth <= 0) {
 
             Die();
-
+            
         }
 
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerHealth : Player {
 
-    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private int maxHealth = 5;
 
     //Purely for testing
     [SerializeField] private int currentHealth;
@@ -34,6 +34,8 @@ public class PlayerHealth : Player {
 
     public void Hurt(int hp) {
 
+        Debug.Log("Player got hurt!");
+
         //if(hp > 0) hurtSound.Play();
 
         //Hurt the player
@@ -43,19 +45,6 @@ public class PlayerHealth : Player {
         if(currentHealth <= 0) {
 
             //isDead = true;
-
-        }
-
-    }
-
-    private void OnCollisionEnter2D(Collision2D other) {
-        
-        //Unique to the green slime, could be moved to enemy's side
-        //Or extended to differentiate dmg from different enemies
-        if (other.gameObject.layer.Equals("GreenSlime")) {
-
-            //Take dmg
-            Hurt(10);
 
         }
 

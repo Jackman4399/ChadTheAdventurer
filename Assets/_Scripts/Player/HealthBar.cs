@@ -20,10 +20,8 @@ public class HealthBar : MonoBehaviour
     }
 
     //Will sync the hp with the player's
-    private void UpdateHealth(){
-        double bias = 0.5;
-        double temp = playerHealth.GetCurrentHP();
-        healthPoints = (int) Math.Round(temp/20 + bias);
+    private void UpdateHealth() {
+        healthPoints = playerHealth.GetCurrentHP();
     }
 
     void FixedUpdate() {

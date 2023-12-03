@@ -39,10 +39,14 @@ public class ChaseScript : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        
-        if(other.gameObject.layer.Equals("Player")) {
-            Debug.Log("Player FOUND!");
+
+        Debug.Log("Found: " + other.gameObject.layer);
+
+        //10 is a number for the 'Player' layer
+        if(other.gameObject.layer == 10) {
+            
             player = other.gameObject.transform;
+
         }
 
     }

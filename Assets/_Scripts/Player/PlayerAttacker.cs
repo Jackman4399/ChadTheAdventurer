@@ -29,7 +29,7 @@ public class PlayerAttacker : Player {
 
         if ((int)Mathf.Pow(2, other.gameObject.layer) == enemyMask) {
             
-            other.gameObject.GetComponent<Enemy>().TakeDamage(20); //Temporarily using 20
+            other.gameObject.GetComponent<Enemy>().TakeDamage(1); //Temporarily using 1
 
         }
     }
