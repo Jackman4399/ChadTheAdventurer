@@ -543,6 +543,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveXName: moveX
   moveYName: moveY
+  attackXName: attackX
+  attackYName: attackY
   speedName: speed
   attackName: attack
 --- !u!212 &6935513086043137993
@@ -635,7 +637,7 @@ GameObject:
   - component: {fileID: 3688875768077442125}
   m_Layer: 10
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -682,7 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd8915e7b386b54798d3671ee8aa428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 5
   currentHealth: 0
 --- !u!50 &6863936759489084731
 Rigidbody2D:
@@ -854,7 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8aa18620d121b4583a0f48de588979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 0
+  healthPoints: 5
   numOfHearts: 5
   hearts:
   - {fileID: 0}

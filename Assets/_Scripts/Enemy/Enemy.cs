@@ -5,8 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public int maxHealth = 100;
-    private int currentHealth;
+    public int maxHealth = 3;
+    [SerializeField] private int currentHealth;
 
     public Animator animator;
 
@@ -25,12 +25,12 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
 
         //Play hurt animation
-        animator.SetTrigger("Hurt");
+        //animator.SetTrigger("Hurt");
 
         if(currentHealth <= 0) {
 
             Die();
-
+            
         }
 
     }
@@ -42,6 +42,8 @@ public class Enemy : MonoBehaviour
         //Disable the enemy
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+
+        Destroy(this.gameObject);
     }
 
 }

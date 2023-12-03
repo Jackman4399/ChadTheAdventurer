@@ -26,8 +26,11 @@ public class PlayerAttacker : Player {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+
         if ((int)Mathf.Pow(2, other.gameObject.layer) == enemyMask) {
-            //TODO: damage enemy here
+            
+            other.gameObject.GetComponent<Enemy>().TakeDamage(1); //Temporarily using 1
+
         }
     }
 
