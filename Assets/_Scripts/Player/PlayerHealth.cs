@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PlayerHealth : Player {
 
-    public event Action<int> OnLivesChanged;
-    public event Action OnHit;
+    public static event Action<int> OnLivesChanged;
+    public static event Action OnHit;
 
     [SerializeField] private int initialLives = 5;
     //Purely for testing
@@ -26,6 +26,8 @@ public class PlayerHealth : Player {
 
         //Start with the maximum health
         currentLives = initialLives;
+
+        OnLivesChanged?.Invoke(initialLives);
     }
 
     public void Heal(int health) {
