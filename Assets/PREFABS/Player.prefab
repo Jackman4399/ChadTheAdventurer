@@ -728,6 +728,12 @@ MonoBehaviour:
   initialLives: 5
   hitInvincibleTime: 2.5
   pushbackForce: 500
+  flashColour: {r: 0, g: 0, b: 0, a: 0}
+  regularColour: {r: 0, g: 0, b: 0, a: 0}
+  flashDuration: 0
+  numOfFlashes: 0
+  invulnerable: 0
+  renderer: {fileID: 0}
 --- !u!114 &3688875768077442125
 MonoBehaviour:
   m_ObjectHideFlags: 0
