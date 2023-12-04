@@ -16,8 +16,6 @@ public class MenuManager : Singleton<MenuManager> {
     protected override void Awake() {
         base.Awake();
 
-		Debug.Log("Still went into menu manager awake");
-
 		menusPrefab = GameObject.Find(menusPrefab.name) ? 
 		GameObject.Find(menusPrefab.name) : Instantiate(menusPrefab);
 		DontDestroyOnLoad(menusPrefab);

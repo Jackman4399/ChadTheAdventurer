@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerAttacker : Player {
 
@@ -13,6 +11,12 @@ public class PlayerAttacker : Player {
     [SerializeField, Tooltip("How long should the attack trigger be enabled in frames.")] 
     private int attackDuration = 3;
 
+	[SerializeField, Tooltip("How long should the delay between attack be in seconds.")] 
+    private float _attackDelay = .3f;
+	public float attackDelay { get { return _attackDelay; } }
+
+    public AudioSource slashSound;
+
     protected override void Awake() {
         base.Awake();
 
@@ -22,8 +26,11 @@ public class PlayerAttacker : Player {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+
         if ((int)Mathf.Pow(2, other.gameObject.layer) == enemyMask) {
-            //TODO: damage enemy here
+            
+            other.gameObject.GetComponent<Enemy>().TakeDamage(1); //Temporarily using 1
+
         }
     }
 
@@ -31,7 +38,10 @@ public class PlayerAttacker : Player {
 	StartCoroutine(AttackCoroutine(transform.Find("Attack" + direction.ToString()).gameObject));
 
     private IEnumerator AttackCoroutine(GameObject direction) {
+
         direction.SetActive(true);
+
+        FindObjectOfType<AudioManager>().Play("Slash");
 
         for (int i = 0; i < attackDuration; i++) yield return null;
 

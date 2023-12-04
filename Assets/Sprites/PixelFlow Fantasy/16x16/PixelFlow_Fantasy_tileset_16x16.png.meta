@@ -480,78 +480,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_17
+      name: tree-0
       rect:
         serializedVersion: 2
         x: 320
-        y: 728
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c29134cb453b32a419e30df3e21cdf8a
-      internalID: 969201835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_18
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 728
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0bdc964d6285cf641983481c9ed755c0
-      internalID: -2084944022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_19
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 728
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d91957fe706ca8b4899af94b5e52dc78
-      internalID: -260107261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_20
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 728
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 680
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -564,15 +501,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_21
+      name: tree-1
       rect:
         serializedVersion: 2
         x: 384
-        y: 728
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 680
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -580,69 +517,6 @@ TextureImporter:
       bones: []
       spriteID: 54c3a65a866d22a448abb649c75ef155
       internalID: -122975263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_22
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 728
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc8f57b477473e04797d8906e392a305
-      internalID: -1841674135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_23
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 728
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be485028c1d70bc4d99d9bcf47bf96c8
-      internalID: -1268172746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_24
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 728
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6dd632ab3edd9ee4b903154b42c5ad10
-      internalID: 1883461182
       vertices: []
       indices: 
       edges: []
@@ -1026,174 +900,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_43
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 712
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b16e97df2b21f144a4b85b1c3547763
-      internalID: -1646562484
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_44
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 712
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8f6e1e069069d548955bec30a60c7c0
-      internalID: -1803609908
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_45
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 712
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b2163a38250993041b7a9866cc2b5db5
-      internalID: 1678565636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_46
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 712
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf2be896c4e61324dbf4e96205239a58
-      internalID: -972437326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_47
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 712
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46342ec0338ae5d44ab4c3baef2471c6
-      internalID: 449423405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_48
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 712
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0aceef4f48e4d44fb1c6557b398e5ae
-      internalID: -173341339
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_49
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 712
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f37ecadc6fd3874a892cc57ceb157e7
-      internalID: 864886796
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_50
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 712
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b52081b81553acb4ea4d1f52de67c318
-      internalID: -2016005995
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PixelFlow_Fantasy_tileset_16x16_51
       rect:
         serializedVersion: 2
@@ -1567,174 +1273,6 @@ TextureImporter:
       bones: []
       spriteID: 09ce8b3ff9a98c24fa0ae983be9864d1
       internalID: 1391356247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_69
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 696
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67e0ce6e57a8a9442bdcf96d330de282
-      internalID: 808769194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_70
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 696
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2387cd1f69012846b7a3d2957008a59
-      internalID: -865720361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_71
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 696
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51baa01eb88a69143baf9d727dd1f057
-      internalID: 1018412090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_72
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 696
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55d458096576bdd419935f09e9e6ad34
-      internalID: 385306844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_73
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 696
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d0963f13ef16994f96567a767e5bff8
-      internalID: -1790971949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_74
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 696
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3d4fb26c52919c4196f43ddc89b68d8
-      internalID: -844038138
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_75
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 696
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d995b6dc89421794eab31958a2c7c6fa
-      internalID: -527138099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_76
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 696
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14c9573fdcd82e541bf91c7c02580b0e
-      internalID: 1506182493
       vertices: []
       indices: 
       edges: []
@@ -2155,90 +1693,6 @@ TextureImporter:
       bones: []
       spriteID: ebd2076f9a1951d43ba292b4a1085ca9
       internalID: 2068504362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_97
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 680
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81d9c54f0dfeab14dbbe7be5a7af6341
-      internalID: 1205846539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_98
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 680
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3090de1d37dece842bebb8d2916d6d4a
-      internalID: -1725180185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_99
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 680
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0808c4296b0719248b0766cb4a4ae721
-      internalID: -1903111446
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_100
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 680
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5db350e4a05c13d46a4431588a1fbd0c
-      internalID: -1785866675
       vertices: []
       indices: 
       edges: []
@@ -5646,78 +5100,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_263
+      name: tree-2
       rect:
         serializedVersion: 2
         x: 400
-        y: 584
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4157ed5dd2fd0a74099d1d0a53e26c75
-      internalID: 1092077812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_264
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 584
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4a0d7cf3ba183441a87e05e26bf9903
-      internalID: 1840149570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_265
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 584
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82f8e23907b290649983379e451975ae
-      internalID: 52481369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_266
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 584
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 536
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5730,15 +5121,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_267
+      name: tree-3
       rect:
         serializedVersion: 2
         x: 464
-        y: 584
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 536
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5746,69 +5137,6 @@ TextureImporter:
       bones: []
       spriteID: e936d3425991a04449f83c5233911ae3
       internalID: 1191162292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_268
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 584
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27b4b22f0d3e9ca4fa33e29ab7af0e8e
-      internalID: 1923840290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_269
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 584
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29f98777c5c95484cadae281086f35f0
-      internalID: -1633998230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_270
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 584
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fb0955f053203245a241ce7b6085e0c
-      internalID: -1908030323
       vertices: []
       indices: 
       edges: []
@@ -6108,174 +5436,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_285
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 568
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac0f3ac4648d886408946ee640104c98
-      internalID: 739137568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_286
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 568
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0440c26435a4dee4384999c50a37cbe9
-      internalID: -860117052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_287
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 568
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7beb1dbfe33711a41944a0e2804eade3
-      internalID: 234685928
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_288
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 568
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05f42adc114e04d43af48826ba32e9e7
-      internalID: -280065539
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_289
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 568
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc5b036fd02cc7c40a5ffb2951b17ba5
-      internalID: -355022581
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_290
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 568
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c92a0f84197239c4a9ce4506a1f74b8b
-      internalID: 1162386429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_291
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 568
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2567e0c22048254f930abef42e2ea68
-      internalID: 1308284692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_292
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 568
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8dfb15b0f832b0249ad02faf3f793e2b
-      internalID: -1874186167
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PixelFlow_Fantasy_tileset_16x16_293
       rect:
         serializedVersion: 2
@@ -6397,174 +5557,6 @@ TextureImporter:
       bones: []
       spriteID: 2847f58cd34cb1341ba69aead8322141
       internalID: -343824305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_299
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 552
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf98ba29bcb94aa4785e72dfdecfae32
-      internalID: -924570303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_300
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 552
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87be1c7450bf26444bc784a085cf0c9d
-      internalID: -692460239
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_301
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 552
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a658c75369f08034eaca950f8af704bb
-      internalID: -1040705814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_302
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 552
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1decc45cfc26f4d4598f021311ec66ca
-      internalID: -70636382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_303
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 552
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a73f3b9044e8214e96bd0b629f657d3
-      internalID: 1970043665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_304
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 552
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54eabf3042c629c49bf4b4238df1b7be
-      internalID: -1680234464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_305
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 552
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d68c74088a40f1458753519badae2a3
-      internalID: 1440661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_306
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 552
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 682840bb6663f544c89a185c99d7f7b1
-      internalID: 1580634541
       vertices: []
       indices: 
       edges: []
@@ -6754,90 +5746,6 @@ TextureImporter:
       bones: []
       spriteID: 9ce7467de2180c24e9b3372bef0b5a54
       internalID: -1762765133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_316
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 536
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6baae47aed9aa204796e5e3c39dca8c8
-      internalID: 1872481432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_317
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 536
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5de13a66c6ffd24fa9e659a9e689dd9
-      internalID: 400848581
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_318
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 536
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ad44902b59130f4c8d81c534d5e52f5
-      internalID: -1046741966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_319
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 536
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79a7a6cb0f6abba48a40682ab9cbfed2
-      internalID: -644473136
       vertices: []
       indices: 
       edges: []
@@ -8733,69 +7641,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_410
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 456
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ca5c676bf097854cb7e5aa95389b19f
-      internalID: 1120553731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_411
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 456
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39b182da20804a14da626a9997f95c08
-      internalID: -627871019
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_412
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 456
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67736b8cc6cf5e34da08c20ea7d63880
-      internalID: 763780833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PixelFlow_Fantasy_tileset_16x16_413
       rect:
         serializedVersion: 2
@@ -9279,15 +8124,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_436
+      name: window-0
       rect:
         serializedVersion: 2
         x: 448
         y: 440
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9300,36 +8145,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_437
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 440
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1633e910b8e2e5646988f937ae40a62a
-      internalID: -988612302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_438
+      name: window-1
       rect:
         serializedVersion: 2
         x: 496
         y: 440
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -9694,69 +8518,6 @@ TextureImporter:
       bones: []
       spriteID: 27aa84866cbc50144b9e67531201a571
       internalID: 1622471721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_456
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 424
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ceab2580ca76e24e859a8e89bc13cc2
-      internalID: -815744363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_457
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 424
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6470814f6eeac04d988a2cc6c0dae69
-      internalID: 841019711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_458
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 424
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9fddf532d495fb4983ac2001c0e836e
-      internalID: 1735556788
       vertices: []
       indices: 
       edges: []
@@ -10140,15 +8901,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_477
+      name: window-2
       rect:
         serializedVersion: 2
         x: 448
         y: 408
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -10161,36 +8922,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_478
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 408
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bef69a8b05ba45e4d8d0b68c8ddbc574
-      internalID: -1842575874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_479
+      name: window-3
       rect:
         serializedVersion: 2
         x: 480
         y: 408
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -11001,13 +9741,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_580
+      name: bed
       rect:
         serializedVersion: 2
         x: 432
-        y: 328
-        width: 16
-        height: 16
+        y: 296
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11022,34 +9762,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_581
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 328
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f91f2490bc0df4478363b7ce2563325
-      internalID: -1140607710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PixelFlow_Fantasy_tileset_16x16_582
       rect:
         serializedVersion: 2
         x: 464
-        y: 328
-        width: 16
-        height: 16
+        y: 296
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11064,34 +9783,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_583
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 328
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33cc6834aa09f5d4993d5174b2c9996c
-      internalID: 654888363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PixelFlow_Fantasy_tileset_16x16_584
       rect:
         serializedVersion: 2
         x: 496
-        y: 328
-        width: 16
-        height: 16
+        y: 296
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11101,27 +9799,6 @@ TextureImporter:
       bones: []
       spriteID: 05b2810fd67d12146a22be5332bed6a0
       internalID: -969421616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_585
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 328
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c335740b7f359844d8f090f61870d901
-      internalID: 1805152395
       vertices: []
       indices: 
       edges: []
@@ -11206,132 +9883,6 @@ TextureImporter:
       bones: []
       spriteID: a5a11f90d1e5b8d4c910d986ede64eef
       internalID: 2141141645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_610
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 312
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a821caa1118df534bbdf9e7bdc54b7f6
-      internalID: 899776913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_611
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 312
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b7e6d28312398d44a1070be1dcb4d36
-      internalID: -1375158084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_612
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 312
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7dddfc1b9dae4ac4a808237d634d1c87
-      internalID: 531743414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_613
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 312
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5306c264d5b666f419cbfa107fbd0af8
-      internalID: -2006129538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_614
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 312
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dda601e597da7594faeded7f3cced58b
-      internalID: -788452128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_615
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 312
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 832285acc9c22494caf25734a8385d4b
-      internalID: -1909955726
       vertices: []
       indices: 
       edges: []
@@ -11479,132 +10030,6 @@ TextureImporter:
       bones: []
       spriteID: d759c3413462b41428e55bc8e5cfb8e8
       internalID: -1496652722
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_641
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 296
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be40cefd446f21a4ba1b064380171ea0
-      internalID: -933948868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_642
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 296
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6e1bda8a382a324b80f3e3808d8a659
-      internalID: -781299054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_643
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 296
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 904a742446fe9b34f93e1c9b44cde368
-      internalID: -1011447010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_644
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 296
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f96bd358922bfa448b9c116896a9e3fe
-      internalID: 299707947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_645
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 296
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a805703f2292cb641a3b1c300d17c417
-      internalID: -79549091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_646
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 296
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4957557101770424b9ea972bc2405823
-      internalID: -320554945
       vertices: []
       indices: 
       edges: []
@@ -11904,13 +10329,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_669
+      name: carpet
       rect:
         serializedVersion: 2
         x: 416
-        y: 280
-        width: 16
-        height: 16
+        y: 264
+        width: 48
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11920,48 +10345,6 @@ TextureImporter:
       bones: []
       spriteID: 69b15040089b2084489991db0de195fc
       internalID: -2097663286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_670
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 280
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 027caa39ddc4b924fa4a6b47ec653728
-      internalID: 1883406640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_671
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 280
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f790fc4ffec54384ba333e9f75014901
-      internalID: 1070938060
       vertices: []
       indices: 
       edges: []
@@ -12093,15 +10476,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_678
+      name: drawers
       rect:
         serializedVersion: 2
         x: 112
-        y: 264
+        y: 248
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4375, y: 0.125}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -12366,69 +10749,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_691
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 264
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 71ea6074f011ab24c8db0dbb65dd1d9d
-      internalID: -791621458
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_692
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 264
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 448802ff19a32604bbf910d04fdf7175
-      internalID: 1390946854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_693
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 264
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60cfa04e2461b6f4cb4e2f12917c05c8
-      internalID: 610168249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PixelFlow_Fantasy_tileset_16x16_694
       rect:
         serializedVersion: 2
@@ -12450,15 +10770,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_695
+      name: bookshelf
       rect:
         serializedVersion: 2
         x: 480
         y: 264
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -12634,27 +10954,6 @@ TextureImporter:
       bones: []
       spriteID: 2c35efbec0361dc4d937e8edfede38c9
       internalID: 1580159496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_704
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 248
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 849ed95e665ccce4fa54283e6dc41c15
-      internalID: -1037661869
       vertices: []
       indices: 
       edges: []
@@ -13920,426 +12219,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_765
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 184
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 583ca9d8f6df99745b52680aa0b1b26a
-      internalID: -1382598387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_766
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 168
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 104f139397a32924eb99f7494f4e79c6
-      internalID: 2018669286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_767
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 168
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26c5507c02cf7cf428551358b780ee2a
-      internalID: 889874219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_768
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 168
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6072979ba7ca7b641805d3318692c3ad
-      internalID: 1132824585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_769
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 168
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b72e7261b05c41048b20ada774b23cf4
-      internalID: -1798205269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_770
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 168
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b30ff6a7b1bc10f4baa2790ec5c740d1
-      internalID: 1913690479
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_771
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 152
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3dd4b90fc155f64ca88dc542edc2b65
-      internalID: 1672641410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_772
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 152
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89619f040be7f1f4fa9317349ce9c864
-      internalID: -617245614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_773
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 152
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85b3cb145cc63694fbeab2e7b231990a
-      internalID: 897802309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_774
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 152
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6bf33d9ebc326154ea79c056afd8478e
-      internalID: 219835561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_775
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 152
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3c0890d43ac6064a807029d1fe2ef55
-      internalID: 792168209
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_776
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 152
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a342b70d0b7d4b4e9fe3358e525f173
-      internalID: 385124722
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_777
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 152
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 440ca6dd42a1ed6468e704d4bba9d7b3
-      internalID: 816376613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_778
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 136
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7149b75eb76fe0543ba6f74179bd499c
-      internalID: 620707024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_779
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 136
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be15ceddb4bf0db41a05cb7334d5ba08
-      internalID: 641568562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_780
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 136
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36281a72c37a1a04ca4002c799f7d522
-      internalID: -841788882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_781
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 136
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61753346395965a4d9f47e618c7265c1
-      internalID: -1871171988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_782
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 136
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d24bc04809a56c34cb3d2a7de290784b
-      internalID: -1976770101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_783
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 136
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10f4166a96d268e4cabe793878d04109
-      internalID: -487669153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_784
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 136
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97e862bae88cbdf4aa2841b0bebe6fc8
-      internalID: 621839146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PixelFlow_Fantasy_tileset_16x16_785
       rect:
         serializedVersion: 2
@@ -14377,153 +12256,6 @@ TextureImporter:
       bones: []
       spriteID: 6a7d4e0203739b146bc443a830e1babe
       internalID: 949249971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_787
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 120
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2c5def0dc68d584092e9dbad28144d1
-      internalID: -549565063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_788
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 120
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45d66dfdc72e48f4cb69c3770afd66a4
-      internalID: -129668172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_789
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 120
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2dd90c7f572047d4abaae828afcdd8e5
-      internalID: 978385199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_790
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 120
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a12213e1870bb5438b70e7ac069c8bc
-      internalID: 1741319973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_791
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 120
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34b006122a472ae4ba79be6d100a8c97
-      internalID: -143568477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_792
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 120
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf07704101dfa4743883a5695dd87fa0
-      internalID: 1977332021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_793
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 120
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e77c36897ce6ee48b012db34a58f243
-      internalID: -909744930
       vertices: []
       indices: 
       edges: []
@@ -14571,153 +12303,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_796
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 104
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e2f9b447fda98f4696fad90cede202a
-      internalID: -1681417551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_797
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 104
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b1067da857e3674494c51c8f9612cb1
-      internalID: -202466706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_798
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 104
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d90e0a3e6fcc3ce45bec11a9af8cb967
-      internalID: -348285948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_799
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 104
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4042d14f32ff8f14ea5453b86df3e1ce
-      internalID: 7432983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_800
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 104
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ea760cdc3bc91a43a8f4e2799b25921
-      internalID: -1659516158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_801
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 104
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ecb8f3e1bc716e40858fe33f6c818dd
-      internalID: -57666408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_802
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 104
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 426424d1f37ef46488f5f1adb8378f09
-      internalID: 1847163056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PixelFlow_Fantasy_tileset_16x16_803
       rect:
         serializedVersion: 2
@@ -14755,153 +12340,6 @@ TextureImporter:
       bones: []
       spriteID: 80fe431982722af44b02fa3c46dd01d8
       internalID: -1609583616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_805
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 88
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a63fb892303a294f8bad2af42a172b4
-      internalID: 1179827010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_806
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 88
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e2578c63ca2fa747ab86a863ccf8731
-      internalID: 592770837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_807
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 88
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec2d550ab0963f940b722c1be7ec972c
-      internalID: 1385832107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_808
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 88
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f40e70c356b0e842ae3520e4f074070
-      internalID: -963577392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_809
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 88
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0714b16624e3734facaaf8bbfb14182
-      internalID: -636779128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_810
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 88
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6585866c9c7dae94da9aeacb11d68be3
-      internalID: 761978335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_811
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 88
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f9669ecb050ce742aa5e53fd13074dc
-      internalID: 444388395
       vertices: []
       indices: 
       edges: []
@@ -14949,153 +12387,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_814
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 72
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0337dc5fd69c7bf4483b635af1eafffe
-      internalID: -1789136186
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_815
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 72
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c4ed1d01d0b9874cb1e2f31cc9ded7e
-      internalID: 1301965738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_816
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 72
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a6a25adf2f328f45826ed196f541553
-      internalID: 1911340925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_817
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 72
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd492247d8b4415429f10294b2e045cf
-      internalID: 443523992
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_818
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 72
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59b2d5bda7cde564480ff675fb7cf172
-      internalID: -2024073392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_819
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 72
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e81dd944889b9b649bbb9c354ca8cf7a
-      internalID: 1712284631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_820
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 72
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ff02ff1fc4063441b3fc1a32089eaba
-      internalID: -1459783421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: PixelFlow_Fantasy_tileset_16x16_821
       rect:
         serializedVersion: 2
@@ -15138,372 +12429,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_823
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 56
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7e373bd0f06fab4ba777468b24daacc
-      internalID: 1063468301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_824
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 56
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a0315701d631fa41acec75251ccea9a
-      internalID: 1530671477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_825
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 56
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 034d92df5cf04dc4883d4723b41adfa2
-      internalID: -1273301202
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_826
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 56
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52f9da4704cc9ef498210f343cafcd06
-      internalID: 827773335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_827
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 56
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0bedb0cca4b575743a32b0cddf5f9685
-      internalID: 157635552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_828
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 56
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfbff7b6c2fc5214095a6f1d1586400f
-      internalID: 1277211498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_829
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 56
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e57c3564a8a6c8241accf7551690b2f2
-      internalID: 1390464440
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_830
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 40
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec75815ffe65ac1478514884813d3237
-      internalID: -1195131966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_831
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 40
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15c7948e8a754cb439f1195615ef5c9b
-      internalID: 1228138603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_832
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 40
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eeb7e1941e1dfb448aa3df9912252add
-      internalID: -397539098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_833
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 40
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e71e83e3abd7e994e8e388d9b22f2517
-      internalID: -33814255
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_834
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 40
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03da09b1c4bb1c54a8f29996c63ffa40
-      internalID: -1486462302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_835
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 40
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d712a1b217b8454438452a771e74678f
-      internalID: -86275602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_836
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 40
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 927f1d36ba70ebc45a9fd0440403a315
-      internalID: 1265437543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_837
+      name: guild
       rect:
         serializedVersion: 2
         x: 0
         y: 24
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f1a94a0aebd9e74cbc1a459a55d06b1
-      internalID: -1028085322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_838
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 24
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da419da8db60f1149a78e805fafb009f
-      internalID: 1007742790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_839
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 24
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21ba27e78cd4b884b9464350f1004d66
-      internalID: 77931058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_840
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 24
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 112
+        height: 176
+      alignment: 9
+      pivot: {x: 0.42857143, y: 0.045454547}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -15511,69 +12445,6 @@ TextureImporter:
       bones: []
       spriteID: 1aa9c85db46da774d8edff5757d7d764
       internalID: -365813710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_841
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 24
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09b39fa511d7ba14cb4ab337d3d68f1f
-      internalID: -144269568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_842
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 24
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be424a8fef32f87479c0a1792dbe767c
-      internalID: 505121296
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PixelFlow_Fantasy_tileset_16x16_843
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 24
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 597361ce86ea11e41b9cea06122d3ccf
-      internalID: -1266653403
       vertices: []
       indices: 
       edges: []
@@ -15702,7 +12573,6 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_198: 703314994
       PixelFlow_Fantasy_tileset_16x16_199: -2015522115
       PixelFlow_Fantasy_tileset_16x16_2: -1742966737
-      PixelFlow_Fantasy_tileset_16x16_20: -1431130598
       PixelFlow_Fantasy_tileset_16x16_200: -1927756403
       PixelFlow_Fantasy_tileset_16x16_201: 2046388484
       PixelFlow_Fantasy_tileset_16x16_202: 2032271378
@@ -15713,7 +12583,6 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_207: 726016214
       PixelFlow_Fantasy_tileset_16x16_208: 468609943
       PixelFlow_Fantasy_tileset_16x16_209: 1599520177
-      PixelFlow_Fantasy_tileset_16x16_21: -122975263
       PixelFlow_Fantasy_tileset_16x16_210: 692894854
       PixelFlow_Fantasy_tileset_16x16_211: -888423641
       PixelFlow_Fantasy_tileset_16x16_212: -2081653476
@@ -15775,8 +12644,6 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_263: 1092077812
       PixelFlow_Fantasy_tileset_16x16_264: 1840149570
       PixelFlow_Fantasy_tileset_16x16_265: 52481369
-      PixelFlow_Fantasy_tileset_16x16_266: 791651039
-      PixelFlow_Fantasy_tileset_16x16_267: 1191162292
       PixelFlow_Fantasy_tileset_16x16_268: 1923840290
       PixelFlow_Fantasy_tileset_16x16_269: -1633998230
       PixelFlow_Fantasy_tileset_16x16_27: 1692293269
@@ -15964,9 +12831,6 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_433: -1464443380
       PixelFlow_Fantasy_tileset_16x16_434: 546607248
       PixelFlow_Fantasy_tileset_16x16_435: -369165445
-      PixelFlow_Fantasy_tileset_16x16_436: -1827567991
-      PixelFlow_Fantasy_tileset_16x16_437: -988612302
-      PixelFlow_Fantasy_tileset_16x16_438: -545502378
       PixelFlow_Fantasy_tileset_16x16_439: 2034705226
       PixelFlow_Fantasy_tileset_16x16_44: -1803609908
       PixelFlow_Fantasy_tileset_16x16_440: -1061377788
@@ -16009,9 +12873,7 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_474: -2141351077
       PixelFlow_Fantasy_tileset_16x16_475: -1121128052
       PixelFlow_Fantasy_tileset_16x16_476: 220246004
-      PixelFlow_Fantasy_tileset_16x16_477: -1795418612
       PixelFlow_Fantasy_tileset_16x16_478: -1842575874
-      PixelFlow_Fantasy_tileset_16x16_479: 802161468
       PixelFlow_Fantasy_tileset_16x16_48: -173341339
       PixelFlow_Fantasy_tileset_16x16_480: -1584218632
       PixelFlow_Fantasy_tileset_16x16_481: -1726032474
@@ -16122,7 +12984,6 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_578: -1483339060
       PixelFlow_Fantasy_tileset_16x16_579: -711295209
       PixelFlow_Fantasy_tileset_16x16_58: 1632039724
-      PixelFlow_Fantasy_tileset_16x16_580: 1038650263
       PixelFlow_Fantasy_tileset_16x16_581: -1140607710
       PixelFlow_Fantasy_tileset_16x16_582: -1167825982
       PixelFlow_Fantasy_tileset_16x16_583: 654888363
@@ -16216,7 +13077,6 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_666: 535880960
       PixelFlow_Fantasy_tileset_16x16_667: -2128141824
       PixelFlow_Fantasy_tileset_16x16_668: 187436094
-      PixelFlow_Fantasy_tileset_16x16_669: -2097663286
       PixelFlow_Fantasy_tileset_16x16_67: 1665891639
       PixelFlow_Fantasy_tileset_16x16_670: 1883406640
       PixelFlow_Fantasy_tileset_16x16_671: 1070938060
@@ -16226,7 +13086,6 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_675: 165822741
       PixelFlow_Fantasy_tileset_16x16_676: 746225527
       PixelFlow_Fantasy_tileset_16x16_677: -15191733
-      PixelFlow_Fantasy_tileset_16x16_678: -1542894476
       PixelFlow_Fantasy_tileset_16x16_679: -807387024
       PixelFlow_Fantasy_tileset_16x16_68: 1391356247
       PixelFlow_Fantasy_tileset_16x16_680: 666176432
@@ -16245,7 +13104,6 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_692: 1390946854
       PixelFlow_Fantasy_tileset_16x16_693: 610168249
       PixelFlow_Fantasy_tileset_16x16_694: -72647353
-      PixelFlow_Fantasy_tileset_16x16_695: -1350129973
       PixelFlow_Fantasy_tileset_16x16_696: -910345152
       PixelFlow_Fantasy_tileset_16x16_697: 482529971
       PixelFlow_Fantasy_tileset_16x16_698: 1589676131
@@ -16407,7 +13265,6 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_838: 1007742790
       PixelFlow_Fantasy_tileset_16x16_839: 77931058
       PixelFlow_Fantasy_tileset_16x16_84: 743159494
-      PixelFlow_Fantasy_tileset_16x16_840: -365813710
       PixelFlow_Fantasy_tileset_16x16_841: -144269568
       PixelFlow_Fantasy_tileset_16x16_842: 505121296
       PixelFlow_Fantasy_tileset_16x16_843: -1266653403
@@ -16427,12 +13284,25 @@ TextureImporter:
       PixelFlow_Fantasy_tileset_16x16_97: 1205846539
       PixelFlow_Fantasy_tileset_16x16_98: -1725180185
       PixelFlow_Fantasy_tileset_16x16_99: -1903111446
+      bed: 1038650263
+      bookshelf: -1350129973
+      carpet: -2097663286
       chimney-0: -1106428167
       chimney-1: -1677975986
+      drawers: -1542894476
+      guild: -365813710
       house-0: -475220463
       house-1: 1376653183
       house-small-0: -1561446488
       house-small-1: -171088132
+      tree-0: -1431130598
+      tree-1: -122975263
+      tree-2: 791651039
+      tree-3: 1191162292
+      window-0: -1827567991
+      window-1: -545502378
+      window-2: -1795418612
+      window-3: 802161468
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
