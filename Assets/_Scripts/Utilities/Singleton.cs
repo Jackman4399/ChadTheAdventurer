@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -25,7 +26,7 @@ public abstract class StaticInstance<T> : MonoBehaviour where T : MonoBehaviour 
 public abstract class Singleton<T> : StaticInstance<T> where T : MonoBehaviour {
   
     protected override void Awake() {
-        if (Instance != null) {
+        if (Instance != null && Instance != this as T) {
 			Destroy(gameObject);
 			return;
 		} else base.Awake();

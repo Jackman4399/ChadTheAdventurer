@@ -7,13 +7,13 @@ public class PlayerAttacker : Player {
     public Action<Direction> OnAttack { get; private set; }
 
     [SerializeField] private LayerMask enemyMask;
-
+    
     [SerializeField, Tooltip("How long should the attack trigger be enabled in frames.")] 
     private int attackDuration = 3;
 
-	[SerializeField, Tooltip("How long should the delay between attack be in seconds.")] 
-    private float _attackDelay = .3f;
-	public float attackDelay { get { return _attackDelay; } }
+	[SerializeField, Tooltip("How long should the delay between attacks be in seconds.")] 
+    private float m_attackDelay = .5f;
+	public float attackDelay => m_attackDelay;
 
     protected override void Awake() {
         base.Awake();
@@ -25,7 +25,7 @@ public class PlayerAttacker : Player {
 
     private void OnTriggerEnter2D(Collider2D other) {
 
-        if ((int)Mathf.Pow(2, other.gameObject.layer) == enemyMask) {
+        if ((1 << other.gameObject.layer | enemyMask) == enemyMask) {
             
             other.gameObject.GetComponent<Enemy>().TakeDamage(1); //Temporarily using 1
 
@@ -39,7 +39,7 @@ public class PlayerAttacker : Player {
 
         direction.SetActive(true);
 
-        FindObjectOfType<AudioManager>().Play("Slash");
+        AudioManager.Instance.PlayOneShot("Slash");
 
         for (int i = 0; i < attackDuration; i++) yield return null;
 

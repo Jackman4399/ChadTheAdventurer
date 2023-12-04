@@ -11,7 +11,7 @@ public class MenuManager : Singleton<MenuManager> {
     [SerializeField] private Canvas[] menus;
 
 	private Image crossfadeImage;
-	[SerializeField] private float transitionTime = 1;
+	[SerializeField] private float transitionTime = .25f;
 
     protected override void Awake() {
         base.Awake();
