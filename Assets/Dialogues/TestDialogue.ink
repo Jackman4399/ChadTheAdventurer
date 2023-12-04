@@ -3,6 +3,8 @@
 === main
 This is a test dialogue.
 
+A test to see if this dialogue menu is working.
+
 Make a choice.
 
 + [Choice 1]
