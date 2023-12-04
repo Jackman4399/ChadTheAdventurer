@@ -57,3 +57,21 @@ MonoBehaviour:
     pitch: 0.65
     loop: 0
     source: {fileID: 0}
+  - name: EnemyHit
+    clip: {fileID: 8300000, guid: 2b21ef916f6943c439b71a7c74568878, type: 3}
+    volume: 0.3
+    pitch: 0.65
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}
+    volume: 0.2
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerWalk
+    clip: {fileID: 8300000, guid: df7087e4d8a8bb546bc08ce68632903f, type: 3}
+    volume: 0.3
+    pitch: 0.65
+    loop: 0
+    source: {fileID: 0}

@@ -10,6 +10,14 @@ public class PlayerHealth : Player {
     //Purely for testing
     [SerializeField] private int currentHealth;
 
+    [SerializeField] private Color flashColour, regularColour;
+
+    [SerializeField] private float flashDuration;
+    [SerializeField] private int numOfFlashes;
+    [SerializeField] private bool invulnerable = false;
+
+    [SerializeField] private SpriteRenderer renderer;
+
     //NOTE: Use this for death animation or any game end triggers
     //private bool isDead = false;
 
@@ -34,16 +42,19 @@ public class PlayerHealth : Player {
 
     public void Hurt(int hp) {
 
-        if(hp > 0) FindObjectOfType<AudioManager>().Play("PlayerHit");;
+        if(invulnerable) return;
 
         //Hurt the player
         currentHealth -= hp;
 
         //Prevent negative health
-        if(currentHealth <= 0) {
+        if(currentHealth > 0) {
 
+            if(hp > 0) FindObjectOfType<AudioManager>().Play("PlayerHit");
+            StartCoroutine(Flash());
+
+        } else {
             //isDead = true;
-
         }
 
     }
@@ -52,6 +63,23 @@ public class PlayerHealth : Player {
     public int GetCurrentHP(){
 
         return currentHealth;
+
+    }
+
+    private IEnumerator Flash() {
+        
+        int temp = 0;
+        invulnerable = true;
+        while (temp < numOfFlashes) {
+            
+            renderer.color = flashColour;
+            yield return new WaitForSeconds(flashDuration);
+            renderer.color = regularColour;
+            yield return new WaitForSeconds(flashDuration);
+            temp++;
+
+        }
+        invulnerable = false;
 
     }
 	
