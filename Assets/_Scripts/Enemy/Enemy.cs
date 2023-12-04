@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
 
     public int maxHealth = 3;
     [SerializeField] private int currentHealth;
+
+    public UnityEvent OnHitWithReference, OnDeathWithReference;
 
     public Animator animator;
 
@@ -29,15 +32,20 @@ public class Enemy : MonoBehaviour
 
         if(currentHealth <= 0) {
 
+            OnDeathWithReference?.Invoke();
             Die();
             
+        } else {
+
+            OnHitWithReference?.Invoke();
+
         }
 
     }
 
     void Die() {
         //Play die animation
-        animator.SetBool("IsDead", true);
+        //animator.SetBool("IsDead", true);
 
         //Disable the enemy
         GetComponent<Collider2D>().enabled = false;

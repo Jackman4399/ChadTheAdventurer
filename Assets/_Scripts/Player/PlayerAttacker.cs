@@ -15,8 +15,6 @@ public class PlayerAttacker : Player {
     private float _attackDelay = .3f;
 	public float attackDelay { get { return _attackDelay; } }
 
-    public AudioSource slashSound;
-
     protected override void Awake() {
         base.Awake();
 
