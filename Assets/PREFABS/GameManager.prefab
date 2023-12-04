@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5452050118715914677}
   - component: {fileID: 2347329707256932898}
+  - component: {fileID: 5923416979284278417}
+  - component: {fileID: 2964856164721253087}
   - component: {fileID: 2347758753718956841}
   - component: {fileID: 6763434984210058267}
   - component: {fileID: 7662754684500877439}
   - component: {fileID: 2873579439693867739}
-  - component: {fileID: 2964856164721253087}
   - component: {fileID: 305123876428434449}
   m_Layer: 0
   m_Name: GameManager
@@ -50,9 +51,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b4650949ca84d4b9e0af71afbca11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialiseInput: 2
-  InitialiseMenu: 2
+  InitialiseInput: 1
+  InitialiseMenu: 0
   InitialiseScene: 0
+--- !u!114 &5923416979284278417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8588660948899467326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04858774e8ae45e47a39938bc9a01948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_masterMixer: {fileID: 24100000, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+  sounds:
+  - name: Slash
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
+    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 0.6
+    pitch: 0.65
+    loop: 0
+    playOnAwake: 0
+  - name: PlayerHit
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
+    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 0.3
+    pitch: 0.65
+    loop: 0
+    playOnAwake: 0
+--- !u!114 &2964856164721253087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8588660948899467326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7278cbbd46417894facac1e4531f992e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentStoryState: 0
+  proceedName: proceed
+  choiceName: choice
+  choices: 
 --- !u!114 &2347758753718956841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,22 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d5da791988650d458f3cdcff237c971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2964856164721253087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8588660948899467326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7278cbbd46417894facac1e4531f992e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _currentStoryState: 0
-  proceedName: proceed
-  choiceName: choice
-  choices: 
 --- !u!95 &305123876428434449
 Animator:
   serializedVersion: 5

@@ -369,8 +369,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   attackDuration: 3
-  _attackDelay: 0.3
-  slashSound: {fileID: 7754809998419655707}
+  m_attackDelay: 0.75
 --- !u!50 &2373958665339442858
 Rigidbody2D:
   serializedVersion: 4
@@ -631,10 +630,10 @@ GameObject:
   - component: {fileID: 966972681199385437}
   - component: {fileID: 4546861600446393581}
   - component: {fileID: 2363801050243011446}
+  - component: {fileID: 3688875768077442125}
   - component: {fileID: 6863936759489084731}
   - component: {fileID: 2804760392498208579}
   - component: {fileID: 1822256248154935445}
-  - component: {fileID: 3688875768077442125}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -686,6 +685,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+--- !u!114 &3688875768077442125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7026618485197575769}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8aa18620d121b4583a0f48de588979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 5
+  numOfHearts: 5
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeart: {fileID: -1895502453, guid: 4a0a508b0cc1ac34c965d5822fb95bf4, type: 3}
+  emptyHeart: {fileID: -1433606994, guid: 4a0a508b0cc1ac34c965d5822fb95bf4, type: 3}
+  playerHealth: {fileID: 2363801050243011446}
 --- !u!50 &6863936759489084731
 Rigidbody2D:
   serializedVersion: 4
@@ -844,29 +866,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3688875768077442125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7026618485197575769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c8aa18620d121b4583a0f48de588979, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthPoints: 5
-  numOfHearts: 5
-  hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fullHeart: {fileID: -1895502453, guid: 4a0a508b0cc1ac34c965d5822fb95bf4, type: 3}
-  emptyHeart: {fileID: -1433606994, guid: 4a0a508b0cc1ac34c965d5822fb95bf4, type: 3}
-  playerHealth: {fileID: 2363801050243011446}
 --- !u!1 &7415414685315926477
 GameObject:
   m_ObjectHideFlags: 0

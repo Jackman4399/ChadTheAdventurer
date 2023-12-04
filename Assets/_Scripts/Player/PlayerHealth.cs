@@ -1,14 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
-using Ink.Parsed;
+using System;
 using UnityEngine;
 
 public class PlayerHealth : Player {
 
-    [SerializeField] private int maxHealth = 5;
+    public event Action<int> OnLivesChanged;
+    public event Action OnHit;
 
+    [SerializeField] private int initialLives = 5;
     //Purely for testing
-    [SerializeField] private int currentHealth;
+    private int currentLives;
+
+    [SerializeField, Tooltip("How many seconds does invincibility applies to player after getting hit")]
+    private float hitInvincibleTime = 2.5f;
+
+    [SerializeField] private float pushbackForce = 500;
+    
 
     //NOTE: Use this for death animation or any game end triggers
     //private bool isDead = false;
@@ -19,41 +25,43 @@ public class PlayerHealth : Player {
         base.Awake();
 
         //Start with the maximum health
-        currentHealth = maxHealth;
+        currentLives = initialLives;
     }
 
-    public void Heal(int hp) {
+    public void Heal(int health) {
 
         //Heal the player
-        currentHealth += hp;
+        currentLives += health;
 
         //Prevent overhealing
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        currentLives = Mathf.Clamp(currentLives, 0, initialLives);
 
+        OnLivesChanged?.Invoke(currentLives);
     }
 
-    public void Hurt(int hp) {
+    public void Hurt(int health) {
 
         Debug.Log("Player got hurt!");
 
         //if(hp > 0) hurtSound.Play();
 
         //Hurt the player
-        currentHealth -= hp;
+        currentLives -= health;
 
         //Prevent negative health
-        if(currentHealth <= 0) {
+        if(currentLives <= 0) {
 
             //isDead = true;
 
         }
 
+        OnLivesChanged?.Invoke(currentLives);
     }
 
     //Fetch the player's current HP
-    public int GetCurrentHP(){
+    public int GetCurrentHP() {
 
-        return currentHealth;
+        return currentLives;
 
     }
 	
