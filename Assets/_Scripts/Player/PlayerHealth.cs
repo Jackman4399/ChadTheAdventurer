@@ -34,9 +34,7 @@ public class PlayerHealth : Player {
 
     public void Hurt(int hp) {
 
-        Debug.Log("Player got hurt!");
-
-        //if(hp > 0) hurtSound.Play();
+        if(hp > 0) FindObjectOfType<AudioManager>().Play("PlayerHit");;
 
         //Hurt the player
         currentHealth -= hp;

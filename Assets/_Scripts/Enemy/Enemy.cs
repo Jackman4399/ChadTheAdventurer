@@ -32,11 +32,12 @@ public class Enemy : MonoBehaviour
 
         if(currentHealth <= 0) {
 
+            FindObjectOfType<AudioManager>().Play("EnemyDeath");
             OnDeathWithReference?.Invoke();
             Die();
             
         } else {
-
+            FindObjectOfType<AudioManager>().Play("EnemyHit");
             OnHitWithReference?.Invoke();
 
         }

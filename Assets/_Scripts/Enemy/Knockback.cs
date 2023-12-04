@@ -13,8 +13,6 @@ public class Knockback : MonoBehaviour
 
     public void PlayFeedback(GameObject sender){
 
-        Debug.Log("GOT HIT");
-
         StopAllCoroutines();
         OnBegin?.Invoke();
         Vector2 direction = (transform.position - sender.transform.position).normalized;
@@ -27,6 +25,5 @@ public class Knockback : MonoBehaviour
         yield return new WaitForSeconds(delay);
         rb.velocity = Vector3.zero;
         OnDone?.Invoke();
-        Debug.Log("Done reset");
     }
 }
