@@ -1,33 +1,40 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerHealth : Player {
 
-    public static event Action<int> OnLivesChanged;
-    public static event Action OnHit;
+    public event Action<int> OnLivesChanged;
 
-    [SerializeField] private int initialLives = 5;
+    [SerializeField] private int m_maxLives = 5;
+    public int maxLives => m_maxLives;
     //Purely for testing
     private int currentLives;
-
-    [SerializeField, Tooltip("How many seconds does invincibility applies to player after getting hit")]
-    private float hitInvincibleTime = 2.5f;
 
     [SerializeField] private float pushbackForce = 500;
     
 
+    [SerializeField] private Color flashColour;
+    [SerializeField] private float flashDuration;
+    [SerializeField] private int numOfFlashes;
+    [SerializeField] private bool invulnerable = false;
+
+    private SpriteRenderer spriteRenderer;
+
     //NOTE: Use this for death animation or any game end triggers
     //private bool isDead = false;
-
-    //public AudioSource hurtSound;
 
     protected override void Awake() {
         base.Awake();
 
-        //Start with the maximum health
-        currentLives = initialLives;
+        spriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
 
-        OnLivesChanged?.Invoke(initialLives);
+        //Start with the maximum health
+        currentLives = m_maxLives;        
+    }
+
+    private void Start() {
+        OnLivesChanged?.Invoke(m_maxLives);
     }
 
     public void Heal(int health) {
@@ -36,26 +43,28 @@ public class PlayerHealth : Player {
         currentLives += health;
 
         //Prevent overhealing
-        currentLives = Mathf.Clamp(currentLives, 0, initialLives);
+        currentLives = Mathf.Clamp(currentLives, 0, m_maxLives);
 
         OnLivesChanged?.Invoke(currentLives);
     }
 
     public void Hurt(int health) {
 
-        Debug.Log("Player got hurt!");
-
-        //if(hp > 0) hurtSound.Play();
+        if(invulnerable) return;
 
         //Hurt the player
         currentLives -= health;
 
         //Prevent negative health
         if(currentLives <= 0) {
-
             //isDead = true;
 
+        } else {
+
+            StartCoroutine(Flash());
+
         }
+
 
         OnLivesChanged?.Invoke(currentLives);
     }
@@ -67,5 +76,23 @@ public class PlayerHealth : Player {
 
     }
 	
+    private IEnumerator Flash() {
+        invulnerable = true;
+        int playerLayer = LayerMask.NameToLayer("Player");
+        int monsterLayer = LayerMask.NameToLayer("Enemy");
+
+        Physics2D.IgnoreLayerCollision(playerLayer, monsterLayer, true);
+
+        for (int i = 0; i < numOfFlashes; i++) {
+            spriteRenderer.color = flashColour;
+            yield return new WaitForSeconds(flashDuration);
+            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(flashDuration);
+        }
+
+        Physics2D.IgnoreLayerCollision(playerLayer, monsterLayer, false);
+
+        invulnerable = false;
+    }
 
 }

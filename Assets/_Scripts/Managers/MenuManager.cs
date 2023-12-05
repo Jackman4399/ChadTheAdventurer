@@ -1,14 +1,16 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Linq;
 
 public enum MenuState { Main, Crossfade, Gameplay, Dialogue, Win, Lose }
 
 public class MenuManager : Singleton<MenuManager> {
 
-	[SerializeField] private GameObject menusPrefab;
-    [SerializeField] private Canvas[] menus;
+    [SerializeField] private List<Canvas> menus;
 
 	private Image crossfadeImage;
 	[SerializeField] private float transitionTime = .25f;
@@ -16,33 +18,49 @@ public class MenuManager : Singleton<MenuManager> {
     protected override void Awake() {
         base.Awake();
 
-		menusPrefab = GameObject.Find(menusPrefab.name) ? 
-		GameObject.Find(menusPrefab.name) : Instantiate(menusPrefab);
-		DontDestroyOnLoad(menusPrefab);
+        menus = new List<Canvas>();
 
-		menus = menusPrefab.GetComponentsInChildren<Canvas>();
-		foreach (var menu in menus) menu.gameObject.SetActive(false);
-
-		crossfadeImage = FindMenu(MenuState.Crossfade).GetComponentInChildren<Image>();
+		crossfadeImage = GetComponentInChildren<Image>();
 		crossfadeImage.color = new Color(0, 0, 0, 0);
+
+        SceneManager.sceneLoaded += OnSceneChanged;
+    }
+
+    private void OnDestroy() {
+        SceneManager.sceneLoaded -= OnSceneChanged;
+    }
+
+    private void OnSceneChanged(Scene scene, LoadSceneMode loadSceneMode) {
+        menus = FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None).ToList();
+        menus = menus.Where(menu => menu.renderMode != RenderMode.WorldSpace).ToList();
     }
 
     public void ChangeMenu(MenuState menuState) {
-        foreach (var menu in menus) {
-            if (menu.name.Equals(menuState.ToString())) menu.gameObject.SetActive(true);
-            else menu.gameObject.SetActive(false);
+        foreach (var menu in menus) menu.gameObject.SetActive(false);
+
+        StartCoroutine(ChangeMenuCoroutine(menuState));
+    }
+
+    private IEnumerator ChangeMenuCoroutine(MenuState menuState) {
+        Canvas menu = null;
+
+        while (menu == null) {
+            menu = menus.Find(m => m.name.Equals(menuState.ToString() + "Menu"));
+            yield return null;
         }
+
+        menu.gameObject.SetActive(true);
     }
 
     public Canvas FindMenu(MenuState menuState) {
-        return Array.Find(menus, menu => menu.name.Equals(menuState.ToString()));
+        return menus.Find(menu => menu.name.Equals(menuState.ToString() + "Menu"));
     }
 
-    public void EnableMenu(MenuState menuState) => Array.Find(menus, menu => 
-	menu.name.Equals(menuState.ToString())).gameObject.SetActive(true);
+    public void EnableMenu(MenuState menuState) => menus.Find(menu =>
+    menu.name.Equals(menuState.ToString() + "Menu")).gameObject.SetActive(true);
 
-    public void DisableMenu(MenuState menuState) => Array.Find(menus, menu => 
-	menu.name.Equals(menuState.ToString())).gameObject.SetActive(false);
+    public void DisableMenu(MenuState menuState) => menus.Find(menu => 
+    menu.name.Equals(menuState.ToString() + "Menu")).gameObject.SetActive(false);
 
 	public void Crossfade(SceneState sceneState) => StartCoroutine(CrossfadeCoroutine(sceneState));
 
