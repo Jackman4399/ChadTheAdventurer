@@ -19355,7 +19355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5473747681346274399, guid: d5272ed58fbc25e44b2b3e433c69dd7c, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5779133891075801958, guid: d5272ed58fbc25e44b2b3e433c69dd7c, type: 3}
       propertyPath: m_Mass
@@ -19371,7 +19371,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762848683753599080, guid: d5272ed58fbc25e44b2b3e433c69dd7c, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787237872812884329, guid: d5272ed58fbc25e44b2b3e433c69dd7c, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31209,6 +31213,10 @@ PrefabInstance:
     - target: {fileID: 6627606873804402039, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6801763790147928865, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
+      propertyPath: enemyMask.m_Bits
+      value: 2048
       objectReference: {fileID: 0}
     - target: {fileID: 6863936759489084731, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
       propertyPath: m_GravityScale
