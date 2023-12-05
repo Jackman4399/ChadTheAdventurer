@@ -19353,10 +19353,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenSlime
       objectReference: {fileID: 0}
+    - target: {fileID: 5473747681346274399, guid: d5272ed58fbc25e44b2b3e433c69dd7c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779133891075801958, guid: d5272ed58fbc25e44b2b3e433c69dd7c, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6096034040510176261, guid: d5272ed58fbc25e44b2b3e433c69dd7c, type: 3}
       propertyPath: OnHitWithReference.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 466258161}
+    - target: {fileID: 6716541512450335853, guid: d5272ed58fbc25e44b2b3e433c69dd7c, type: 3}
+      propertyPath: strength
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762848683753599080, guid: d5272ed58fbc25e44b2b3e433c69dd7c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31184,6 +31200,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 966972681199385437, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587545608012970083, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627606873804402039, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6863936759489084731, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7026618485197575769, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}

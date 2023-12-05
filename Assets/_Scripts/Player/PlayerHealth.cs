@@ -24,8 +24,6 @@ public class PlayerHealth : Player {
     //NOTE: Use this for death animation or any game end triggers
     //private bool isDead = false;
 
-    //public AudioSource hurtSound;
-
     protected override void Awake() {
         base.Awake();
 
@@ -58,7 +56,15 @@ public class PlayerHealth : Player {
         currentLives -= health;
 
         //Prevent negative health
-        if(currentLives <= 0) ;//isDead = true;
+        if(currentLives <= 0) {
+            //isDead = true;
+
+        } else {
+
+            StartCoroutine(Flash());
+
+        }
+
 
         OnLivesChanged?.Invoke(currentLives);
     }
@@ -72,6 +78,10 @@ public class PlayerHealth : Player {
 	
     private IEnumerator Flash() {
         invulnerable = true;
+        int playerLayer = LayerMask.NameToLayer("Player");
+        int monsterLayer = LayerMask.NameToLayer("Enemy");
+
+        Physics2D.IgnoreLayerCollision(playerLayer, monsterLayer, true);
 
         for (int i = 0; i < numOfFlashes; i++) {
             spriteRenderer.color = flashColour;
@@ -79,6 +89,8 @@ public class PlayerHealth : Player {
             spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(flashDuration);
         }
+
+        Physics2D.IgnoreLayerCollision(playerLayer, monsterLayer, false);
 
         invulnerable = false;
     }

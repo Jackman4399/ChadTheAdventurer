@@ -14,8 +14,6 @@ public class ChaseScript : MonoBehaviour
 
      private Transform player;
 
-     public LayerMask playerMask;
-
     private void FixedUpdate() {
 
         // if(agent.velocity.x < 0) {

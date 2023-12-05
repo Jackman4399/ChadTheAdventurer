@@ -38,7 +38,7 @@ public class PlayerController : Player {
         // Check to see that the proper amount of time has passed
         if ((trackedTime >= interval) && (rigidbody.velocity != Vector2.zero)) {
             // Play the sound, reset the timer
-            FindObjectOfType<AudioManager>().Play("PlayerWalk");
+            AudioManager.Instance.PlayOneShot("PlayerWalk");
             trackedTime = 0.0f;
         }
 

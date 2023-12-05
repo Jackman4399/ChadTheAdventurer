@@ -18,6 +18,9 @@ public class Enemy : MonoBehaviour
     {
         currentHealth = maxHealth;
 
+        // Freeze rotation of the sprite
+        //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+
         var agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 		agent.updateRotation = false;
 		agent.updateUpAxis = false;
@@ -32,12 +35,12 @@ public class Enemy : MonoBehaviour
 
         if(currentHealth <= 0) {
 
-            FindObjectOfType<AudioManager>().Play("EnemyDeath");
+            AudioManager.Instance.PlayOneShot("EnemyDeath");
             OnDeathWithReference?.Invoke();
             Die();
             
         } else {
-            FindObjectOfType<AudioManager>().Play("EnemyHit");
+            AudioManager.Instance.PlayOneShot("EnemyHit");
             OnHitWithReference?.Invoke();
 
         }
