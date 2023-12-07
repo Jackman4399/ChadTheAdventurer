@@ -326,7 +326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb459f25472865a45a78c261576d5d47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menusPrefab: {fileID: 7992915553360804508, guid: 6852eb3471f8b514c95441189acf35b7, type: 3}
   menus: []
   transitionTime: 0.25
 --- !u!114 &7662754684500877439
