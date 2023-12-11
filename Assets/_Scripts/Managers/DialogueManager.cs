@@ -16,13 +16,13 @@ public class DialogueManager : Singleton<DialogueManager> {
     }
 
     private IEnumerator ProcessDialogueCoroutine() {
-        InputManager.Instance.ChangeActionMap(InputState.Dialogue);
+        InputManager.Instance.ChangeInput(InputState.Dialogue);
         MenuManager.Instance.ChangeMenu(MenuState.Dialogue);
         dialogueMenu = MenuManager.Instance.FindMenu(MenuState.Dialogue).GetComponent<DialogueMenu>();
 
         while (story.canContinue) yield return StartCoroutine(dialogueMenu.SetDialogue(story));
 
-        InputManager.Instance.ChangeActionMap(InputState.Gameplay);
+        InputManager.Instance.ChangeInput(InputState.Gameplay);
         MenuManager.Instance.ChangeMenu(MenuState.Gameplay);
     }
 
