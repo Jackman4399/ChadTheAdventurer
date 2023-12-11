@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 36447439}
   - component: {fileID: 36447438}
-  - component: {fileID: 36447437}
   - component: {fileID: 36447440}
+  - component: {fileID: 36447441}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -142,14 +142,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &36447437
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36447436}
-  m_Enabled: 1
 --- !u!20 &36447438
 Camera:
   m_ObjectHideFlags: 0
@@ -260,6 +252,14 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!81 &36447441
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36447436}
+  m_Enabled: 1
 --- !u!1001 &123090479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -271,6 +271,10 @@ PrefabInstance:
     - target: {fileID: 542177756982692934, guid: 164d57c8ba326a34a8e3097a9e469475, type: 3}
       propertyPath: m_Name
       value: PreludeLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 542177756982692934, guid: 164d57c8ba326a34a8e3097a9e469475, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1075065804871201851, guid: 164d57c8ba326a34a8e3097a9e469475, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29152,6 +29156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9bc4b30e927844ba39c53eaf2543db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  director: {fileID: 1420613164}
 --- !u!1 &1499539639
 GameObject:
   m_ObjectHideFlags: 0
