@@ -5,15 +5,25 @@ using UnityEngine;
 
 public enum StoryState {
 	Introduction,
-	SomethingElse
+	CollectHerbs,
+	ExterminateGoblinTribe,
+	GoblinSpare,
+	GoblinKill,
+	EmergencyQuest,
+	IgnoreEmergencyQuest,
+	ParticipateEmergencyQuest,
+	WinEmergencyQuest,
+	LoseEmergencyQuest,
+	WinEmergencyQuestWithGoblin,
+	LoseAllTogether
 }
 
 public class StoryManager : Singleton<StoryManager> {
 
 	public event Action<StoryState> OnStoryChanged;
 
-	public StoryState initialStoryState { get; private set; }
-	[SerializeField] private StoryState currentStoryState;
+	[SerializeField] private StoryState initialStoryState, currentStoryState;
+	public StoryState InitialStoryState => initialStoryState;
 	public StoryState CurrentStoryState => currentStoryState;
 
 	[SerializeField] private string proceedName = "proceed", choiceName = "choice";

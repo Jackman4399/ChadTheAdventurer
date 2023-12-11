@@ -8,7 +8,7 @@ public class StoryStateBehaviour : StateMachineBehaviour {
 
 	public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		if (StoryManager.Instance.isSkipping) {
-			if (StoryManager.Instance.initialStoryState != storyState) StoryManager.Instance.Proceed();
+			if (StoryManager.Instance.InitialStoryState != storyState) StoryManager.Instance.Proceed();
 			else StoryManager.Instance.DisableSkip();
 		} else StoryManager.Instance.ChangeCurrentStoryState(storyState);
 	}
