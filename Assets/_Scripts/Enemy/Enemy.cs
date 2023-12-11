@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public abstract class Enemy : MonoBehaviour {
-
     protected NavMeshAgent agent;
 
     protected virtual void Awake() {
@@ -15,5 +12,4 @@ public abstract class Enemy : MonoBehaviour {
 		    agent.updateUpAxis = false;
         }
     }
-
 }
