@@ -8,8 +8,8 @@ public class PlayerAttacker : Player {
 
     [SerializeField] private LayerMask enemyMask;
     
-    [SerializeField, Tooltip("How long should the attack trigger be enabled in frames.")] 
-    private int attackDuration = 3;
+    [SerializeField, Tooltip("How long should the attack trigger be enabled in physics steps.")] 
+    private int attackDuration = 5;
 
 	[SerializeField, Tooltip("How long should the delay between attacks be in seconds.")] 
     private float m_attackDelay = .5f;
@@ -27,7 +27,7 @@ public class PlayerAttacker : Player {
 
         if ((1 << other.gameObject.layer | enemyMask) == enemyMask) {
             
-            other.gameObject.GetComponent<Enemy>().TakeDamage(1); //Temporarily using 1
+            other.gameObject.GetComponent<EnemyScript>().TakeDamage(1); //Temporarily using 1
 
         }
     }
@@ -41,7 +41,7 @@ public class PlayerAttacker : Player {
 
         AudioManager.Instance.PlayOneShot("Slash");
 
-        for (int i = 0; i < attackDuration; i++) yield return null;
+        for (int i = 0; i < attackDuration; i++) yield return new WaitForFixedUpdate();
 
         direction.SetActive(false);
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-public enum MenuState { Crossfade, Main, Gameplay, Dialogue, Win, Lose }
+public enum MenuState { Main, Gameplay, Dialogue, Win, Lose }
 
 public class MenuManager : Singleton<MenuManager> {
 
@@ -62,7 +62,6 @@ public class MenuManager : Singleton<MenuManager> {
 		InputState currentInputState = InputManager.Instance.currentInputState;
 
 		InputManager.Instance.ChangeInput(InputState.None);
-		EnableMenu(MenuState.Crossfade);
 
 		// Fade In
 		while (crossfadeImage.color.a < 1) {
@@ -82,7 +81,6 @@ public class MenuManager : Singleton<MenuManager> {
 
 		crossfadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(crossfadeImage.color.a));
 
-		DisableMenu(MenuState.Crossfade);
 		InputManager.Instance.ChangeInput(currentInputState);
 	}
 
