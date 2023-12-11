@@ -19,6 +19,7 @@ public class EnemyController : Enemy {
     }
 
     private void Update() { if (stopFollow) agent.SetDestination(origin); else agent.SetDestination(waypoint); }
+    
     private void OnTriggerStay2D(Collider2D other) {
         if ((1 << other.gameObject.layer | playerMask) != playerMask) return;
         waypoint = other.transform.position;
