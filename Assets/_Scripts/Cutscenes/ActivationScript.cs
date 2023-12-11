@@ -35,6 +35,8 @@ public class ActivationScript : MonoBehaviour
             
         }
 
+        Destroy(gameObject);
+
     }
 
     
