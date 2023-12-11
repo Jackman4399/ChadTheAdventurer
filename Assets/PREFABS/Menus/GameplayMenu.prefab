@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3316b8d08d0d934ca3d8eeb9d056552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuState: 1
   fullHeart: {fileID: -1895502453, guid: 4a0a508b0cc1ac34c965d5822fb95bf4, type: 3}
   emptyHeart: {fileID: -1433606994, guid: 4a0a508b0cc1ac34c965d5822fb95bf4, type: 3}
   heart: {fileID: 6768272484248159367, guid: f9d541d78f8405e40b3c0408ac221678, type: 3}

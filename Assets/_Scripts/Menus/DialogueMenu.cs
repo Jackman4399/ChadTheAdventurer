@@ -5,7 +5,7 @@ using TMPro;
 using Ink.Runtime;
 
 
-public class DialogueMenu : MonoBehaviour {
+public class DialogueMenu : Menu {
 
     [SerializeField] private TMP_Text nameText, dialogueText;
 

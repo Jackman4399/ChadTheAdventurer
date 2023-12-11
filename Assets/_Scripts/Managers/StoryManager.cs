@@ -26,9 +26,10 @@ public class StoryManager : Singleton<StoryManager> {
 	public StoryState InitialStoryState => initialStoryState;
 	public StoryState CurrentStoryState => currentStoryState;
 
-	[SerializeField] private string proceedName = "proceed", choiceName = "choice";
+	[SerializeField] private string proceedName = "proceed";
 
-	[SerializeField] private int[] choices;
+	[SerializeField] private Choice[] choices;
+    public Choice[] Choices => choices;
 
 	private Animator storyStateMachine;
 
@@ -39,15 +40,21 @@ public class StoryManager : Singleton<StoryManager> {
 
 		storyStateMachine = GetComponent<Animator>();
 
+        if (choices.Length == 0) choices = new Choice[] {
+            new(ChoiceState.GoblinChoice),
+            new(ChoiceState.EmergencyQuestChoice),
+            new(ChoiceState.BossChoice),
+        };
+
 		initialStoryState = StoryState.Introduction;
 		currentStoryState = initialStoryState;
 
 		isSkipping = true;
 
-		for (int i = 0; i < choices.Length; i++) {
-			choices[i] = 0;
-			storyStateMachine.SetInteger(choiceName + i, 0);
-		}
+        foreach (var choice in choices) {
+            choice.choiceNumber = 0;
+            storyStateMachine.SetInteger(choice.ChoiceState.ToString(), 0);
+        }
 	}
 
 	public void ChangeCurrentStoryState(StoryState storyState) {
@@ -57,9 +64,9 @@ public class StoryManager : Singleton<StoryManager> {
 
 	public void Proceed() => storyStateMachine.SetTrigger(proceedName);
 
-	public void makeChoice(int choiceID, int choiceNumber) {
-		choices[choiceID] = choiceNumber;
-		storyStateMachine.SetInteger(choiceName + choiceID, choiceNumber);
+	public void makeChoice(ChoiceState choiceState, int choiceNumber) {
+		Choice choice = Array.Find(choices, c => c.ChoiceState == choiceState);
+		storyStateMachine.SetInteger(choice.ChoiceState.ToString(), choiceNumber + 1);
 
 		Proceed();
 	}

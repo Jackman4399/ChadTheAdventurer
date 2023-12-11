@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameplayMenu : MonoBehaviour {
+public class GameplayMenu : Menu {
 
     private List<Image> pooledHearts;
     [SerializeField] private Sprite fullHeart, emptyHeart;
@@ -11,7 +11,9 @@ public class GameplayMenu : MonoBehaviour {
 
     private PlayerHealth playerHealth;
 
-    private void Awake() {
+    protected override void Awake() {
+        base.Awake();
+
         pooledHearts = new List<Image>();
         heartPanel = (RectTransform)transform.Find("HeartPanel");
 

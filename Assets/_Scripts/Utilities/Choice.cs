@@ -7,6 +7,12 @@ public enum ChoiceState { GoblinChoice, EmergencyQuestChoice, BossChoice }
 [System.Serializable]
 public class Choice {
 
-    public ChoiceState choiceState;
+    [SerializeField] private ChoiceState choiceState;
+    public ChoiceState ChoiceState => choiceState;
+    public int choiceNumber;
+
+    public Choice(ChoiceState choiceState) {
+        this.choiceState = choiceState;
+    }
 
 }

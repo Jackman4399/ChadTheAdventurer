@@ -11,8 +11,8 @@ public class MenuManager : Singleton<MenuManager> {
 
     public event Action OnMenuChanged;
 
-    [SerializeField] private List<MenuData> menus;
-    public List<MenuData> Menus => menus;
+    [SerializeField] private MenuData[] menus;
+    public MenuData[] Menus => menus;
 
 	private Image crossfadeImage;
 	[SerializeField] private float transitionTime = .25f;
@@ -20,7 +20,7 @@ public class MenuManager : Singleton<MenuManager> {
     protected override void Awake() {
         base.Awake();
 
-        menus = new List<MenuData>() {
+        if (menus.Length == 0) menus = new MenuData[] {
             new(MenuState.Main),
             new(MenuState.Gameplay),
             new(MenuState.Dialogue),
@@ -34,7 +34,7 @@ public class MenuManager : Singleton<MenuManager> {
 
     public void ChangeMenu(MenuState menuState) {
         foreach (var menu in menus) {
-            if (menu.menuState == menuState) menu.enabled = true;
+            if (menu.MenuState == menuState) menu.enabled = true;
             else menu.enabled = false;
         }
 
@@ -47,12 +47,12 @@ public class MenuManager : Singleton<MenuManager> {
     }
 
     public void EnableMenu(MenuState menuState) {
-        menus.Find(menu => menu.menuState == menuState).enabled = true;
+        Array.Find(menus, menu => menu.MenuState == menuState).enabled = true;
         OnMenuChanged?.Invoke();
     }
 
     public void DisableMenu(MenuState menuState) {
-        menus.Find(menu => menu.menuState == menuState).enabled = false;
+        Array.Find(menus, menu => menu.MenuState == menuState).enabled = false;
         OnMenuChanged?.Invoke();
     }
 
