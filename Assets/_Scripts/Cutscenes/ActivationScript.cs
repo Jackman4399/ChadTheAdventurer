@@ -18,7 +18,7 @@ public class ActivationScript : MonoBehaviour
 
             if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(MenuState.Gameplay);
             
-            if(InputManager.Instance != null) InputManager.Instance.ChangeActionMap(InputState.Gameplay);
+            if(InputManager.Instance != null) InputManager.Instance.ChangeInput(InputState.Gameplay);
         }
             
     }
@@ -29,7 +29,7 @@ public class ActivationScript : MonoBehaviour
             
             if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(MenuState.Dialogue);
             
-            if(InputManager.Instance != null) InputManager.Instance.ChangeActionMap(InputState.Menu);
+            if(InputManager.Instance != null) InputManager.Instance.ChangeInput(InputState.Menu);
 
             if(director != null) director.Play();
             

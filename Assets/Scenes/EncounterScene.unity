@@ -10176,6 +10176,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
+      propertyPath: InitialiseMenu
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
+      propertyPath: InitialiseInput
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
+      propertyPath: InitialiseScene
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5452050118715914677, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -29864,10 +29876,10 @@ GameObject:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 935916112}
   - {fileID: 1103872668}
   - {fileID: 1340293937}
   - {fileID: 923107357}
-  - {fileID: 935916112}
   - {fileID: 1804136001}
   - {fileID: 123694419}
   - {fileID: 3678243026317139930}
