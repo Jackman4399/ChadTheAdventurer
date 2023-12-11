@@ -13,8 +13,8 @@ public class StoryManager : Singleton<StoryManager> {
 	public event Action<StoryState> OnStoryChanged;
 
 	public StoryState initialStoryState { get; private set; }
-	[SerializeField] StoryState _currentStoryState;
-	public StoryState currentStoryState { get { return _currentStoryState; } }
+	[SerializeField] private StoryState currentStoryState;
+	public StoryState CurrentStoryState => currentStoryState;
 
 	[SerializeField] private string proceedName = "proceed", choiceName = "choice";
 
@@ -30,7 +30,7 @@ public class StoryManager : Singleton<StoryManager> {
 		storyStateMachine = GetComponent<Animator>();
 
 		initialStoryState = StoryState.Introduction;
-		_currentStoryState = initialStoryState;
+		currentStoryState = initialStoryState;
 
 		isSkipping = true;
 
@@ -41,7 +41,7 @@ public class StoryManager : Singleton<StoryManager> {
 	}
 
 	public void ChangeCurrentStoryState(StoryState storyState) {
-		_currentStoryState = storyState;
+		currentStoryState = storyState;
 		OnStoryChanged?.Invoke(storyState);
 	}
 

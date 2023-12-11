@@ -9,7 +9,7 @@ public class SceneLoader : Singleton<SceneLoader> {
 
 	private SceneState currentSceneState;
 
-	public void LoadScene(SceneState sceneState) {
+	public void ChangeScene(SceneState sceneState) {
 		if (sceneState == SceneState.None) return;
 		SceneManager.LoadScene(sceneState.ToString());
 		currentSceneState = sceneState;

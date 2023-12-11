@@ -16,7 +16,7 @@ public class InputManager : Singleton<InputManager> {
         userInput = new UserInput();
     }
 
-    public void ChangeActionMap(InputState inputState) {
+    public void ChangeInput(InputState inputState) {
         userInput.Disable();
 
         InputActionMap actionMap = null;

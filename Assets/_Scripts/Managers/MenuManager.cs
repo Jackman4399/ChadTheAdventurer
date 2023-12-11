@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System.Linq;
 
-public enum MenuState { Main, Crossfade, Gameplay, Dialogue, Win, Lose }
+public enum MenuState { Crossfade, Main, Gameplay, Dialogue, Win, Lose }
 
 public class MenuManager : Singleton<MenuManager> {
 
-    [SerializeField] private List<Canvas> menus;
+    public event Action OnMenuChanged;
+
+    [SerializeField] private List<MenuData> menus;
+    public List<MenuData> Menus => menus;
 
 	private Image crossfadeImage;
 	[SerializeField] private float transitionTime = .25f;
@@ -18,56 +20,48 @@ public class MenuManager : Singleton<MenuManager> {
     protected override void Awake() {
         base.Awake();
 
-        menus = new List<Canvas>();
+        menus = new List<MenuData>() {
+            new(MenuState.Main),
+            new(MenuState.Gameplay),
+            new(MenuState.Dialogue),
+            new(MenuState.Win),
+            new(MenuState.Lose),
+        };
 
 		crossfadeImage = GetComponentInChildren<Image>();
 		crossfadeImage.color = new Color(0, 0, 0, 0);
-
-        SceneManager.sceneLoaded += OnSceneChanged;
-    }
-
-    private void OnDestroy() {
-        SceneManager.sceneLoaded -= OnSceneChanged;
-    }
-
-    private void OnSceneChanged(Scene scene, LoadSceneMode loadSceneMode) {
-        menus = FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None).ToList();
-        menus = menus.Where(menu => menu.renderMode != RenderMode.WorldSpace).ToList();
     }
 
     public void ChangeMenu(MenuState menuState) {
-        foreach (var menu in menus) menu.gameObject.SetActive(false);
-
-        StartCoroutine(ChangeMenuCoroutine(menuState));
-    }
-
-    private IEnumerator ChangeMenuCoroutine(MenuState menuState) {
-        Canvas menu = null;
-
-        while (menu == null) {
-            menu = menus.Find(m => m.name.Equals(menuState.ToString() + "Menu"));
-            yield return null;
+        foreach (var menu in menus) {
+            if (menu.menuState == menuState) menu.enabled = true;
+            else menu.enabled = false;
         }
 
-        menu.gameObject.SetActive(true);
+        OnMenuChanged?.Invoke();
     }
 
     public Canvas FindMenu(MenuState menuState) {
-        return menus.Find(menu => menu.name.Equals(menuState.ToString() + "Menu"));
+        Canvas[] menus = FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        return menus.Single(menu => menu.gameObject.name.Equals(menuState.ToString()));
     }
 
-    public void EnableMenu(MenuState menuState) => menus.Find(menu =>
-    menu.name.Equals(menuState.ToString() + "Menu")).gameObject.SetActive(true);
+    public void EnableMenu(MenuState menuState) {
+        menus.Find(menu => menu.menuState == menuState).enabled = true;
+        OnMenuChanged?.Invoke();
+    }
 
-    public void DisableMenu(MenuState menuState) => menus.Find(menu => 
-    menu.name.Equals(menuState.ToString() + "Menu")).gameObject.SetActive(false);
+    public void DisableMenu(MenuState menuState) {
+        menus.Find(menu => menu.menuState == menuState).enabled = false;
+        OnMenuChanged?.Invoke();
+    }
 
 	public void Crossfade(SceneState sceneState) => StartCoroutine(CrossfadeCoroutine(sceneState));
 
 	private IEnumerator CrossfadeCoroutine(SceneState sceneState) {
 		InputState currentInputState = InputManager.Instance.currentInputState;
 
-		InputManager.Instance.ChangeActionMap(InputState.None);
+		InputManager.Instance.ChangeInput(InputState.None);
 		EnableMenu(MenuState.Crossfade);
 
 		// Fade In
@@ -78,7 +72,7 @@ public class MenuManager : Singleton<MenuManager> {
 
 		crossfadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(crossfadeImage.color.a));
 
-		if (sceneState != SceneState.None) SceneLoader.Instance.LoadScene(sceneState);
+		if (sceneState != SceneState.None) SceneLoader.Instance.ChangeScene(sceneState);
 
 		// Fade Out
 		while (crossfadeImage.color.a > 0) {
@@ -89,7 +83,7 @@ public class MenuManager : Singleton<MenuManager> {
 		crossfadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(crossfadeImage.color.a));
 
 		DisableMenu(MenuState.Crossfade);
-		InputManager.Instance.ChangeActionMap(currentInputState);
+		InputManager.Instance.ChangeInput(currentInputState);
 	}
 
 }
