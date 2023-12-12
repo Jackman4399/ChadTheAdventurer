@@ -5,14 +5,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-public enum MenuState { Crossfade, Main, Gameplay, Dialogue, Win, Lose }
+public enum MenuState { Main, Gameplay, SoftGameplay, Dialogue, Win, Lose }
 
 public class MenuManager : Singleton<MenuManager> {
 
     public event Action OnMenuChanged;
 
-    [SerializeField] private List<MenuData> menus;
-    public List<MenuData> Menus => menus;
+    private MenuData[] menus;
+    public MenuData[] Menus => menus;
 
 	private Image crossfadeImage;
 	[SerializeField] private float transitionTime = .25f;
@@ -20,9 +20,10 @@ public class MenuManager : Singleton<MenuManager> {
     protected override void Awake() {
         base.Awake();
 
-        menus = new List<MenuData>() {
+        if (menus.Length == 0) menus = new MenuData[] {
             new(MenuState.Main),
             new(MenuState.Gameplay),
+            new(MenuState.SoftGameplay),
             new(MenuState.Dialogue),
             new(MenuState.Win),
             new(MenuState.Lose),
@@ -34,7 +35,7 @@ public class MenuManager : Singleton<MenuManager> {
 
     public void ChangeMenu(MenuState menuState) {
         foreach (var menu in menus) {
-            if (menu.menuState == menuState) menu.enabled = true;
+            if (menu.MenuState == menuState) menu.enabled = true;
             else menu.enabled = false;
         }
 
@@ -47,22 +48,21 @@ public class MenuManager : Singleton<MenuManager> {
     }
 
     public void EnableMenu(MenuState menuState) {
-        menus.Find(menu => menu.menuState == menuState).enabled = true;
+        Array.Find(menus, menu => menu.MenuState == menuState).enabled = true;
         OnMenuChanged?.Invoke();
     }
 
     public void DisableMenu(MenuState menuState) {
-        menus.Find(menu => menu.menuState == menuState).enabled = false;
+        Array.Find(menus, menu => menu.MenuState == menuState).enabled = false;
         OnMenuChanged?.Invoke();
     }
 
 	public void Crossfade(SceneState sceneState) => StartCoroutine(CrossfadeCoroutine(sceneState));
 
 	private IEnumerator CrossfadeCoroutine(SceneState sceneState) {
-		InputState currentInputState = InputManager.Instance.currentInputState;
+		InputState currentInputState = InputManager.Instance.CurrentInputState;
 
 		InputManager.Instance.ChangeInput(InputState.None);
-		EnableMenu(MenuState.Crossfade);
 
 		// Fade In
 		while (crossfadeImage.color.a < 1) {
@@ -82,7 +82,6 @@ public class MenuManager : Singleton<MenuManager> {
 
 		crossfadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(crossfadeImage.color.a));
 
-		DisableMenu(MenuState.Crossfade);
 		InputManager.Instance.ChangeInput(currentInputState);
 	}
 

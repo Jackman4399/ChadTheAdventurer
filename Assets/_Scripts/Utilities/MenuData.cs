@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class MenuData {
 
-    public MenuState menuState { get; private set; }
+    [SerializeField] private MenuState menuState;
+    public MenuState MenuState => menuState;
     public bool enabled;
 
     public MenuData(MenuState menuState) {

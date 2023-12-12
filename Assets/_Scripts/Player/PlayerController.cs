@@ -22,10 +22,12 @@ public class PlayerController : Player {
     }
 
 	private void OnEnable() {
+		userInput.SoftGameplay.Interact.performed += OnInteract;
 		userInput.Gameplay.Interact.performed += OnInteract;
     }
 
     private void OnDisable() {
+		userInput.SoftGameplay.Interact.performed -= OnInteract;
 		userInput.Gameplay.Interact.performed -= OnInteract;
     }
 

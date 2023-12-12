@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 85899171e53c8154d9382483da0e77f3
+guid: 9fb00a090c505734ab31511a2819a1cc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,131 +106,144 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: S_Death_0
+      name: goblin-walk-down-0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 691465cc7f896e14f8ec9bb11b846cc6
-      internalID: -448781277
+      spriteID: 2eab4902a0d3c6643b23a67f91187214
+      internalID: 1907276222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: S_Death_1
+      name: goblin-walk-down-1
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9321375dcbf558843842dd4092dc5f0b
-      internalID: 1729355623
+      spriteID: 61db39fa670347e478e0a9111c2e60d8
+      internalID: -1735916094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: S_Death_2
+      name: goblin-walk-down-2
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1411893208fe3c24ab8c2c38cab5bf05
-      internalID: -2083761253
+      spriteID: 07f8bc63edc3da240be45620f415cd6a
+      internalID: -781110367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: S_Death_3
+      name: goblin-walk-down-3
       rect:
         serializedVersion: 2
         x: 144
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f18b90717194b0b43bb8e3967201bcca
-      internalID: 1158601084
+      spriteID: 5f5b76f9d6cda7c42a13d5ebd89a1f65
+      internalID: -1314135685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: S_Death_4
+      name: goblin-walk-down-4
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0447f2784609edc4fa030d5b1280f38d
-      internalID: -1691213666
+      spriteID: ae4dac942a4317d47b8324d47b32f78d
+      internalID: -1438905412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: S_Death_5
+      name: goblin-walk-down-5
       rect:
         serializedVersion: 2
         x: 240
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fde140183d6c764492462a05d0d06bf
-      internalID: -814465657
+      spriteID: 3827f58f868a3ed4fba9679c6d22d6da
+      internalID: 1841164506
       vertices: []
       indices: 
       edges: []
@@ -246,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      S_Death_0: -448781277
-      S_Death_1: 1729355623
-      S_Death_2: -2083761253
-      S_Death_3: 1158601084
-      S_Death_4: -1691213666
-      S_Death_5: -814465657
+      goblin-walk-down-0: 1907276222
+      goblin-walk-down-1: -1735916094
+      goblin-walk-down-2: -781110367
+      goblin-walk-down-3: -1314135685
+      goblin-walk-down-4: -1438905412
+      goblin-walk-down-5: 1841164506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

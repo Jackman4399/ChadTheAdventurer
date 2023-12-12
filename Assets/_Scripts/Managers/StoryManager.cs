@@ -5,20 +5,32 @@ using UnityEngine;
 
 public enum StoryState {
 	Introduction,
-	SomethingElse
+	CollectHerbs,
+	ExterminateGoblinTribe,
+	GoblinSpare,
+	GoblinKill,
+	EmergencyQuest,
+	IgnoreEmergencyQuest,
+	ParticipateEmergencyQuest,
+	WinEmergencyQuest,
+	LoseEmergencyQuest,
+	WinEmergencyQuestWithGoblin,
+	LoseAllTogether
 }
 
 public class StoryManager : Singleton<StoryManager> {
 
 	public event Action<StoryState> OnStoryChanged;
 
-	public StoryState initialStoryState { get; private set; }
-	[SerializeField] private StoryState currentStoryState;
+	[SerializeField] private StoryState initialStoryState;
+    private StoryState currentStoryState;
+	public StoryState InitialStoryState => initialStoryState;
 	public StoryState CurrentStoryState => currentStoryState;
 
-	[SerializeField] private string proceedName = "proceed", choiceName = "choice";
+	[SerializeField] private string proceedName = "proceed";
 
-	[SerializeField] private int[] choices;
+	private Choice[] choices;
+    public Choice[] Choices => choices;
 
 	private Animator storyStateMachine;
 
@@ -29,27 +41,30 @@ public class StoryManager : Singleton<StoryManager> {
 
 		storyStateMachine = GetComponent<Animator>();
 
-		initialStoryState = StoryState.Introduction;
-		currentStoryState = initialStoryState;
+        currentStoryState = initialStoryState;
 
-		isSkipping = true;
+        choices = new Choice[] {
+            new(ChoiceState.GoblinChoice),
+            new(ChoiceState.EmergencyQuestChoice),
+            new(ChoiceState.BossChoice),
+        };
 
-		for (int i = 0; i < choices.Length; i++) {
-			choices[i] = 0;
-			storyStateMachine.SetInteger(choiceName + i, 0);
-		}
+        foreach (var choice in choices) 
+        storyStateMachine.SetInteger(choice.ChoiceState.ToString(), choice.choiceNumber);
+
+        isSkipping = true;
 	}
 
-	public void ChangeCurrentStoryState(StoryState storyState) {
+	public void ChangeStoryState(StoryState storyState) {
 		currentStoryState = storyState;
 		OnStoryChanged?.Invoke(storyState);
 	}
 
 	public void Proceed() => storyStateMachine.SetTrigger(proceedName);
 
-	public void makeChoice(int choiceID, int choiceNumber) {
-		choices[choiceID] = choiceNumber;
-		storyStateMachine.SetInteger(choiceName + choiceID, choiceNumber);
+	public void makeChoice(ChoiceState choiceState, int choiceNumber) {
+		Choice choice = Array.Find(choices, c => c.ChoiceState == choiceState);
+		storyStateMachine.SetInteger(choice.ChoiceState.ToString(), choiceNumber + 1);
 
 		Proceed();
 	}

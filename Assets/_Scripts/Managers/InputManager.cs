@@ -2,13 +2,15 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public enum InputState { None, Menu, Gameplay, Dialogue }
+public enum InputState { None, Menu, Gameplay, SoftGameplay, Dialogue }
 
 public class InputManager : Singleton<InputManager> {
 
-    public UserInput userInput { get; private set; }
+    private UserInput userInput;
+    public UserInput UserInput => userInput;
 
-	public InputState currentInputState { get; private set; }
+	private InputState currentInputState;
+    public InputState CurrentInputState => currentInputState;
 
     protected override void Awake() {
         base.Awake();

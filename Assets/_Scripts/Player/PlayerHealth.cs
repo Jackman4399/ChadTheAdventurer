@@ -30,17 +30,17 @@ public class PlayerHealth : Player {
         spriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
 
         //Start with the maximum health
-        currentLives = m_maxLives;        
+        currentLives = m_maxLives; 
     }
 
     private void Start() {
         OnLivesChanged?.Invoke(m_maxLives);
     }
 
-    public void Heal(int health) {
+    public void Heal(int lives) {
 
         //Heal the player
-        currentLives += health;
+        currentLives += lives;
 
         //Prevent overhealing
         currentLives = Mathf.Clamp(currentLives, 0, m_maxLives);
@@ -48,12 +48,12 @@ public class PlayerHealth : Player {
         OnLivesChanged?.Invoke(currentLives);
     }
 
-    public void Hurt(int health) {
+    public void Hurt(int lives) {
 
         if(invulnerable) return;
 
         //Hurt the player
-        currentLives -= health;
+        currentLives -= lives;
 
         //Prevent negative health
         if(currentLives <= 0) {

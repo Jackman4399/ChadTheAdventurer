@@ -39,7 +39,7 @@ public class PlayerAnimator : Player {
 
 		animator.SetFloat(moveXName, lastMove.x);
         animator.SetFloat(moveYName, lastMove.y);
-        animator.SetFloat(speedName, move.magnitude);
+        animator.SetFloat(speedName, move.sqrMagnitude);
     }
 
 	private void OnAttackUp(InputAction.CallbackContext context) => OnAttack(Vector2.up);
@@ -59,7 +59,7 @@ public class PlayerAnimator : Player {
 
 		InitialiseAttackListeners(false);
 
-		yield return new WaitForSeconds(attacker.attackDelay);
+		yield return new WaitForSeconds(attacker.AttackDelay);
 
 		InitialiseAttackListeners(true);
 	}

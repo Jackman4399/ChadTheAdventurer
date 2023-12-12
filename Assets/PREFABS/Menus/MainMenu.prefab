@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fba7beac97563547b194cb470d3c915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuState: 1
+  menuState: 0
 --- !u!1 &2279592246193245988
 GameObject:
   m_ObjectHideFlags: 0
