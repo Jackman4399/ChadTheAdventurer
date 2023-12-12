@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Ink.Runtime;
+using UnityEngine.InputSystem.Controls;
 
 
 public class DialogueMenu : Menu {
@@ -29,8 +31,13 @@ public class DialogueMenu : Menu {
                 // variables outside from its scope, instead they copy a reference to the variable.
                 // For lamda expression inside loops, the simple fix is to create a local variable unique to each
                 // loop, and get that local variable as a reference for the lambda expression.
-                int index = i + 1;
-                choiceButtons[i].onClick.AddListener(() => story.ChooseChoiceIndex(index));
+                int index = i;
+                
+                choiceButtons[i].onClick.AddListener(() => {
+                    story.ChooseChoiceIndex(index);
+                    string tags = story.currentTags[0];
+                    StoryManager.Instance.makeChoice((ChoiceState)int.Parse(tags), index);
+                });
 
                 choiceButtons[i].gameObject.SetActive(true);
             }
