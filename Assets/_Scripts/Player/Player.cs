@@ -7,11 +7,19 @@ public abstract class Player : MonoBehaviour {
 
     protected Vector2 move;
 
-    protected virtual void Awake() => userInput = InputManager.Instance.userInput;
+    protected virtual void Awake() => userInput = InputManager.Instance.UserInput;
 
 
     protected virtual void Update() {
-        move = userInput.Gameplay.Movement.ReadValue<Vector2>();
+        switch (InputManager.Instance.CurrentInputState) {
+            case InputState.SoftGameplay:
+                move = userInput.SoftGameplay.Movement.ReadValue<Vector2>();
+            break;
+
+            case InputState.Gameplay:
+                move = userInput.Gameplay.Movement.ReadValue<Vector2>();
+            break;
+        }
     }
 
 }

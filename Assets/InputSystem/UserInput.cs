@@ -46,15 +46,6 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Attack"",
-                    ""type"": ""Button"",
-                    ""id"": ""a417cc0f-85a3-49cf-b91c-8f26f137b342"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""AttackUp"",
                     ""type"": ""Button"",
                     ""id"": ""bfb2c52f-6cc7-4dff-95ed-6c194c6f3bbf"",
@@ -160,17 +151,6 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a461b592-4a3f-409f-b2b6-3581e171a6da"",
-                    ""path"": ""<Keyboard>/l"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""49a4ab0e-a624-496f-bc89-931745e48664"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
@@ -210,6 +190,98 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""AttackRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""SoftGameplay"",
+            ""id"": ""75a9fcaa-5333-4350-a209-6a03bfcdf13a"",
+            ""actions"": [
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""77b8e11b-970f-4e50-87e4-46ef07a8115d"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""e5ef7288-33cd-4b35-b34f-3c1e12dc9d63"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""d7c9e378-6253-4f2e-9a2e-60db0261ae27"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""7ff7bf27-d76c-461b-9fef-d265668cf622"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""77aa9ab1-cccc-4e3e-ab68-6baa87466317"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""b9920d98-8e40-4d57-9b02-ca7ea08cff05"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""efa404ad-5ca5-43f4-bb56-0fcfa6c14d4a"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6a50f4f3-0494-454c-a96c-2c63f95de793"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -609,11 +681,14 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
         m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
         m_Gameplay_Movement = m_Gameplay.FindAction("Movement", throwIfNotFound: true);
         m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
-        m_Gameplay_Attack = m_Gameplay.FindAction("Attack", throwIfNotFound: true);
         m_Gameplay_AttackUp = m_Gameplay.FindAction("AttackUp", throwIfNotFound: true);
         m_Gameplay_AttackDown = m_Gameplay.FindAction("AttackDown", throwIfNotFound: true);
         m_Gameplay_AttackLeft = m_Gameplay.FindAction("AttackLeft", throwIfNotFound: true);
         m_Gameplay_AttackRight = m_Gameplay.FindAction("AttackRight", throwIfNotFound: true);
+        // SoftGameplay
+        m_SoftGameplay = asset.FindActionMap("SoftGameplay", throwIfNotFound: true);
+        m_SoftGameplay_Movement = m_SoftGameplay.FindAction("Movement", throwIfNotFound: true);
+        m_SoftGameplay_Interact = m_SoftGameplay.FindAction("Interact", throwIfNotFound: true);
         // Dialogue
         m_Dialogue = asset.FindActionMap("Dialogue", throwIfNotFound: true);
         m_Dialogue_Next = m_Dialogue.FindAction("Next", throwIfNotFound: true);
@@ -691,7 +766,6 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
     private List<IGameplayActions> m_GameplayActionsCallbackInterfaces = new List<IGameplayActions>();
     private readonly InputAction m_Gameplay_Movement;
     private readonly InputAction m_Gameplay_Interact;
-    private readonly InputAction m_Gameplay_Attack;
     private readonly InputAction m_Gameplay_AttackUp;
     private readonly InputAction m_Gameplay_AttackDown;
     private readonly InputAction m_Gameplay_AttackLeft;
@@ -702,7 +776,6 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
         public GameplayActions(@UserInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Gameplay_Movement;
         public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
-        public InputAction @Attack => m_Wrapper.m_Gameplay_Attack;
         public InputAction @AttackUp => m_Wrapper.m_Gameplay_AttackUp;
         public InputAction @AttackDown => m_Wrapper.m_Gameplay_AttackDown;
         public InputAction @AttackLeft => m_Wrapper.m_Gameplay_AttackLeft;
@@ -722,9 +795,6 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
-            @Attack.started += instance.OnAttack;
-            @Attack.performed += instance.OnAttack;
-            @Attack.canceled += instance.OnAttack;
             @AttackUp.started += instance.OnAttackUp;
             @AttackUp.performed += instance.OnAttackUp;
             @AttackUp.canceled += instance.OnAttackUp;
@@ -747,9 +817,6 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
-            @Attack.started -= instance.OnAttack;
-            @Attack.performed -= instance.OnAttack;
-            @Attack.canceled -= instance.OnAttack;
             @AttackUp.started -= instance.OnAttackUp;
             @AttackUp.performed -= instance.OnAttackUp;
             @AttackUp.canceled -= instance.OnAttackUp;
@@ -779,6 +846,60 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
         }
     }
     public GameplayActions @Gameplay => new GameplayActions(this);
+
+    // SoftGameplay
+    private readonly InputActionMap m_SoftGameplay;
+    private List<ISoftGameplayActions> m_SoftGameplayActionsCallbackInterfaces = new List<ISoftGameplayActions>();
+    private readonly InputAction m_SoftGameplay_Movement;
+    private readonly InputAction m_SoftGameplay_Interact;
+    public struct SoftGameplayActions
+    {
+        private @UserInput m_Wrapper;
+        public SoftGameplayActions(@UserInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_SoftGameplay_Movement;
+        public InputAction @Interact => m_Wrapper.m_SoftGameplay_Interact;
+        public InputActionMap Get() { return m_Wrapper.m_SoftGameplay; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(SoftGameplayActions set) { return set.Get(); }
+        public void AddCallbacks(ISoftGameplayActions instance)
+        {
+            if (instance == null || m_Wrapper.m_SoftGameplayActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_SoftGameplayActionsCallbackInterfaces.Add(instance);
+            @Movement.started += instance.OnMovement;
+            @Movement.performed += instance.OnMovement;
+            @Movement.canceled += instance.OnMovement;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
+        }
+
+        private void UnregisterCallbacks(ISoftGameplayActions instance)
+        {
+            @Movement.started -= instance.OnMovement;
+            @Movement.performed -= instance.OnMovement;
+            @Movement.canceled -= instance.OnMovement;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
+        }
+
+        public void RemoveCallbacks(ISoftGameplayActions instance)
+        {
+            if (m_Wrapper.m_SoftGameplayActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ISoftGameplayActions instance)
+        {
+            foreach (var item in m_Wrapper.m_SoftGameplayActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_SoftGameplayActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public SoftGameplayActions @SoftGameplay => new SoftGameplayActions(this);
 
     // Dialogue
     private readonly InputActionMap m_Dialogue;
@@ -948,11 +1069,15 @@ public partial class @UserInput: IInputActionCollection2, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
-        void OnAttack(InputAction.CallbackContext context);
         void OnAttackUp(InputAction.CallbackContext context);
         void OnAttackDown(InputAction.CallbackContext context);
         void OnAttackLeft(InputAction.CallbackContext context);
         void OnAttackRight(InputAction.CallbackContext context);
+    }
+    public interface ISoftGameplayActions
+    {
+        void OnMovement(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
     public interface IDialogueActions
     {

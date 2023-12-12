@@ -7,13 +7,16 @@ public class PlayerAttacker : Player {
     public Action<Direction> OnAttack { get; private set; }
 
     [SerializeField] private LayerMask enemyMask;
+
     
     [SerializeField, Tooltip("How long should the attack trigger be enabled in physics steps.")] 
     private int attackDuration = 5;
 
 	[SerializeField, Tooltip("How long should the delay between attacks be in seconds.")] 
-    private float m_attackDelay = .5f;
-	public float attackDelay => m_attackDelay;
+    private float attackDelay = .5f;
+	public float AttackDelay => attackDelay;
+
+    [SerializeField] private int pushbackForce = 1000;
 
     protected override void Awake() {
         base.Awake();
@@ -24,12 +27,9 @@ public class PlayerAttacker : Player {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-
-        if ((1 << other.gameObject.layer | enemyMask) == enemyMask) {
-            
-            other.gameObject.GetComponent<EnemyScript>().TakeDamage(1); //Temporarily using 1
-
-        }
+        if ((1 << other.gameObject.layer | enemyMask) != enemyMask) return;
+        Vector2 direction = (other.transform.position - transform.position).normalized;
+        other.GetComponent<EnemyHealth>().TakeDamage(pushbackForce * direction);
     }
 
     private void Attack(Direction direction) => 

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-public enum MenuState { Main, Gameplay, Dialogue, Win, Lose }
+public enum MenuState { Main, Gameplay, SoftGameplay, Dialogue, Win, Lose }
 
 public class MenuManager : Singleton<MenuManager> {
 
@@ -23,6 +23,7 @@ public class MenuManager : Singleton<MenuManager> {
         if (menus.Length == 0) menus = new MenuData[] {
             new(MenuState.Main),
             new(MenuState.Gameplay),
+            new(MenuState.SoftGameplay),
             new(MenuState.Dialogue),
             new(MenuState.Win),
             new(MenuState.Lose),
@@ -59,7 +60,7 @@ public class MenuManager : Singleton<MenuManager> {
 	public void Crossfade(SceneState sceneState) => StartCoroutine(CrossfadeCoroutine(sceneState));
 
 	private IEnumerator CrossfadeCoroutine(SceneState sceneState) {
-		InputState currentInputState = InputManager.Instance.currentInputState;
+		InputState currentInputState = InputManager.Instance.CurrentInputState;
 
 		InputManager.Instance.ChangeInput(InputState.None);
 

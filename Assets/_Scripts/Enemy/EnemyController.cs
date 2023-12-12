@@ -1,33 +1,58 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyController : Enemy {
 
     [SerializeField] private LayerMask playerMask;
 
+    [SerializeField] private float stoppingDistanceFromPlayer;
+    public float StoppingDistanceFromPlayer => stoppingDistanceFromPlayer;
+
+    private float originalStoppingDistance = 2;
+
     private Vector3 origin;
-    private Vector3 waypoint;
 
-    private bool stopFollow;
+    private new Rigidbody2D rigidbody;
 
-    protected override void Awake() {
-        base.Awake();
+    private EnemyHealth health;
+
+    private void Awake() {
+        AssignAgent(GetComponent<NavMeshAgent>);
+
+        rigidbody = GetComponent<Rigidbody2D>();
 
         origin = transform.position;
-        waypoint = origin;
+        originalStoppingDistance = agent.stoppingDistance;
+
+        health = GetComponentInChildren<EnemyHealth>();
     }
 
-    private void Update() { if (stopFollow) agent.SetDestination(origin); else agent.SetDestination(waypoint); }
+    private void OnEnable() {
+        health.OnHit += OnHit;
+    }
+
+    private void OnDisable() {
+        health.OnHit -= OnHit;
+    }
     
     private void OnTriggerStay2D(Collider2D other) {
         if ((1 << other.gameObject.layer | playerMask) != playerMask) return;
-        waypoint = other.transform.position;
+        agent.SetDestination(other.transform.position);
+        agent.stoppingDistance = stoppingDistanceFromPlayer;
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         if ((1 << other.gameObject.layer | playerMask) != playerMask) return;
-        waypoint = origin;
+        agent.SetDestination(origin);
+        agent.stoppingDistance = originalStoppingDistance;
+    }
+
+    private void OnHit(int lives, Vector2 direction) {
+        if (lives == 0) agent.isStopped = true;
+        else rigidbody.AddForce(direction);
     }
 
 }
