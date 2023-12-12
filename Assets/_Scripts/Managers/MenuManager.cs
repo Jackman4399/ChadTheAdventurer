@@ -11,7 +11,7 @@ public class MenuManager : Singleton<MenuManager> {
 
     public event Action OnMenuChanged;
 
-    [SerializeField] private MenuData[] menus;
+    private MenuData[] menus;
     public MenuData[] Menus => menus;
 
 	private Image crossfadeImage;

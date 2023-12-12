@@ -10,7 +10,7 @@ public class StoryStateBehaviour : StateMachineBehaviour {
 		if (StoryManager.Instance.isSkipping) {
 			if (StoryManager.Instance.InitialStoryState != storyState) StoryManager.Instance.Proceed();
 			else StoryManager.Instance.DisableSkip();
-		} else StoryManager.Instance.ChangeCurrentStoryState(storyState);
+		} else StoryManager.Instance.ChangeStoryState(storyState);
 	}
 
 }

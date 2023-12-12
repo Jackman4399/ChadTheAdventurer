@@ -9,16 +9,13 @@ public class GameplayMenu : Menu {
     [SerializeField] private RectTransform heart;
     private RectTransform heartPanel;
 
-    private PlayerHealth playerHealth;
+    [SerializeField] private PlayerHealth playerHealth;
 
     protected override void Awake() {
         base.Awake();
 
         pooledHearts = new List<Image>();
         heartPanel = (RectTransform)transform.Find("HeartPanel");
-
-        GameObject player = GameObject.Find("Player");
-        playerHealth = player.GetComponentInChildren<PlayerHealth>();
 
         for (int i = 0; i < playerHealth.maxLives; i++) {
                 RectTransform h = Instantiate(heart);

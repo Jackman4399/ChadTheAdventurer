@@ -43,7 +43,6 @@ public abstract class EnemyAnimator : Enemy {
 
     protected virtual void Update() {
         moveDirection = agent.velocity;
-        Debug.Log(moveDirection);
 
         if (moveDirection.sqrMagnitude > .1f) lastMove = moveDirection;
 
