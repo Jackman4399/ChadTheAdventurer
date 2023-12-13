@@ -19,6 +19,7 @@ public abstract class EnemyAnimator : Enemy {
     protected EnemyHealth health;
 
     protected virtual void Awake() {
+        AssignAgent(GetComponentInParent<NavMeshAgent>);
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -29,7 +30,6 @@ public abstract class EnemyAnimator : Enemy {
             case Direction.Left: lastMove = Vector2.left; break;
         }
 
-        AssignAgent(GetComponentInParent<NavMeshAgent>);
         health = transform.parent.GetComponentInChildren<EnemyHealth>();
     }
 
@@ -42,7 +42,7 @@ public abstract class EnemyAnimator : Enemy {
     }
 
     protected virtual void Update() {
-        moveDirection = agent.velocity;
+        moveDirection = agent.desiredVelocity;
 
         if (moveDirection.sqrMagnitude > .1f) lastMove = moveDirection;
 
@@ -51,10 +51,10 @@ public abstract class EnemyAnimator : Enemy {
         animator.SetFloat(speedName, moveDirection.sqrMagnitude);
     }
 
-    private void OnHit(int lives, Vector2 _) {
+    private void OnHit(int currentLives, Vector2 _) {
         StopAllCoroutines();
         StartCoroutine(HitAnimation());
-        if (lives == 0) animator.SetTrigger(diedName);
+        if (currentLives == 0) animator.SetTrigger(diedName);
     }
 
     private IEnumerator HitAnimation() {

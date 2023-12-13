@@ -12,12 +12,12 @@ public class DialogueTrigger : MonoBehaviour {
 	[SerializeField] private LayerMask playerMask;
 
 	private void OnTriggerEnter2D(Collider2D other) {
-		if ((int)Mathf.Pow(2, other.gameObject.layer) == playerMask)
+		if ((1 << other.gameObject.layer | playerMask) == playerMask)
 		HandlePlayerInteract(other.gameObject, true);
 	}
 
     private void OnTriggerExit2D(Collider2D other) {
-		if ((int)Mathf.Pow(2, other.gameObject.layer) == playerMask)
+		if ((1 << other.gameObject.layer | playerMask) == playerMask)
         HandlePlayerInteract(other.gameObject, false);
     }
 

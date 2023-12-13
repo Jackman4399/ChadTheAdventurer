@@ -11,9 +11,9 @@ public class PlayerController : Player {
     [SerializeField, Min(0)] private float speed;
 
     // The interval of time (in seconds) that the sound will be played.
-    public float interval = 0.3f;
+    [SerializeField, Min(0)] private float interval = .3f;
 
-    private float trackedTime = 0.0f;
+    private float trackedTime;
 
     protected override void Awake() {
         base.Awake();
@@ -41,7 +41,7 @@ public class PlayerController : Player {
         if ((trackedTime >= interval) && (rigidbody.velocity != Vector2.zero)) {
             // Play the sound, reset the timer
             AudioManager.Instance.PlayOneShot("PlayerWalk");
-            trackedTime = 0.0f;
+            trackedTime = 0;
         }
 
     }

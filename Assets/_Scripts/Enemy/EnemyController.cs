@@ -37,6 +37,10 @@ public class EnemyController : Enemy {
     private void OnDisable() {
         health.OnHit -= OnHit;
     }
+
+    private void FixedUpdate() {
+        rigidbody.AddForce(agent.desiredVelocity);
+    }
     
     private void OnTriggerStay2D(Collider2D other) {
         if ((1 << other.gameObject.layer | playerMask) != playerMask) return;
@@ -50,9 +54,8 @@ public class EnemyController : Enemy {
         agent.stoppingDistance = originalStoppingDistance;
     }
 
-    private void OnHit(int lives, Vector2 direction) {
-        if (lives == 0) agent.isStopped = true;
-        else rigidbody.AddForce(direction);
+    private void OnHit(int currentLives, Vector2 direction) {
+        if (currentLives > 0) rigidbody.AddForce(direction);
     }
 
 }

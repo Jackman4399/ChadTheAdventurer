@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyHealth : Enemy {
 
@@ -12,13 +12,15 @@ public class EnemyHealth : Enemy {
     private int currentLives;
 
     private void Awake() {
+        AssignAgent(GetComponentInParent<NavMeshAgent>);
+
         currentLives = maxLives;
     }
 
     public void TakeDamage(Vector2 direction) {
-        if (currentLives == 0) return;
         currentLives--;
         OnHit?.Invoke(currentLives, direction);
+        if (currentLives == 0) agent.isStopped = true;
     }
 
 }

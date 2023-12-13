@@ -5,21 +5,16 @@ using UnityEngine;
 public class PlayerHealth : Player {
 
     public event Action<int> OnLivesChanged;
+    public event Action OnHit, OnDied;
 
-    [SerializeField] private int m_maxLives = 5;
-    public int maxLives => m_maxLives;
+    [SerializeField] private int maxLives = 5;
+    public int MaxLives => maxLives;
     //Purely for testing
     private int currentLives;
-
-    [SerializeField] private float pushbackForce = 500;
     
-
-    [SerializeField] private Color flashColour;
-    [SerializeField] private float flashDuration;
-    [SerializeField] private int numOfFlashes;
-    [SerializeField] private bool invulnerable = false;
-
-    private SpriteRenderer spriteRenderer;
+    [SerializeField, Tooltip("How long should the player be invulnerable once hit in seconds.")]
+    private float hitInvulnerableTime = 2.5f;
+    public float HitInvulnerableTime => hitInvulnerableTime;
 
     //NOTE: Use this for death animation or any game end triggers
     //private bool isDead = false;
@@ -27,46 +22,34 @@ public class PlayerHealth : Player {
     protected override void Awake() {
         base.Awake();
 
-        spriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
-
         //Start with the maximum health
-        currentLives = m_maxLives; 
-    }
-
-    private void Start() {
-        OnLivesChanged?.Invoke(m_maxLives);
+        currentLives = maxLives;
     }
 
     public void Heal(int lives) {
-
         //Heal the player
         currentLives += lives;
 
         //Prevent overhealing
-        currentLives = Mathf.Clamp(currentLives, 0, m_maxLives);
+        currentLives = Mathf.Clamp(currentLives, 0, maxLives);
 
         OnLivesChanged?.Invoke(currentLives);
     }
 
     public void Hurt(int lives) {
-
-        if(invulnerable) return;
-
         //Hurt the player
         currentLives -= lives;
+        OnLivesChanged?.Invoke(currentLives);
 
         //Prevent negative health
-        if(currentLives <= 0) {
-            //isDead = true;
-
-        } else {
-
-            StartCoroutine(Flash());
-
+        if(currentLives == 0) OnDied?.Invoke();
+        else {
+            OnHit?.Invoke();
+            StartCoroutine(HitInvunerableCoroutine());
         }
 
-
-        OnLivesChanged?.Invoke(currentLives);
+        //StartCoroutine(Flash());
+        
     }
 
     //Fetch the player's current HP
@@ -75,24 +58,14 @@ public class PlayerHealth : Player {
         return currentLives;
 
     }
-	
-    private IEnumerator Flash() {
-        invulnerable = true;
-        int playerLayer = LayerMask.NameToLayer("Player");
-        int monsterLayer = LayerMask.NameToLayer("Enemy");
 
-        Physics2D.IgnoreLayerCollision(playerLayer, monsterLayer, true);
+    private IEnumerator HitInvunerableCoroutine() {
+        int layer = gameObject.layer;
+        gameObject.layer = 0;
 
-        for (int i = 0; i < numOfFlashes; i++) {
-            spriteRenderer.color = flashColour;
-            yield return new WaitForSeconds(flashDuration);
-            spriteRenderer.color = Color.white;
-            yield return new WaitForSeconds(flashDuration);
-        }
+        yield return new WaitForSeconds(hitInvulnerableTime);
 
-        Physics2D.IgnoreLayerCollision(playerLayer, monsterLayer, false);
-
-        invulnerable = false;
+        gameObject.layer = layer;
     }
 
 }

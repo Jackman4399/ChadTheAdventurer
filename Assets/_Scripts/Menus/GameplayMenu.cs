@@ -17,7 +17,7 @@ public class GameplayMenu : Menu {
         pooledHearts = new List<Image>();
         heartPanel = (RectTransform)transform.Find("HeartPanel");
 
-        for (int i = 0; i < playerHealth.maxLives; i++) {
+        for (int i = 0; i < playerHealth.MaxLives; i++) {
                 RectTransform h = Instantiate(heart);
 
                 h.SetParent(heartPanel, false);

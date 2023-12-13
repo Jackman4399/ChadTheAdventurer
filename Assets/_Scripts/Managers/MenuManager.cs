@@ -20,7 +20,7 @@ public class MenuManager : Singleton<MenuManager> {
     protected override void Awake() {
         base.Awake();
 
-        if (menus.Length == 0) menus = new MenuData[] {
+        menus = new MenuData[] {
             new(MenuState.Main),
             new(MenuState.Gameplay),
             new(MenuState.SoftGameplay),
