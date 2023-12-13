@@ -20,6 +20,7 @@ public abstract class EnemyAnimator : Enemy {
 
     protected virtual void Awake() {
         AssignAgent(GetComponentInParent<NavMeshAgent>);
+        
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
