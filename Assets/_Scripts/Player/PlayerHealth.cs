@@ -16,8 +16,7 @@ public class PlayerHealth : Player {
     private float hitInvulnerableTime = 2.5f;
     public float HitInvulnerableTime => hitInvulnerableTime;
 
-    //NOTE: Use this for death animation or any game end triggers
-    //private bool isDead = false;
+    private bool invulnerable;
 
     protected override void Awake() {
         base.Awake();
@@ -36,9 +35,11 @@ public class PlayerHealth : Player {
         OnLivesChanged?.Invoke(currentLives);
     }
 
-    public void Hurt(int lives) {
+    public void TakeDamage(Vector2 direction) {
+        if (invulnerable) return;
+
         //Hurt the player
-        currentLives -= lives;
+        currentLives--;
         OnLivesChanged?.Invoke(currentLives);
 
         //Prevent negative health
@@ -46,9 +47,8 @@ public class PlayerHealth : Player {
         else {
             OnHit?.Invoke();
             StartCoroutine(HitInvunerableCoroutine());
+            StartCoroutine(HitInvunerableInputCoroutine());
         }
-
-        //StartCoroutine(Flash());
         
     }
 
@@ -60,12 +60,20 @@ public class PlayerHealth : Player {
     }
 
     private IEnumerator HitInvunerableCoroutine() {
-        int layer = gameObject.layer;
-        gameObject.layer = 0;
+        invulnerable = true;
 
         yield return new WaitForSeconds(hitInvulnerableTime);
 
-        gameObject.layer = layer;
+        invulnerable = false;
+    }
+
+    private IEnumerator HitInvunerableInputCoroutine() {
+        InputState inputState = InputManager.Instance.CurrentInputState;
+        InputManager.Instance.ChangeInput(InputState.None);
+
+        yield return new WaitForSeconds(hitInvulnerableTime / 5);
+
+        InputManager.Instance.ChangeInput(inputState);
     }
 
 }

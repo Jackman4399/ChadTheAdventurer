@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0138ea8a065d9d14ca5c3f28c609f0be
+guid: a348d4cceaf66674a9b31ebe9985eb30
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,131 +106,144 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: D_Walk_0
+      name: golbin-attack-side-0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0cb1d3d95c4b6043abe125209f66de9
-      internalID: 1352931559
+      spriteID: fb187854d203cc148bad6369cbc1e3c1
+      internalID: -2125886054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: D_Walk_1
+      name: golbin-attack-side-1
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31652bee327968c44961aeefaca82290
-      internalID: 892665946
+      spriteID: 2385a30f4ed98d1468bf8242c5164687
+      internalID: -69469044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: D_Walk_2
+      name: golbin-attack-side-2
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6611e3f4e637c044bbc3ed01f9597c30
-      internalID: 523273632
+      spriteID: fef1071502eb4de4f954dd675a6e5c68
+      internalID: 720209661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: D_Walk_3
+      name: golbin-attack-side-3
       rect:
         serializedVersion: 2
         x: 144
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 103367d8e2d51564f95a3da5c71dd843
-      internalID: -651112188
+      spriteID: 95d56a775cfb8d249be9597e777c905c
+      internalID: 2086071762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: D_Walk_4
+      name: golbin-attack-side-4
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a714235308b50bf4983bc1ec7099e9c7
-      internalID: 1558248480
+      spriteID: 8388b2b33c83b0b48aa9a67a98baaaa8
+      internalID: -1126241790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: D_Walk_5
+      name: golbin-attack-side-5
       rect:
         serializedVersion: 2
         x: 240
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8d6c0500e52208469ee8d3e79020622
-      internalID: 1663039824
+      spriteID: 7a0ceb32530b191478b0385a7ce46ce6
+      internalID: 1628881274
       vertices: []
       indices: 
       edges: []
@@ -246,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      D_Walk_0: 1352931559
-      D_Walk_1: 892665946
-      D_Walk_2: 523273632
-      D_Walk_3: -651112188
-      D_Walk_4: 1558248480
-      D_Walk_5: 1663039824
+      golbin-attack-side-0: -2125886054
+      golbin-attack-side-1: -69469044
+      golbin-attack-side-2: 720209661
+      golbin-attack-side-3: 2086071762
+      golbin-attack-side-4: -1126241790
+      golbin-attack-side-5: 1628881274
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

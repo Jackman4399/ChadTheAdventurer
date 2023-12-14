@@ -7,17 +7,14 @@ using UnityEngine.AI;
 public class EnemyController : Enemy {
 
     [SerializeField] private LayerMask playerMask;
-
-    [SerializeField] private float stoppingDistanceFromPlayer;
-    public float StoppingDistanceFromPlayer => stoppingDistanceFromPlayer;
-
-    private float originalStoppingDistance = 2;
+    public LayerMask PlayerMask => playerMask;
 
     private Vector3 origin;
 
     private new Rigidbody2D rigidbody;
 
     private EnemyHealth health;
+    private EnemyAttacker attacker;
 
     private void Awake() {
         AssignAgent(GetComponent<NavMeshAgent>);
@@ -25,9 +22,9 @@ public class EnemyController : Enemy {
         rigidbody = GetComponent<Rigidbody2D>();
 
         origin = transform.position;
-        originalStoppingDistance = agent.stoppingDistance;
 
         health = GetComponentInChildren<EnemyHealth>();
+        attacker = GetComponentInChildren<EnemyAttacker>();
     }
 
     private void OnEnable() {
@@ -37,21 +34,15 @@ public class EnemyController : Enemy {
     private void OnDisable() {
         health.OnHit -= OnHit;
     }
-
-    private void FixedUpdate() {
-        rigidbody.AddForce(agent.desiredVelocity);
-    }
     
     private void OnTriggerStay2D(Collider2D other) {
         if ((1 << other.gameObject.layer | playerMask) != playerMask) return;
         agent.SetDestination(other.transform.position);
-        agent.stoppingDistance = stoppingDistanceFromPlayer;
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         if ((1 << other.gameObject.layer | playerMask) != playerMask) return;
         agent.SetDestination(origin);
-        agent.stoppingDistance = originalStoppingDistance;
     }
 
     private void OnHit(int currentLives, Vector2 direction) {

@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerAnimator : Player {
 
+    public event Action<Direction> OnAttack;
+
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     
@@ -37,12 +39,12 @@ public class PlayerAnimator : Player {
     }
 
 	private void OnEnable() {
-		attacker.OnAttack += OnAttack;
+		attacker.OnAttackPressed += OnAttackPressed;
         health.OnHit += OnHit;
     }
 
     private void OnDisable() {
-		attacker.OnAttack -= OnAttack;
+		attacker.OnAttackPressed -= OnAttackPressed;
         health.OnHit -= OnHit;
     }
 
@@ -56,7 +58,7 @@ public class PlayerAnimator : Player {
         animator.SetFloat(speedName, move.sqrMagnitude);
     }
 
-	private void OnAttack(Direction direction) {
+	private void OnAttackPressed(Direction direction) {
         Vector2 attackDirection = Vector2.zero;
 
         switch (direction) {
@@ -73,7 +75,7 @@ public class PlayerAnimator : Player {
 	}
 
 	// Use from within the animation events
-    private void AttackDirection(Direction direction) => attacker.Attack(direction);
+    private void AttackDirection(Direction direction) => OnAttack?.Invoke(direction);
 
     private void OnHit() {
         animator.SetTrigger(hurtName);

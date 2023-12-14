@@ -11,25 +11,17 @@ public abstract class EnemyAnimator : Enemy {
     private SpriteRenderer spriteRenderer;
 
     protected Vector2 moveDirection;
-    protected Vector2 lastMove;
-    [SerializeField] private Direction idleFaceDirection;
 
-    [SerializeField] private string moveXName = "moveX", moveYName = "moveY", speedName = "speed", diedName = "died";
+    [SerializeField] protected string
+    speedName = "speed", diedName = "died";
 
-    protected EnemyHealth health;
+    private EnemyHealth health;
 
     protected virtual void Awake() {
         AssignAgent(GetComponentInParent<NavMeshAgent>);
         
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        switch (idleFaceDirection) {
-            case Direction.Down: lastMove = Vector2.down; break;
-            case Direction.Up: lastMove = Vector2.up; break;
-            case Direction.Right: lastMove = Vector2.right; break;
-            case Direction.Left: lastMove = Vector2.left; break;
-        }
 
         health = transform.parent.GetComponentInChildren<EnemyHealth>();
     }
@@ -45,41 +37,34 @@ public abstract class EnemyAnimator : Enemy {
     protected virtual void Update() {
         moveDirection = agent.desiredVelocity;
 
-        if (moveDirection.sqrMagnitude > .1f) lastMove = moveDirection;
-
-        animator.SetFloat(moveXName, lastMove.x);
-        animator.SetFloat(moveYName, lastMove.y);
         animator.SetFloat(speedName, moveDirection.sqrMagnitude);
     }
 
     private void OnHit(int currentLives, Vector2 _) {
         StopAllCoroutines();
-        StartCoroutine(HitAnimation());
+        StartCoroutine(HitCoroutine());
         if (currentLives == 0) animator.SetTrigger(diedName);
     }
 
-    private IEnumerator HitAnimation() {
+    private IEnumerator HitCoroutine() {
         float hitBlinkTime = .5f;
 
-        Coroutine blinkAnimation = StartCoroutine(BlinkAnimation());
+        Coroutine blinkCoroutine = StartCoroutine(BlinkCoroutine());
 
         yield return new WaitForSeconds(hitBlinkTime);
 
-        StopCoroutine(blinkAnimation);
+        StopCoroutine(blinkCoroutine);
 
         spriteRenderer.color = Color.white;
     }
 
-    private IEnumerator BlinkAnimation() {
+    private IEnumerator BlinkCoroutine() {
         float visiblityTime = .075f;
 
         while (true) {
             spriteRenderer.color = Color.black;
-
             yield return new WaitForSeconds(visiblityTime);
-
             spriteRenderer.color = Color.white;
-
             yield return new WaitForSeconds(visiblityTime);
         }
     }

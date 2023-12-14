@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttacker : Player {
 
-    public event Action<Direction> OnAttack;
+    public event Action<Direction> OnAttackPressed;
 
     [SerializeField] private LayerMask enemyMask;
 
@@ -18,18 +18,26 @@ public class PlayerAttacker : Player {
 
     [SerializeField] private int pushbackForce = 1000;
 
+    private PlayerAnimator animator;
+
     protected override void Awake() {
         base.Awake();
 
         foreach (Transform child in transform) child.gameObject.SetActive(false);
+
+        animator = transform.parent.GetComponentInChildren<PlayerAnimator>();
     }
 
     private void OnEnable() {
         InitialiseAttackListeners(true);
+
+        animator.OnAttack += OnAttack;
     }
 
     private void OnDisable() {
         InitialiseAttackListeners(false);
+
+        animator.OnAttack -= OnAttack;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -52,13 +60,13 @@ public class PlayerAttacker : Player {
 		}
 	}
 
-    private void OnAttackUp(InputAction.CallbackContext context) => OnAttackPressed(Direction.Up);
-	private void OnAttackDown(InputAction.CallbackContext context) => OnAttackPressed(Direction.Down);
-	private void OnAttackLeft(InputAction.CallbackContext context) => OnAttackPressed(Direction.Left);
-	private void OnAttackRight(InputAction.CallbackContext context) => OnAttackPressed(Direction.Right);
+    private void OnAttackUp(InputAction.CallbackContext context) => OnAttackDirection(Direction.Up);
+	private void OnAttackDown(InputAction.CallbackContext context) => OnAttackDirection(Direction.Down);
+	private void OnAttackLeft(InputAction.CallbackContext context) => OnAttackDirection(Direction.Left);
+	private void OnAttackRight(InputAction.CallbackContext context) => OnAttackDirection(Direction.Right);
 
-    private void OnAttackPressed(Direction direction) {
-        OnAttack?.Invoke(direction);
+    private void OnAttackDirection(Direction direction) {
+        OnAttackPressed?.Invoke(direction);
         StartCoroutine(OnAttackPressedCoroutine());
     }
 
@@ -68,7 +76,7 @@ public class PlayerAttacker : Player {
         InitialiseAttackListeners(true);
     }
 
-    public void Attack(Direction direction) => 
+    private void OnAttack(Direction direction) => 
 	StartCoroutine(AttackCoroutine(transform.Find("Attack" + direction.ToString()).gameObject));
 
     private IEnumerator AttackCoroutine(GameObject direction) {
