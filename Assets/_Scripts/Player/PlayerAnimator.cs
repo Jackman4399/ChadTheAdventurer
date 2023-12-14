@@ -77,7 +77,7 @@ public class PlayerAnimator : Player {
 	// Use from within the animation events
     private void AttackDirection(Direction direction) => OnAttack?.Invoke(direction);
 
-    private void OnHit() {
+    private void OnHit(int _, Vector2 direction) {
         animator.SetTrigger(hurtName);
         StartCoroutine(HitInvulnerableCoroutine());
     }

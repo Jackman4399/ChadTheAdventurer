@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerHealth : Player {
 
     public event Action<int> OnLivesChanged;
-    public event Action OnHit, OnDied;
+    public event Action<int, Vector2> OnHit;
+    public event Action OnDied;
 
     [SerializeField] private int maxLives = 5;
     public int MaxLives => maxLives;
@@ -17,6 +18,7 @@ public class PlayerHealth : Player {
     public float HitInvulnerableTime => hitInvulnerableTime;
 
     private bool invulnerable;
+    public bool Invulnerable => invulnerable;
 
     protected override void Awake() {
         base.Awake();
@@ -45,18 +47,11 @@ public class PlayerHealth : Player {
         //Prevent negative health
         if(currentLives == 0) OnDied?.Invoke();
         else {
-            OnHit?.Invoke();
+            OnHit?.Invoke(currentLives, direction);
             StartCoroutine(HitInvunerableCoroutine());
             StartCoroutine(HitInvunerableInputCoroutine());
         }
         
-    }
-
-    //Fetch the player's current HP
-    public int GetCurrentHP() {
-
-        return currentLives;
-
     }
 
     private IEnumerator HitInvunerableCoroutine() {

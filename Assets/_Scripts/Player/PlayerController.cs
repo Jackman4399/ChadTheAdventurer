@@ -15,23 +15,33 @@ public class PlayerController : Player {
 
     private float trackedTime;
 
+    private PlayerHealth health;
+
     protected override void Awake() {
         base.Awake();
 
         rigidbody = GetComponent<Rigidbody2D>();
+
+        health = GetComponentInChildren<PlayerHealth>();
     }
 
 	private void OnEnable() {
 		userInput.SoftGameplay.Interact.performed += OnInteract;
 		userInput.Gameplay.Interact.performed += OnInteract;
+
+        health.OnHit += OnHit;
     }
 
     private void OnDisable() {
 		userInput.SoftGameplay.Interact.performed -= OnInteract;
 		userInput.Gameplay.Interact.performed -= OnInteract;
+
+        health.OnHit += OnHit;
     }
 
     private void FixedUpdate() {
+        if (InputManager.Instance.CurrentInputState == InputState.None) return;
+
         rigidbody.velocity = move * speed;
 
         // Increment the timer
@@ -47,5 +57,9 @@ public class PlayerController : Player {
     }
 
 	private void OnInteract(InputAction.CallbackContext context) => Interact?.Invoke();
+
+    private void OnHit(int currentLives, Vector2 direction) {
+        if (currentLives > 0) rigidbody.AddForce(direction);
+    }
 
 }

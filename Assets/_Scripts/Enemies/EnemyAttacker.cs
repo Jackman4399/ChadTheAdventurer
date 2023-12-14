@@ -16,7 +16,7 @@ public class EnemyAttacker : Enemy {
         controller = GetComponentInParent<EnemyController>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerStay2D(Collider2D other) {
         if ((1 << other.gameObject.layer | controller.PlayerMask) != controller.PlayerMask) return;
         Vector2 direction = (other.transform.position - transform.position).normalized;
         other.GetComponent<PlayerHealth>().TakeDamage(pushbackForce * direction);
