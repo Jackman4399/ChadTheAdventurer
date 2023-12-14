@@ -19,6 +19,10 @@ public abstract class Player : MonoBehaviour {
             case InputState.Gameplay:
                 move = userInput.Gameplay.Movement.ReadValue<Vector2>();
             break;
+
+            default:
+                move = Vector2.zero;
+            break;
         }
     }
 

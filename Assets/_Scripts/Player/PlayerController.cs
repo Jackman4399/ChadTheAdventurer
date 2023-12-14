@@ -11,27 +11,37 @@ public class PlayerController : Player {
     [SerializeField, Min(0)] private float speed;
 
     // The interval of time (in seconds) that the sound will be played.
-    public float interval = 0.3f;
+    [SerializeField, Min(0)] private float interval = .3f;
 
-    private float trackedTime = 0.0f;
+    private float trackedTime;
+
+    private PlayerHealth health;
 
     protected override void Awake() {
         base.Awake();
 
         rigidbody = GetComponent<Rigidbody2D>();
+
+        health = GetComponentInChildren<PlayerHealth>();
     }
 
 	private void OnEnable() {
 		userInput.SoftGameplay.Interact.performed += OnInteract;
 		userInput.Gameplay.Interact.performed += OnInteract;
+
+        health.OnHit += OnHit;
     }
 
     private void OnDisable() {
 		userInput.SoftGameplay.Interact.performed -= OnInteract;
 		userInput.Gameplay.Interact.performed -= OnInteract;
+
+        health.OnHit += OnHit;
     }
 
     private void FixedUpdate() {
+        if (InputManager.Instance.CurrentInputState == InputState.None) return;
+
         rigidbody.velocity = move * speed;
 
         // Increment the timer
@@ -41,11 +51,15 @@ public class PlayerController : Player {
         if ((trackedTime >= interval) && (rigidbody.velocity != Vector2.zero)) {
             // Play the sound, reset the timer
             AudioManager.Instance.PlayOneShot("PlayerWalk");
-            trackedTime = 0.0f;
+            trackedTime = 0;
         }
 
     }
 
 	private void OnInteract(InputAction.CallbackContext context) => Interact?.Invoke();
+
+    private void OnHit(int currentLives, Vector2 direction) {
+        if (currentLives > 0) rigidbody.AddForce(direction);
+    }
 
 }
