@@ -29,7 +29,7 @@ public class ActivationScript : MonoBehaviour
             
             if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(MenuState.Dialogue);
             
-            if(InputManager.Instance != null) InputManager.Instance.ChangeInput(InputState.Menu);
+            if(InputManager.Instance != null) InputManager.Instance.ChangeInput(InputState.Dialogue);
 
             if(director != null) director.Play();
             

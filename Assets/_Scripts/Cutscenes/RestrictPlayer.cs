@@ -7,6 +7,12 @@ public class RestrictPlayer : MonoBehaviour
 {
     [SerializeField] private PlayableDirector director;
 
+    [SerializeField] private InputState initInputState;
+    [SerializeField] private MenuState initMenuState;
+
+    [SerializeField] private InputState endInputState;
+    [SerializeField] private MenuState endMenuState;
+
     private void Start() {
 
         director.stopped += OnPlayableDirectorStopped;
@@ -14,9 +20,9 @@ public class RestrictPlayer : MonoBehaviour
 
         if (director.playOnAwake) {
 
-            if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(MenuState.Dialogue);
+            if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(initMenuState);
         
-            if(InputManager.Instance != null) InputManager.Instance.ChangeInput(InputState.None);
+            if(InputManager.Instance != null) InputManager.Instance.ChangeInput(initInputState);
 
             OnPlayableDirectorPlayed(director);
         }
@@ -28,9 +34,9 @@ public class RestrictPlayer : MonoBehaviour
     {
         if (director == aDirector){
 
-            if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(MenuState.Gameplay);
+            if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(endMenuState);
             
-            if(InputManager.Instance != null) InputManager.Instance.ChangeInput(InputState.Gameplay);
+            if(InputManager.Instance != null) InputManager.Instance.ChangeInput(endInputState);
         }
             
     }
@@ -42,9 +48,9 @@ public class RestrictPlayer : MonoBehaviour
 
         if (director == aDirector){
 
-            if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(MenuState.Dialogue);
+            if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(initMenuState);
         
-            if(InputManager.Instance != null) InputManager.Instance.ChangeInput(InputState.None);
+            if(InputManager.Instance != null) InputManager.Instance.ChangeInput(initInputState);
         }
     }
 
