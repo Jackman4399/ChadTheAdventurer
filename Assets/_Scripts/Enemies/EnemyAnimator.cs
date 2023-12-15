@@ -16,6 +16,7 @@ public abstract class EnemyAnimator : Enemy {
     speedName = "speed", diedName = "died";
 
     private EnemyHealth health;
+    private EnemyAttacker attacker;
 
     protected virtual void Awake() {
         AssignAgent(GetComponentInParent<NavMeshAgent>);
@@ -24,6 +25,7 @@ public abstract class EnemyAnimator : Enemy {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         health = transform.parent.GetComponentInChildren<EnemyHealth>();
+        attacker = transform.parent.GetComponentInChildren<EnemyAttacker>();
     }
 
     private void OnEnable() {
@@ -67,6 +69,11 @@ public abstract class EnemyAnimator : Enemy {
             spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(visiblityTime);
         }
+    }
+
+    // For use within animation events
+    private void DisableAttack() {
+        attacker.DisableAttack();
     }
 
     // For use within animation events

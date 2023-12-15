@@ -11,8 +11,6 @@ public class GoblinAnimator : EnemyAnimator {
     [SerializeField] private string
     moveXName = "moveX", moveYName = "moveY";
 
-    private bool isAttacking;
-
     protected override void Awake() {
         base.Awake();
 
@@ -31,10 +29,6 @@ public class GoblinAnimator : EnemyAnimator {
 
         animator.SetFloat(moveXName, lastMove.x);
         animator.SetFloat(moveYName, lastMove.y);
-
-        if (agent.remainingDistance > agent.stoppingDistance && isAttacking) return;
-
-        
     }
 
 }
