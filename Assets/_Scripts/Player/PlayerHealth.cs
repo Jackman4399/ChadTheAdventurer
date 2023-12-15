@@ -49,7 +49,6 @@ public class PlayerHealth : Player {
         else {
             OnHit?.Invoke(currentLives, direction);
             StartCoroutine(HitInvunerableCoroutine());
-            StartCoroutine(HitInvunerableInputCoroutine());
         }
         
     }
@@ -60,15 +59,6 @@ public class PlayerHealth : Player {
         yield return new WaitForSeconds(hitInvulnerableTime);
 
         invulnerable = false;
-    }
-
-    private IEnumerator HitInvunerableInputCoroutine() {
-        InputState inputState = InputManager.Instance.CurrentInputState;
-        InputManager.Instance.ChangeInput(InputState.None);
-
-        yield return new WaitForSeconds(hitInvulnerableTime / 5);
-
-        InputManager.Instance.ChangeInput(inputState);
     }
 
 }
