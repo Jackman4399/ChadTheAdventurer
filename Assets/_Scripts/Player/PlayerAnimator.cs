@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerAnimator : Player {
 
@@ -12,6 +10,8 @@ public class PlayerAnimator : Player {
     private SpriteRenderer spriteRenderer;
     
     private Vector2 lastMove = Vector2.right;
+
+    private InputState gameplayInputState;
 
     [Header("Animator Settings")]
     [SerializeField] private string speedName = "speed";
@@ -74,9 +74,6 @@ public class PlayerAnimator : Player {
 		animator.SetTrigger(attackName);
 	}
 
-	// Use from within the animation events
-    private void AttackDirection(Direction direction) => OnAttack?.Invoke(direction);
-
     private void OnHit(int _, Vector2 direction) {
         animator.SetTrigger(hurtName);
         StartCoroutine(HitInvulnerableCoroutine());
@@ -97,6 +94,20 @@ public class PlayerAnimator : Player {
             spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(flashDelay);
         }
+    }
+
+    // Use from within the animation events
+    private void AttackDirection(Direction direction) => OnAttack?.Invoke(direction);
+
+    // Use from within the animation events
+    private void EnableGameplay() {
+        InputManager.Instance.ChangeInput(gameplayInputState);
+    }
+
+    // Use from within the animation events
+    private void DisableGameplay() {
+        gameplayInputState = InputManager.Instance.CurrentInputState;
+        InputManager.Instance.ChangeInput(InputState.None);
     }
 
 }
