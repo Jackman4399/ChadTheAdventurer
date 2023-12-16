@@ -10,9 +10,9 @@ public class HeartScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         
-        if(other.gameObject.layer.Equals("Player")) {
+        if(other.gameObject.layer == LayerMask.NameToLayer("Player")) {
 
-            heal.Play();
+            AudioManager.Instance.PlayOneShot("HeartHeal");
 
             //Heal player
             other.gameObject.GetComponent<PlayerHealth>().Heal(healAmount);

@@ -29125,7 +29125,7 @@ PlayableDirector:
   - key: {fileID: 8619603400500572182, guid: e9699499a9b7e4048a30515e12a9ffe8, type: 2}
     value: {fileID: 36447436}
   - key: {fileID: 1419011690684820654, guid: e9699499a9b7e4048a30515e12a9ffe8, type: 2}
-    value: {fileID: 1628113249}
+    value: {fileID: 0}
   - key: {fileID: -3380476601844518633, guid: e9699499a9b7e4048a30515e12a9ffe8, type: 2}
     value: {fileID: 1378359613}
   m_ExposedReferences:
@@ -29161,6 +29161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   director: {fileID: 1420613164}
+  initInputState: 0
+  initMenuState: 0
+  endInputState: 2
+  endMenuState: 1
 --- !u!1 &1499539639
 GameObject:
   m_ObjectHideFlags: 0
@@ -29631,11 +29635,6 @@ BoxCollider2D:
 Animator:
   m_CorrespondingSourceObject: {fileID: 3271393892090456211, guid: ce41e4c8a7e521840b791475dc18d2fd, type: 3}
   m_PrefabInstance: {fileID: 2125893370}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1628113249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5292013277876159385, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
-  m_PrefabInstance: {fileID: 1177046843}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &1630017732 stripped
 Animator:
