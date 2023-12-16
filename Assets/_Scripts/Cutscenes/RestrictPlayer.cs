@@ -13,11 +13,17 @@ public class RestrictPlayer : MonoBehaviour
     [SerializeField] private InputState endInputState;
     [SerializeField] private MenuState endMenuState;
 
-    private void Start() {
-
+    private void Awake() {
         director.stopped += OnPlayableDirectorStopped;
         director.played += OnPlayableDirectorPlayed;
+    }
 
+    private void OnDestroy() {
+        director.stopped -= OnPlayableDirectorStopped;
+        director.played -= OnPlayableDirectorPlayed;
+    }
+
+    private void Start() {
         if (director.playOnAwake) {
 
             if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(initMenuState);
@@ -30,9 +36,9 @@ public class RestrictPlayer : MonoBehaviour
     }
 
     //Will trigger when director finishes
-    void OnPlayableDirectorStopped(PlayableDirector aDirector)
+    void OnPlayableDirectorStopped(PlayableDirector director)
     {
-        if (director == aDirector){
+        if (this.director == director) {
 
             if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(endMenuState);
             
@@ -43,10 +49,10 @@ public class RestrictPlayer : MonoBehaviour
 
 
     //Will trigger when director starts
-    void OnPlayableDirectorPlayed(PlayableDirector aDirector)
+    void OnPlayableDirectorPlayed(PlayableDirector director)
     {
 
-        if (director == aDirector){
+        if (this.director == director) {
 
             if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(initMenuState);
         

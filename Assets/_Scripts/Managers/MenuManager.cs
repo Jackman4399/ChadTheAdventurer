@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-public enum MenuState { Main, Gameplay, SoftGameplay, Dialogue, Win, Lose }
+public enum MenuState { None, Main, Gameplay, SoftGameplay, Dialogue, Win, Lose }
 
 public class MenuManager : Singleton<MenuManager> {
 
