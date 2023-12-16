@@ -14,9 +14,6 @@ public class MenuManager : Singleton<MenuManager> {
     private MenuData[] menus;
     public MenuData[] Menus => menus;
 
-	private Image crossfadeImage;
-	[SerializeField] private float transitionTime = .25f;
-
     protected override void Awake() {
         base.Awake();
 
@@ -28,9 +25,6 @@ public class MenuManager : Singleton<MenuManager> {
             new(MenuState.Win),
             new(MenuState.Lose),
         };
-
-		crossfadeImage = GetComponentInChildren<Image>();
-		crossfadeImage.color = new Color(0, 0, 0, 0);
     }
 
     public void ChangeMenu(MenuState menuState) {
@@ -56,33 +50,5 @@ public class MenuManager : Singleton<MenuManager> {
         Array.Find(menus, menu => menu.MenuState == menuState).enabled = false;
         OnMenuChanged?.Invoke();
     }
-
-	public void Crossfade(SceneState sceneState) => StartCoroutine(CrossfadeCoroutine(sceneState));
-
-	private IEnumerator CrossfadeCoroutine(SceneState sceneState) {
-		InputState currentInputState = InputManager.Instance.CurrentInputState;
-
-		InputManager.Instance.ChangeInput(InputState.None);
-
-		// Fade In
-		while (crossfadeImage.color.a < 1) {
-			crossfadeImage.color += new Color(0, 0, 0, Time.deltaTime / transitionTime);
-			yield return null;
-		}
-
-		crossfadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(crossfadeImage.color.a));
-
-		if (sceneState != SceneState.None) SceneLoader.Instance.ChangeScene(sceneState);
-
-		// Fade Out
-		while (crossfadeImage.color.a > 0) {
-			crossfadeImage.color -= new Color(0, 0, 0, Time.deltaTime / transitionTime);
-			yield return null;
-		}
-
-		crossfadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(crossfadeImage.color.a));
-
-		InputManager.Instance.ChangeInput(currentInputState);
-	}
 
 }
