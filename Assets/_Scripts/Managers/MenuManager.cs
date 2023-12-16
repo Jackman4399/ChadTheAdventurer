@@ -11,7 +11,7 @@ public class MenuManager : Singleton<MenuManager> {
 
     public event Action OnMenuChanged;
 
-    private MenuData[] menus;
+    [SerializeField] private MenuData[] menus;
     public MenuData[] Menus => menus;
 
     protected override void Awake() {
@@ -38,7 +38,7 @@ public class MenuManager : Singleton<MenuManager> {
 
     public Canvas FindMenu(MenuState menuState) {
         Canvas[] menus = FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-        return menus.Single(menu => menu.gameObject.name.Equals(menuState.ToString()));
+        return menus.Single(menu => menu.gameObject.name.Equals(menuState.ToString() + "Menu"));
     }
 
     public void EnableMenu(MenuState menuState) {

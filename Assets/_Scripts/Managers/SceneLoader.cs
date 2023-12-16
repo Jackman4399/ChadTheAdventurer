@@ -13,8 +13,10 @@ public class SceneLoader : Singleton<SceneLoader> {
 
 	[SerializeField] private SceneState currentSceneState;
 
-    [SerializeField] private float transitionTime = .25f;
-    [SerializeField] private float transitionTimeBetweenScenes = 1;
+    [SerializeField, Tooltip("Transition time between different places in the same scene in seconds.")] 
+    private float transitionTime = .25f;
+    [SerializeField, Tooltip("Transition time between different scenes in seconds.")] 
+    private float transitionTimeBetweenScenes = 1;
 
     protected override void Awake() {
         base.Awake();

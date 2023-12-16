@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441dc7a03c509c543a87f5fb2475e6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuState: 2
+  menuState: 3
   nameText: {fileID: 6755650896229576426}
   dialogueText: {fileID: 4541734145768879920}
   choiceButtons:

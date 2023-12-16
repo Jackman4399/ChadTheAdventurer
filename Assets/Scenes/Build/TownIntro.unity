@@ -6090,15 +6090,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: InitialiseInput
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: InitialiseScene
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2964856164721253087, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
-      propertyPath: choices.Array.size
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5452050118715914677, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6144,9 +6140,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 9046191966061607121, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
-      propertyPath: m_Color.a
-      value: 0
+    - target: {fileID: 8588660948899467326, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9388,6 +9384,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6935513086043137993, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -84546984, guid: 6383096bde96fc84e8b675f86e3a48a6, type: 3}
     - target: {fileID: 7026618485197575769, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
       propertyPath: m_Name
       value: Player
@@ -29218,17 +29218,23 @@ PlayableDirector:
     value: {fileID: 1630017732}
   - key: {fileID: -6776977562262319622, guid: e9699499a9b7e4048a30515e12a9ffe8, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 8695551164913234400, guid: e9699499a9b7e4048a30515e12a9ffe8, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 1547371988}
   - key: {fileID: 8619603400500572182, guid: e9699499a9b7e4048a30515e12a9ffe8, type: 2}
     value: {fileID: 36447436}
   - key: {fileID: 1419011690684820654, guid: e9699499a9b7e4048a30515e12a9ffe8, type: 2}
     value: {fileID: 0}
-  - key: {fileID: -3380476601844518633, guid: e9699499a9b7e4048a30515e12a9ffe8, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 1378359613}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 2386cb30c312f8342bfbc6dd20e106ac: {fileID: 328090988}
+    - c947c3ab9e01e1040ada889ef1d70aa6: {fileID: 0}
+    - b73371e59a164ef4ebe0abd7aa7a6e1f: {fileID: 0}
     - 2a1f4f804fcd38946bace0677131b313: {fileID: 328090988}
     - a35edb17f57380e4f995a6b2430de1d8: {fileID: 328090988}
 --- !u!4 &1420613165
@@ -29742,6 +29748,7 @@ GameObject:
   - component: {fileID: 1547450479}
   - component: {fileID: 1547450478}
   - component: {fileID: 1547450477}
+  - component: {fileID: 1547450481}
   m_Layer: 5
   m_Name: SoftGameplayMenu
   m_TagString: Untagged
@@ -29831,6 +29838,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1547450481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547450476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad72a98f4cacd2149888c0d43da68ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuState: 2
 --- !u!95 &1630017732 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5684835387968410944, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
@@ -30149,7 +30169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4220841918349386234, guid: ce41e4c8a7e521840b791475dc18d2fd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30213,11 +30233,11 @@ SceneRoots:
   - {fileID: 1547450480}
   - {fileID: 1402912069}
   - {fileID: 2029195147}
+  - {fileID: 1420613165}
   - {fileID: 36447439}
   - {fileID: 2140083482}
   - {fileID: 1262906813}
   - {fileID: 1177046843}
-  - {fileID: 1420613165}
   - {fileID: 2125893370}
   - {fileID: 839149125}
   - {fileID: 123090479}
