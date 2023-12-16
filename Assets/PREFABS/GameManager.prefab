@@ -313,6 +313,22 @@ MonoBehaviour:
     pitch: 0.65
     loop: 0
     playOnAwake: 0
+  - name: HeartHeal
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
+    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 0.6
+    pitch: 0.65
+    loop: 0
+    playOnAwake: 0
+  - name: Collect
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 0.6
+    pitch: 0.65
+    loop: 0
+    playOnAwake: 0
 --- !u!114 &2964856164721253087
 MonoBehaviour:
   m_ObjectHideFlags: 0
