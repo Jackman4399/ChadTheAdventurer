@@ -41,11 +41,13 @@ public class PlayerAnimator : Player {
 	private void OnEnable() {
 		attacker.OnAttackPressed += OnAttackPressed;
         health.OnHit += OnHit;
+        health.OnDied += OnDied;
     }
 
     private void OnDisable() {
 		attacker.OnAttackPressed -= OnAttackPressed;
         health.OnHit -= OnHit;
+        health.OnDied -= OnDied;
     }
 
     protected override void Update() {
@@ -94,6 +96,10 @@ public class PlayerAnimator : Player {
             spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(flashDelay);
         }
+    }
+
+    private void OnDied() {
+        animator.SetTrigger(diedName);
     }
 
     // Use from within the animation events

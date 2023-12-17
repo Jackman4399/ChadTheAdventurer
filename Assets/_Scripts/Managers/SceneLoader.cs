@@ -14,7 +14,7 @@ public class SceneLoader : Singleton<SceneLoader> {
 	[SerializeField] private SceneState currentSceneState;
 
     [SerializeField, Tooltip("Transition time between different places in the same scene in seconds.")] 
-    private float transitionTime = .25f;
+    private float transitionTimeInScene = .25f;
     [SerializeField, Tooltip("Transition time between different scenes in seconds.")] 
     private float transitionTimeBetweenScenes = 1;
 
@@ -47,10 +47,12 @@ public class SceneLoader : Singleton<SceneLoader> {
 		currentSceneState = sceneState;
 	}
 
-    public void Crossfade(SceneState sceneState) => StartCoroutine(CrossfadeCoroutine(sceneState));
+    public void Crossfade() => Crossfade(SceneState.None);
+
+    private void Crossfade(SceneState sceneState) => StartCoroutine(CrossfadeCoroutine(sceneState));
 
 	private IEnumerator CrossfadeCoroutine(SceneState sceneState) {
-        float transitionTime = sceneState == SceneState.None ? this.transitionTime : transitionTimeBetweenScenes;
+        float transitionTime = sceneState == SceneState.None ? transitionTimeInScene : transitionTimeBetweenScenes;
 
 		InputState currentInputState = InputManager.Instance.CurrentInputState;
 
