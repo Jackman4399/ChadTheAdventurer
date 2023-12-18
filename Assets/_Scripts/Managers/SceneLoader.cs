@@ -44,10 +44,11 @@ public class SceneLoader : Singleton<SceneLoader> {
 
     public void ChangeScene(SceneState sceneState) {
 		if (sceneState == SceneState.None) return;
-		Crossfade(sceneState);
+		Crossfade(sceneState, null);
 		currentSceneState = sceneState;
 	}
 
+    // For use in timeline
     public void ChangeBackgroundFade(float alpha) {
         if (alpha > 1 || alpha < 0) return;
 
@@ -59,11 +60,12 @@ public class SceneLoader : Singleton<SceneLoader> {
         );
     }
 
-    public void Crossfade() => Crossfade(SceneState.None);
+    public void Crossfade(Action action) => Crossfade(SceneState.None, action);
 
-    private void Crossfade(SceneState sceneState) => StartCoroutine(CrossfadeCoroutine(sceneState));
+    private void Crossfade(SceneState sceneState, Action action) => 
+    StartCoroutine(CrossfadeCoroutine(sceneState, action));
 
-	private IEnumerator CrossfadeCoroutine(SceneState sceneState) {
+	private IEnumerator CrossfadeCoroutine(SceneState sceneState, Action action) {
         float transitionTime = sceneState == SceneState.None ? transitionTimeInScene : transitionTimeBetweenScenes;
 
 		InputState currentInputState = InputManager.Instance.CurrentInputState;
@@ -79,6 +81,7 @@ public class SceneLoader : Singleton<SceneLoader> {
 		crossfadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(crossfadeImage.color.a));
 
 		if (sceneState != SceneState.None) SceneManager.LoadScene(sceneState.ToString());
+        action?.Invoke();
 
 		// Fade Out
 		while (crossfadeImage.color.a > 0) {
