@@ -200,11 +200,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5452050118715914677}
   - component: {fileID: 2347329707256932898}
+  - component: {fileID: 7662754684500877439}
   - component: {fileID: 2055437480642026607}
   - component: {fileID: 2964856164721253087}
   - component: {fileID: 2347758753718956841}
   - component: {fileID: 6763434984210058267}
-  - component: {fileID: 7662754684500877439}
   - component: {fileID: 2873579439693867739}
   - component: {fileID: 305123876428434449}
   m_Layer: 0
@@ -245,6 +245,20 @@ MonoBehaviour:
   InitialiseInput: 1
   InitialiseMenu: 0
   InitialiseScene: 1
+--- !u!114 &7662754684500877439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8588660948899467326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89db5777a5b487441958dea565d0e6d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionTime: 0.25
+  transitionTimeBetweenScenes: 1
 --- !u!114 &2055437480642026607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,19 +365,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb459f25472865a45a78c261576d5d47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transitionTime: 0.25
---- !u!114 &7662754684500877439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8588660948899467326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89db5777a5b487441958dea565d0e6d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2873579439693867739

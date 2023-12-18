@@ -495,7 +495,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1618452522, guid: 6383096bde96fc84e8b675f86e3a48a6, type: 3}
+  m_Sprite: {fileID: -84546984, guid: 6383096bde96fc84e8b675f86e3a48a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -653,6 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb8f493b580fa343b796edcaa26d678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strawberries: 0
 --- !u!1 &7415414685315926477
 GameObject:
   m_ObjectHideFlags: 0

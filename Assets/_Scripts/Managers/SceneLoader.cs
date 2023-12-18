@@ -1,28 +1,94 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum SceneState { None, Main, Town, Cave }
+public enum SceneState { None, Main, TownIntro, Cave }
 
 public class SceneLoader : Singleton<SceneLoader> {
 
     private Image crossfadeImage;
+    public Image CrossfadeImage => crossfadeImage;
 
-	private SceneState currentSceneState;
+	[SerializeField] private SceneState currentSceneState;
+
+    [SerializeField, Tooltip("Transition time between different places in the same scene in seconds.")] 
+    private float transitionTimeInScene = .25f;
+    [SerializeField, Tooltip("Transition time between different scenes in seconds.")] 
+    private float transitionTimeBetweenScenes = 1;
 
     protected override void Awake() {
         base.Awake();
 
         crossfadeImage = GetComponentInChildren<Image>();
 		crossfadeImage.color = new Color(0, 0, 0, 0);
+
+        try {
+            currentSceneState = Enum.Parse<SceneState>(SceneManager.GetActiveScene().name);
+        } catch (Exception) { Debug.LogWarning("Unable to parse current scene."); }
     }
 
-	public void ChangeScene(SceneState sceneState) {
+    public void ChangeNextScene() {
+        Scene nextScene = SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1);
+        
+        SceneState nextSceneState = SceneState.None;
+
+        try {
+            nextSceneState = Enum.Parse<SceneState>(nextScene.name);
+        } catch (Exception) { Debug.LogWarning("Unable to parse next scene."); }
+
+        ChangeScene(nextSceneState);
+    }
+
+    public void ChangeScene(SceneState sceneState) {
 		if (sceneState == SceneState.None) return;
-		SceneManager.LoadScene(sceneState.ToString());
+		Crossfade(sceneState);
 		currentSceneState = sceneState;
+	}
+
+    public void ChangeBackgroundFade(float alpha) {
+        if (alpha > 1 || alpha < 0) return;
+
+        crossfadeImage.color = new Color(
+            crossfadeImage.color.r,
+            crossfadeImage.color.g,
+            crossfadeImage.color.b,
+            alpha
+        );
+    }
+
+    public void Crossfade() => Crossfade(SceneState.None);
+
+    private void Crossfade(SceneState sceneState) => StartCoroutine(CrossfadeCoroutine(sceneState));
+
+	private IEnumerator CrossfadeCoroutine(SceneState sceneState) {
+        float transitionTime = sceneState == SceneState.None ? transitionTimeInScene : transitionTimeBetweenScenes;
+
+		InputState currentInputState = InputManager.Instance.CurrentInputState;
+
+		InputManager.Instance.ChangeInput(InputState.None);
+
+		// Fade In
+		while (crossfadeImage.color.a < 1) {
+			crossfadeImage.color += new Color(0, 0, 0, Time.deltaTime / transitionTime);
+			yield return null;
+		}
+
+		crossfadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(crossfadeImage.color.a));
+
+		if (sceneState != SceneState.None) SceneManager.LoadScene(sceneState.ToString());
+
+		// Fade Out
+		while (crossfadeImage.color.a > 0) {
+			crossfadeImage.color -= new Color(0, 0, 0, Time.deltaTime / transitionTime);
+			yield return null;
+		}
+
+		crossfadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(crossfadeImage.color.a));
+
+		InputManager.Instance.ChangeInput(currentInputState);
 	}
 
 }

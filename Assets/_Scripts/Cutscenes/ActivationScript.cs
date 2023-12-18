@@ -8,24 +8,31 @@ public class ActivationScript : MonoBehaviour
 
     [SerializeField] private PlayableDirector director;
 
-    private void Start() {
+    [SerializeField] private InputState endInputState;
+    [SerializeField] private MenuState endMenuState;
+
+    private void Awake() {
         director.stopped += OnPlayableDirectorStopped;
     }
 
-    void OnPlayableDirectorStopped(PlayableDirector aDirector)
-    {
-        if (director == aDirector){
+    private void OnDestroy() {
+        director.stopped -= OnPlayableDirectorStopped;
+    }
 
-            if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(MenuState.Gameplay);
+    void OnPlayableDirectorStopped(PlayableDirector director)
+    {
+        if (this.director == director) {
+
+            if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(endMenuState);
             
-            if(InputManager.Instance != null) InputManager.Instance.ChangeInput(InputState.Gameplay);
+            if(InputManager.Instance != null) InputManager.Instance.ChangeInput(endInputState);
         }
             
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
 
-        if(other.gameObject.layer == LayerMask.NameToLayer("Player")){
+        if(other.gameObject.layer == LayerMask.NameToLayer("Player")) {
             
             if(MenuManager.Instance != null) MenuManager.Instance.ChangeMenu(MenuState.Dialogue);
             
