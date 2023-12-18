@@ -22,8 +22,8 @@ public class DialogueTrackMixer : PlayableBehaviour {
 
             if (inputWeight <= 0) continue;
 
-            var inputPlayable = (ScriptPlayable<DialogueBehaviour>)playable.GetInput(i);
-            DialogueBehaviour input = inputPlayable.GetBehaviour();
+            var inputPlayable = (ScriptPlayable<DialoguePlayableBehaviour>)playable.GetInput(i);
+            DialoguePlayableBehaviour input = inputPlayable.GetBehaviour();
 
             dialogueText = input.dialogueText;
         }

@@ -6,7 +6,7 @@ using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
 [TrackBindingType(typeof(TMP_Text))]
-[TrackClipType(typeof(DialogueClip))]
+[TrackClipType(typeof(DialoguePlayableAsset))]
 public class DialogueTrack : TrackAsset { 
 
     public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount) {

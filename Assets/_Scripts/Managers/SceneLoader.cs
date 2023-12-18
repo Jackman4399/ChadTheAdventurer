@@ -10,6 +10,7 @@ public enum SceneState { None, Main, TownIntro, Cave }
 public class SceneLoader : Singleton<SceneLoader> {
 
     private Image crossfadeImage;
+    public Image CrossfadeImage => crossfadeImage;
 
 	[SerializeField] private SceneState currentSceneState;
 
@@ -46,6 +47,17 @@ public class SceneLoader : Singleton<SceneLoader> {
 		Crossfade(sceneState);
 		currentSceneState = sceneState;
 	}
+
+    public void ChangeBackgroundFade(float alpha) {
+        if (alpha > 1 || alpha < 0) return;
+
+        crossfadeImage.color = new Color(
+            crossfadeImage.color.r,
+            crossfadeImage.color.g,
+            crossfadeImage.color.b,
+            alpha
+        );
+    }
 
     public void Crossfade() => Crossfade(SceneState.None);
 

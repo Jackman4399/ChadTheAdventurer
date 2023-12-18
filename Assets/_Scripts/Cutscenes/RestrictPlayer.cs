@@ -5,7 +5,7 @@ using UnityEngine.Playables;
 
 public class RestrictPlayer : MonoBehaviour
 {
-    [SerializeField] private PlayableDirector director;
+    private PlayableDirector director;
 
     [SerializeField] private InputState initInputState;
     [SerializeField] private MenuState initMenuState;
@@ -14,11 +14,15 @@ public class RestrictPlayer : MonoBehaviour
     [SerializeField] private MenuState endMenuState;
 
     private void Awake() {
+        director = GetComponent<PlayableDirector>();
+    }
+
+    private void OnEnable() {
         director.stopped += OnPlayableDirectorStopped;
         director.played += OnPlayableDirectorPlayed;
     }
 
-    private void OnDestroy() {
+    private void OnDisable() {
         director.stopped -= OnPlayableDirectorStopped;
         director.played -= OnPlayableDirectorPlayed;
     }

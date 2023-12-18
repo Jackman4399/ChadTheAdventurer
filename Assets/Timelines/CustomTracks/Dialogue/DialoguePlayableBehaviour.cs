@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class DialogueBehaviour : PlayableBehaviour {
+public class DialoguePlayableBehaviour : PlayableBehaviour {
 
     public string dialogueText;
 
