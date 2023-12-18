@@ -24,9 +24,6 @@ public class Strawberry : MonoBehaviour
 
             AudioManager.Instance.PlayOneShot("Collect");
 
-
-            //StartCoroutine(DestroyAfterSeconds(1));
-
         }
 
     }
@@ -43,14 +40,5 @@ public class Strawberry : MonoBehaviour
             }
         }
     }
-
-    // IEnumerator DestroyAfterSeconds(int seconds)
-    // {
-    //     // Wait for the specified number of seconds
-    //     yield return new WaitForSeconds(seconds);
-
-    //     // Destroy the GameObject this script is attached to
-    //     Destroy(gameObject);
-    // }
 
 }
