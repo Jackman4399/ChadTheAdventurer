@@ -11,19 +11,11 @@ public abstract class Player : MonoBehaviour {
 
 
     protected virtual void Update() {
-        switch (InputManager.Instance.CurrentInputState) {
-            case InputState.SoftGameplay:
-                move = userInput.SoftGameplay.Movement.ReadValue<Vector2>();
-            break;
-
-            case InputState.Gameplay:
-                move = userInput.Gameplay.Movement.ReadValue<Vector2>();
-            break;
-
-            default:
-                move = Vector2.zero;
-            break;
-        }
+        move = InputManager.Instance.CurrentInputState switch {
+            InputState.SoftGameplay => userInput.SoftGameplay.Movement.ReadValue<Vector2>(),
+            InputState.Gameplay => userInput.Gameplay.Movement.ReadValue<Vector2>(),
+            _ => Vector2.zero,
+        };
     }
 
 }
