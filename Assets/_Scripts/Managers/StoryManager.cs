@@ -6,7 +6,7 @@ using UnityEngine;
 public enum StoryState {
 	Introduction,
 	CollectHerbs,
-	ExterminateGoblinTribe,
+	EncounterGoblin,
 	GoblinSpare,
 	GoblinKill,
 	EmergencyQuest,
