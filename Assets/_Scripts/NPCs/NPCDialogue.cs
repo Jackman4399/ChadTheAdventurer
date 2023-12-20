@@ -3,11 +3,9 @@ using UnityEngine;
 
 public enum DialogueDisplayMode { Menu, World }
 
-public class DialogueTrigger : MonoBehaviour {
+public class NPCDialogue : MonoBehaviour {
 
     [SerializeField] private TextAsset dialogueText;
-
-	[SerializeField] private DialogueDisplayMode dialogueDisplayMode;
 
 	[SerializeField] private LayerMask playerMask;
 
@@ -29,15 +27,7 @@ public class DialogueTrigger : MonoBehaviour {
     }
 
 	private void OnInteract() {
-		switch (dialogueDisplayMode) {
-			case DialogueDisplayMode.Menu:
-				DialogueManager.Instance.ProcessDialogue(dialogueText);
-			break; 
-
-			case DialogueDisplayMode.World:
-				//TODO: display dialogue in world
-			break; 
-		}
+        DialogueManager.Instance.ProcessDialogue(dialogueText);
 	}
 
 }
