@@ -36,7 +36,7 @@ public class PlayerController : Player {
 		userInput.SoftGameplay.Interact.performed -= OnInteract;
 		userInput.Gameplay.Interact.performed -= OnInteract;
 
-        health.OnHit += OnHit;
+        health.OnHit -= OnHit;
     }
 
     private void FixedUpdate() {

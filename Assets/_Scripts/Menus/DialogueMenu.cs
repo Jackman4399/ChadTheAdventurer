@@ -16,6 +16,7 @@ public class DialogueMenu : Menu {
 
     public IEnumerator SetDialogue(Story story) {
         dialogueText.text = story.Continue();
+        if (story.currentTags.Count != 0) nameText.text = story.currentTags[0];
 
         if (story.currentChoices.Count > choiceButtons.Length) yield break;
         else if (story.currentChoices.Count == 0) {

@@ -40292,6 +40292,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 820211391710959848, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 4900000, guid: 134a29607fa84854c826b0e5f8434789, type: 3}
     - target: {fileID: 2350302743963820333, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.8
@@ -40332,21 +40336,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4537808895417779605, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
-      propertyPath: NPCID
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6042395661359184193, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
       propertyPath: m_Name
       value: NPC
-      objectReference: {fileID: 0}
-    - target: {fileID: 6474414578055365325, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6474414578055365325, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
