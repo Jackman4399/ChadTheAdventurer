@@ -6,6 +6,7 @@ using UnityEngine;
 public enum StoryState {
 	Introduction,
 	CollectHerbs,
+    ExterminateWolfTribe,
 	EncounterGoblin,
 	GoblinSpare,
 	GoblinKill,
@@ -49,7 +50,7 @@ public class StoryManager : Singleton<StoryManager> {
             new(ChoiceState.BossChoice),
         };
 
-        foreach (var choice in choices) 
+        foreach (var choice in choices)
         storyStateMachine.SetInteger(choice.ChoiceState.ToString(), choice.choiceNumber);
 
         isSkipping = true;
@@ -62,7 +63,7 @@ public class StoryManager : Singleton<StoryManager> {
 
 	public void Proceed() => storyStateMachine.SetTrigger(proceedName);
 
-	public void makeChoice(ChoiceState choiceState, int choiceNumber) {
+	public void MakeChoice(ChoiceState choiceState, int choiceNumber) {
 		Choice choice = Array.Find(choices, c => c.ChoiceState == choiceState);
 		storyStateMachine.SetInteger(choice.ChoiceState.ToString(), choiceNumber + 1);
 

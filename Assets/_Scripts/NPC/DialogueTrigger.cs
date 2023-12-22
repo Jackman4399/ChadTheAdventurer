@@ -16,8 +16,6 @@ public class DialogueTrigger : MonoBehaviour {
     }
 
 	private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("something entered");
-
         if ((1 << other.gameObject.layer | playerMask) == playerMask)
         HandlePlayerInteract(other.gameObject, true);
 	}

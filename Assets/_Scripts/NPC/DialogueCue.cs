@@ -9,7 +9,7 @@ public class DialogueCue : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
 
     private void Awake() {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         spriteRenderer.enabled = false;
     }
 
