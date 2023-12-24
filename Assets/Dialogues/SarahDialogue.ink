@@ -1,9 +1,5 @@
 INCLUDE GLOBAL.ink
 
-EXTERNAL GetCurrentStoryState()
-
-VAR CurrentStoryState = ""
-
 -> main
 
 === main ===

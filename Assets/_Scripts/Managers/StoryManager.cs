@@ -66,8 +66,6 @@ public class StoryManager : Singleton<StoryManager> {
 	public void MakeChoice(ChoiceState choiceState, int choiceNumber) {
 		Choice choice = Array.Find(choices, c => c.ChoiceState == choiceState);
 		storyStateMachine.SetInteger(choice.ChoiceState.ToString(), choiceNumber + 1);
-
-		Proceed();
 	}
 
 	public void DisableSkip() => isSkipping = false;

@@ -37,8 +37,9 @@ public class DialogueMenu : Menu {
                 
                 choiceButtons[i].onClick.AddListener(() => {
                     story.ChooseChoiceIndex(index);
-                    string choiceName = story.currentTags[0];
-                    StoryManager.Instance.MakeChoice(Enum.Parse<ChoiceState>(choiceName), index);
+                    ChoiceState choiceState = ChoiceState.GoblinChoice;
+                    if (Enum.TryParse(story.currentTags[0], out choiceState)) 
+                    StoryManager.Instance.MakeChoice(choiceState, index);
                 });
 
                 choiceButtons[i].gameObject.SetActive(true);

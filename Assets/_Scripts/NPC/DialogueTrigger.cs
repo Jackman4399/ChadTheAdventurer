@@ -7,6 +7,8 @@ public class DialogueTrigger : MonoBehaviour {
 
     [SerializeField] private TextAsset dialogueText;
 
+    private bool haveVisited;
+
 	[SerializeField] private LayerMask playerMask;
 
     private DialogueCue dialogueCue;
@@ -36,8 +38,10 @@ public class DialogueTrigger : MonoBehaviour {
     }
 
 	private void OnInteract() {
-        DialogueManager.Instance.ProcessDialogue(dialogueText);
+        DialogueManager.Instance.ProcessDialogue(dialogueText, haveVisited);
         dialogueCue.DisableCue();
+
+        if (!haveVisited) haveVisited = true;
 	}
 
 }
