@@ -16,15 +16,20 @@ public class DialogueMenu : Menu {
 
     public IEnumerator SetDialogue(Story story) {
         dialogueText.text = story.Continue();
+
         if (story.currentTags.Count != 0) nameText.text = story.currentTags[0];
 
         if (story.currentChoices.Count > choiceButtons.Length) {
             Debug.LogWarning("Current choices exceed number of buttons, skipping...");
             yield break;
-        } else if (story.currentChoices.Count == 0) {
+        } 
+        
+        else if (story.currentChoices.Count == 0) {
             foreach (var choiceButton in choiceButtons) choiceButton.gameObject.SetActive(false);
             yield return new WaitForInput(InputManager.Instance.UserInput.Dialogue.Next);
-        } else {
+        } 
+        
+        else {
             for (int i = 0; i < story.currentChoices.Count; i++) {
                 choiceTexts[i].text = story.currentChoices[i].text;
                 choiceButtons[i].onClick.RemoveAllListeners();
@@ -47,7 +52,6 @@ public class DialogueMenu : Menu {
 
             yield return new WaitForChoice(story);
         }
-
     }
 
 }

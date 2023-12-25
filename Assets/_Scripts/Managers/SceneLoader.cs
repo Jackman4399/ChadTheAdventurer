@@ -25,21 +25,20 @@ public class SceneLoader : Singleton<SceneLoader> {
         crossfadeImage = GetComponentInChildren<Image>();
 		crossfadeImage.color = new Color(0, 0, 0, 0);
 
-        try {
-            currentSceneState = Enum.Parse<SceneState>(SceneManager.GetActiveScene().name);
-        } catch (Exception) { Debug.LogWarning("Unable to parse current scene."); }
+        if (!Enum.TryParse(SceneManager.GetActiveScene().name, false, out currentSceneState)) 
+        Debug.LogWarning("Unable to parse current scene.");
     }
 
     public void ChangeNextScene() {
-        Scene nextScene = SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1);
-        
-        SceneState nextSceneState = SceneState.None;
+        var nextScene = SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1);
 
-        try {
-            nextSceneState = Enum.Parse<SceneState>(nextScene.name);
-        } catch (Exception) { Debug.LogWarning("Unable to parse next scene."); }
+        if (Enum.TryParse(nextScene.name, false, out SceneState nextSceneState)) ChangeScene(nextSceneState);
+        else Debug.LogWarning("Unable to parse next scene.");
+    }
 
-        ChangeScene(nextSceneState);
+    public void ChangeScene(string sceneName) {
+        if (Enum.TryParse(sceneName, false, out SceneState sceneState)) ChangeScene(sceneState);
+        else Debug.LogWarning("Unable to parse given scene.");
     }
 
     public void ChangeScene(SceneState sceneState) {
@@ -68,7 +67,7 @@ public class SceneLoader : Singleton<SceneLoader> {
 	private IEnumerator CrossfadeCoroutine(SceneState sceneState, Action action) {
         float transitionTime = sceneState == SceneState.None ? transitionTimeInScene : transitionTimeBetweenScenes;
 
-		InputState currentInputState = InputManager.Instance.CurrentInputState;
+		var currentInputState = InputManager.Instance.CurrentInputState;
 
 		InputManager.Instance.ChangeInput(InputState.None);
 

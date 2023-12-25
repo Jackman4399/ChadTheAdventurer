@@ -29,10 +29,10 @@ INCLUDE GLOBAL.ink
     Hi! Welcome to the adventurer's guild.
 
     #Receptionist
-    Excuse us for the cozy-looking environment this guild has contrary to popular belief.
+    Excuse us for the cozy-looking environment this guild has, contrary to popular belief.
 
     #Receptionist
-    Anyways, the guild is currently looking for someone to take on a simple gathering herb quest, and a reward will be given.
+    Anyways, the guild is currently looking for someone to take on a simple gathering strawberries quest, and a reward will be given.
 }
 
 #Receptionist
@@ -45,7 +45,7 @@ Do you want to take on this quest?
     Great! Let me fulfil you on the details of the quest.
     
     #Receptionist
-    You will need to find 7 herbs scattered around the forest located outside of town.
+    You will need to find 7 strawberries scattered around the forest located outside of town. Pretty simple, right?
     
     #Receptionist
     We haven't yet decide on what reward you will receive, but expect it to be ready once you've done the quest!
@@ -66,8 +66,8 @@ Do you want to take on this quest?
 
 === CollectHerbs
 #Receptionist
-I hope you do well on your quest! We will reward you accordingly if you fulfil the objectives of the quest.
+I hope you do well on your quest! We will reward you accordingly if you fulfil the objectives.
 
 #Receptionist
-In case you forgot, you will need to find 7 herbs scattered around the forest located outside of town.
+In case you forgot, you will need to find 7 strawberries scattered around the forest located outside of town.
 -> DONE

@@ -1,26 +1,19 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public enum DialogueDisplayMode { Menu, World }
-
-public class DialogueTrigger : MonoBehaviour {
-
-    [SerializeField] private TextAsset dialogueText;
-
-    private bool haveVisited;
-
-	[SerializeField] private LayerMask playerMask;
+public class NPCDialogueTrigger : DialogueTrigger {
 
     private DialogueCue dialogueCue;
 
     private void Awake() {
         dialogueCue = transform.parent.GetComponentInChildren<DialogueCue>();
     }
-
-	private void OnTriggerEnter2D(Collider2D other) {
+    protected override void OnTriggerEnter2D(Collider2D other) {
         if ((1 << other.gameObject.layer | playerMask) == playerMask)
         HandlePlayerInteract(other.gameObject, true);
-	}
+    }
 
     private void OnTriggerExit2D(Collider2D other) {
         if ((1 << other.gameObject.layer | playerMask) == playerMask)
@@ -37,11 +30,9 @@ public class DialogueTrigger : MonoBehaviour {
         }
     }
 
-	private void OnInteract() {
-        DialogueManager.Instance.ProcessDialogue(dialogueText, haveVisited);
+    protected override void OnInteract() {
         dialogueCue.DisableCue();
-
-        if (!haveVisited) haveVisited = true;
-	}
+        base.OnInteract();
+    }
 
 }

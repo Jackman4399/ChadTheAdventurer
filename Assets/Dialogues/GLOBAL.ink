@@ -1,5 +1,7 @@
 EXTERNAL GetCurrentStoryState()
 EXTERNAL Proceed()
+EXTERNAL ChangeScene(sceneName)
+EXTERNAL ChangeNextScene()
 
 VAR HaveVisited = false
 VAR CurrentStoryState = ""
