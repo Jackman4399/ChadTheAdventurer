@@ -14,6 +14,9 @@ public class MenuManager : Singleton<MenuManager> {
     [SerializeField] private MenuData[] menus;
     public MenuData[] Menus => menus;
 
+    private MenuState currentMenuState;
+    public MenuState CurrentMenuState => currentMenuState;
+
     protected override void Awake() {
         base.Awake();
 
@@ -29,8 +32,10 @@ public class MenuManager : Singleton<MenuManager> {
 
     public void ChangeMenu(MenuState menuState) {
         foreach (var menu in menus) {
-            if (menu.MenuState == menuState) menu.enabled = true;
-            else menu.enabled = false;
+            if (menu.MenuState == menuState) {
+                menu.enabled = true;
+                currentMenuState = menuState;
+            } else menu.enabled = false;
         }
 
         OnMenuChanged?.Invoke();
