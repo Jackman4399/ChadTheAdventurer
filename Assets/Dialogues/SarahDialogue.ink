@@ -16,16 +16,16 @@ INCLUDE GLOBAL.ink
 
 === Introduction
 #Sarah
-It's a good weather today!
+The weather's nice today!
 
 #Sarah
-I heard the guild puts up a herb quest for an adventurer to pick up.
+Are you short on cash again? You should pop by the guild...
 
 #Sarah
-I wish I could be an adventurer someday, its seems fun to explore outside of this town!
+Heard they got some new quests in today!
 -> DONE
 
 === CollectHerbs
 #Sarah
-I wish you on a safe journey with your herbs quest!
+The forest? Oh, just follow this path!
 -> DONE
