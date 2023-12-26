@@ -18,21 +18,21 @@ INCLUDE GLOBAL.ink
 { HaveVisited   :
 
     #Receptionist
-    Hi! We meet again.
+    Hi! We meet again!
 
     #Receptionist
-    I assume you've made up your mind.
+    Have you decided to take on the quest?
 
 - else          :
 
     #Receptionist
-    Hi! Welcome to the adventurer's guild.
+    Hi! Welcome to the adventurer's guild!
 
     #Receptionist
     Excuse us for the cozy-looking environment this guild has, contrary to popular belief.
 
     #Receptionist
-    Anyways, the guild is currently looking for someone to take on a simple gathering strawberries quest, and a reward will be given.
+    Anyways, the guild is currently looking for someone to take on a simple gathering strawberries quest for a small reward, and a FREE meal!
 }
 
 #Receptionist
@@ -42,23 +42,23 @@ Do you want to take on this quest?
     ~ Proceed()
 
     #Receptionist
-    Great! Let me fulfil you on the details of the quest.
+    Great! Let me fill you in on the details of the quest.
     
     #Receptionist
-    You will need to find 7 strawberries scattered around the forest located outside of town. Pretty simple, right?
+    The commision needs 8 strawberries found in the forest located outside of town. Pretty simple, right?
     
     #Receptionist
-    We haven't yet decide on what reward you will receive, but expect it to be ready once you've done the quest!
+    We haven't decided on what reward you will receive yet, but expect it to be ready once you've completed the quest!
     
     #Receptionist
-    We will make sure it is equivalent in terms of value to the quest you're taking.
+    Don't worry! Think of it as a surprise!
     
     #Receptionist
-    Finally, we hope you succeed in your quest!
+    Well then... hope you succeed on your quest!
 
-+ [I'll give it some time to think.]
++ [I'll come back later.]
     #Receptionist
-    That's alright. If you changed your mind, feel free to come back to us anytime.
+    Alrighty! If you change your mind, feel free to come back to us anytime.
     
 - 
 
@@ -66,8 +66,8 @@ Do you want to take on this quest?
 
 === CollectHerbs
 #Receptionist
-I hope you do well on your quest! We will reward you accordingly if you fulfil the objectives.
+I hope you do well on your quest! We will reward you accordingly if you fulfill the objectives.
 
 #Receptionist
-In case you forgot, you will need to find 7 strawberries scattered around the forest located outside of town.
+In case you forgot, you need to find 8 strawberries scattered around the forest located outside of town.
 -> DONE

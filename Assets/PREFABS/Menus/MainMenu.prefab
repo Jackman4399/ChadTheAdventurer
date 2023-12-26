@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: The Adventurer and The Goblin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}
-  m_sharedMaterial: {fileID: 1546870827964651290, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}
+  m_sharedMaterial: {fileID: -2936030333718721094, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 35
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_text: QUIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}
-  m_sharedMaterial: {fileID: 1546870827964651290, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}
+  m_sharedMaterial: {fileID: -2936030333718721094, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_text: PLAY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}
-  m_sharedMaterial: {fileID: 1546870827964651290, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}
+  m_sharedMaterial: {fileID: -2936030333718721094, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

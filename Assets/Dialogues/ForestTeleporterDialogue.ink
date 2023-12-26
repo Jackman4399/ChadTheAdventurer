@@ -16,10 +16,10 @@ INCLUDE GLOBAL.ink
 
 === Introduction
 #Player
-I have no business going outside of town.
+I don't really need to go out of town...
 
 #Player
-Perhaps ask the guild staff for a quest?
+Perhaps I should ask the guild for any quests...
 -> DONE
 
 == CollectHerbs
