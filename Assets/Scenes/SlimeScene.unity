@@ -30977,17 +30977,6 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
---- !u!114 &2836856743693728174 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7433813046174819659, guid: 164d57c8ba326a34a8e3097a9e469475, type: 3}
-  m_PrefabInstance: {fileID: 8181839687232463858}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 638afb93f56d2224fb2f04bff44f2d6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3516631818303933101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30999,7 +30988,7 @@ PrefabInstance:
     - target: {fileID: 500833021589479847, guid: a4aabaf458906b74eab1202ebf994342, type: 3}
       propertyPath: levelLoader
       value: 
-      objectReference: {fileID: 2836856743693728174}
+      objectReference: {fileID: 0}
     - target: {fileID: 4479663660329810916, guid: a4aabaf458906b74eab1202ebf994342, type: 3}
       propertyPath: m_Name
       value: NextSceneTrigger
@@ -31060,6 +31049,10 @@ PrefabInstance:
     - target: {fileID: 542177756982692934, guid: 164d57c8ba326a34a8e3097a9e469475, type: 3}
       propertyPath: m_Name
       value: PreludeLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 542177756982692934, guid: 164d57c8ba326a34a8e3097a9e469475, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1075065804871201851, guid: 164d57c8ba326a34a8e3097a9e469475, type: 3}
       propertyPath: m_LocalPosition.x
