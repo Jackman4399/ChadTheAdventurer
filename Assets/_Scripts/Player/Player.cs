@@ -12,8 +12,9 @@ public abstract class Player : MonoBehaviour {
 
     protected virtual void Update() {
         move = InputManager.Instance.CurrentInputState switch {
-            InputState.SoftGameplay => userInput.SoftGameplay.Movement.ReadValue<Vector2>(),
             InputState.Gameplay => userInput.Gameplay.Movement.ReadValue<Vector2>(),
+            InputState.GameplayWithoutDash => userInput.GameplayWithoutDash.Movement.ReadValue<Vector2>(),
+            InputState.SoftGameplay => userInput.SoftGameplay.Movement.ReadValue<Vector2>(),
             _ => Vector2.zero,
         };
     }

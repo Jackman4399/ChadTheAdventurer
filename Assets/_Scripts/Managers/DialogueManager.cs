@@ -7,13 +7,13 @@ public class DialogueManager : Singleton<DialogueManager> {
 
     private DialogueMenu dialogueMenu;
 
-    private void Start() => 
-    dialogueMenu = MenuManager.Instance.FindMenu(MenuState.Dialogue).GetComponent<DialogueMenu>();
-
     public void ProcessDialogue(TextAsset dialogueText, bool haveVisited) =>
     StartCoroutine(ProcessDialogueCoroutine(dialogueText, haveVisited));
 
     private IEnumerator ProcessDialogueCoroutine(TextAsset dialogueText, bool haveVisited) {
+        if (dialogueMenu == null) dialogueMenu = 
+        MenuManager.Instance.FindMenu(MenuState.Dialogue).GetComponent<DialogueMenu>();
+
         var story = new Story(dialogueText.text);
 
         var inputState = InputManager.Instance.CurrentInputState;

@@ -10952,11 +10952,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: InitialiseMenu
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: InitialiseInput
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: InitialiseScene
@@ -19935,6 +19935,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4097672594048128256, guid: c7939637a05f0bb4e9c38aee057632b6, type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097672594048128256, guid: c7939637a05f0bb4e9c38aee057632b6, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4737262202033369888, guid: c7939637a05f0bb4e9c38aee057632b6, type: 3}
       propertyPath: m_Name
       value: DialogueMenu
@@ -37955,7 +37963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initInputState: 0
   initMenuState: 0
-  endInputState: 3
+  endInputState: 4
   endMenuState: 3
 --- !u!1 &1446049242
 GameObject:

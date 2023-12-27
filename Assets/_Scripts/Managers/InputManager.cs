@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public enum InputState { None, Menu, Gameplay, SoftGameplay, Dialogue }
+public enum InputState { None, Menu, Gameplay, GameplayWithoutDash, SoftGameplay, Dialogue }
 
 public class InputManager : Singleton<InputManager> {
 
