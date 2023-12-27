@@ -577,8 +577,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd999c64739a2e54095eaeb59a3047bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  interval: 0.3
+  speed: 100
+  dashMultiplier: 10
+  dashDelayTime: 0.5
+  moveSoundInterval: 0.3
 --- !u!50 &6863936759489084731
 Rigidbody2D:
   serializedVersion: 4
@@ -592,7 +594,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 10
+  m_LinearDrag: 25
   m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}

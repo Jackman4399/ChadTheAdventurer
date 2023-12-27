@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,10 +9,12 @@ public class PlayerController : Player {
 
     private new Rigidbody2D rigidbody;
 
-    [SerializeField, Min(0)] private float speed;
+    [SerializeField] private float speed = 100;
+    [SerializeField] private float dashMultiplier = 10;
+    [SerializeField] private float dashDelayTime = .5f;
 
     // The interval of time (in seconds) that the sound will be played.
-    [SerializeField, Min(0)] private float interval = .3f;
+    [SerializeField] private float moveSoundInterval = .3f;
 
     private float trackedTime;
 
@@ -26,15 +29,21 @@ public class PlayerController : Player {
     }
 
 	private void OnEnable() {
+        userInput.Gameplay.Interact.performed += OnInteract;
+        userInput.GameplayWithoutDash.Interact.performed += OnInteract;
 		userInput.SoftGameplay.Interact.performed += OnInteract;
-		userInput.Gameplay.Interact.performed += OnInteract;
+		
+        userInput.Gameplay.Dash.performed += Dash;
 
         health.OnHit += OnHit;
     }
 
     private void OnDisable() {
+        userInput.Gameplay.Interact.performed -= OnInteract;
+        userInput.GameplayWithoutDash.Interact.performed -= OnInteract;
 		userInput.SoftGameplay.Interact.performed -= OnInteract;
-		userInput.Gameplay.Interact.performed -= OnInteract;
+
+        userInput.Gameplay.Dash.performed -= Dash;
 
         health.OnHit -= OnHit;
     }
@@ -42,13 +51,13 @@ public class PlayerController : Player {
     private void FixedUpdate() {
         if (InputManager.Instance.CurrentInputState == InputState.None) return;
 
-        rigidbody.velocity = move * speed;
+        rigidbody.AddForce(move * speed);
 
         // Increment the timer
         trackedTime += Time.deltaTime;
         
         // Check to see that the proper amount of time has passed
-        if ((trackedTime >= interval) && (rigidbody.velocity != Vector2.zero)) {
+        if ((trackedTime >= moveSoundInterval) && (move != Vector2.zero)) {
             // Play the sound, reset the timer
             AudioManager.Instance.PlayOneShot("PlayerWalk");
             trackedTime = 0;
@@ -60,6 +69,24 @@ public class PlayerController : Player {
 
     private void OnHit(int currentLives, Vector2 direction) {
         if (currentLives > 0) rigidbody.AddForce(direction);
+    }
+
+    private void Dash(InputAction.CallbackContext context) {
+        if (!userInput.Gameplay.Movement.IsPressed()) return;
+
+        rigidbody.AddForce(dashMultiplier * speed * move);
+
+        // play sounds here
+
+        StartCoroutine(DashDelay());
+    } 
+
+    private IEnumerator DashDelay() {
+        userInput.Gameplay.Dash.Disable();
+
+        yield return new WaitForSeconds(dashDelayTime);
+
+        userInput.Gameplay.Dash.Enable();
     }
 
 }

@@ -60,9 +60,7 @@ Do you want to take on this quest?
     #Receptionist
     That's alright. If you changed your mind, feel free to come back to us anytime.
     
-- 
-
--> DONE
+- -> DONE
 
 === CollectHerbs
 #Receptionist
