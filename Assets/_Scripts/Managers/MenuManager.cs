@@ -11,11 +11,11 @@ public class MenuManager : Singleton<MenuManager> {
 
     public event Action OnMenuChanged;
 
+    [SerializeField] private MenuState currentMenuState;
+    public MenuState CurrentMenuState => currentMenuState;
+
     [SerializeField] private MenuData[] menus;
     public MenuData[] Menus => menus;
-
-    private MenuState currentMenuState;
-    public MenuState CurrentMenuState => currentMenuState;
 
     protected override void Awake() {
         base.Awake();
@@ -28,6 +28,11 @@ public class MenuManager : Singleton<MenuManager> {
             new(MenuState.Win),
             new(MenuState.Lose),
         };
+    }
+
+    public void ChangeMenu(string menuName) {
+        if (Enum.TryParse(menuName, false, out MenuState menuState)) ChangeMenu(menuState);
+        else Debug.LogWarning("Unable to parse given menu.");
     }
 
     public void ChangeMenu(MenuState menuState) {

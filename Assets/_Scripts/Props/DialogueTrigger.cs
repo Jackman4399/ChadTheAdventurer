@@ -12,7 +12,15 @@ public class DialogueTrigger : MonoBehaviour {
 
 	[SerializeField] protected LayerMask playerMask;
 
-	protected virtual void OnTriggerEnter2D(Collider2D other) {
+    private void OnEnable() {
+        StoryManager.Instance.OnStoryChanged += OnStoryChanged;
+    }
+
+    private void OnDisable() {
+        StoryManager.Instance.OnStoryChanged -= OnStoryChanged;
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D other) {
         if ((1 << other.gameObject.layer | playerMask) == playerMask) OnInteract();
 	}
 
@@ -20,5 +28,7 @@ public class DialogueTrigger : MonoBehaviour {
         DialogueManager.Instance.ProcessDialogue(dialogueText, haveVisited);
         if (!haveVisited) haveVisited = true;
 	}
+
+    private void OnStoryChanged(StoryState state) => haveVisited = false;
 
 }

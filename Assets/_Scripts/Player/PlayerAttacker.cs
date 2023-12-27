@@ -52,11 +52,21 @@ public class PlayerAttacker : Player {
 			userInput.Gameplay.AttackDown.performed += OnAttackDown;
 			userInput.Gameplay.AttackLeft.performed += OnAttackLeft;
 			userInput.Gameplay.AttackRight.performed += OnAttackRight;
+
+            userInput.GameplayWithoutDash.AttackUp.performed += OnAttackUp;
+			userInput.GameplayWithoutDash.AttackDown.performed += OnAttackDown;
+			userInput.GameplayWithoutDash.AttackLeft.performed += OnAttackLeft;
+			userInput.GameplayWithoutDash.AttackRight.performed += OnAttackRight;
 		} else {
 			userInput.Gameplay.AttackUp.performed -= OnAttackUp;
 			userInput.Gameplay.AttackDown.performed -= OnAttackDown;
 			userInput.Gameplay.AttackLeft.performed -= OnAttackLeft;
 			userInput.Gameplay.AttackRight.performed -= OnAttackRight;
+
+            userInput.GameplayWithoutDash.AttackUp.performed -= OnAttackUp;
+			userInput.GameplayWithoutDash.AttackDown.performed -= OnAttackDown;
+			userInput.GameplayWithoutDash.AttackLeft.performed -= OnAttackLeft;
+			userInput.GameplayWithoutDash.AttackRight.performed -= OnAttackRight;
 		}
 	}
 
