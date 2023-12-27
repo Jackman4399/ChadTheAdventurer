@@ -24,11 +24,11 @@ INCLUDE GLOBAL.ink
 - else          :
     
     #Blacksmith
-    Well hello there! Welcome to my shop. I sell weapons to adventurers that thinks they got what it takes.
+    Well hello there! Welcome to my shop. I sell weapons to the bravest of adventurers.
     
 }
 
 #Blacksmith
-Unfortunately, I'm not open to business at the moment. You can come back anytime soon, and hopefully I can get my shop up and running!
+Sorry pal, I'm out of stock at the moment. You can come back later, and hopefully I will have some goods to sell!
 
 -> DONE

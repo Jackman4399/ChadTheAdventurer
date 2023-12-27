@@ -257,7 +257,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89db5777a5b487441958dea565d0e6d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionTime: 0.25
+  currentSceneState: 0
+  transitionTimeInScene: 0.25
   transitionTimeBetweenScenes: 1
 --- !u!114 &2055437480642026607
 MonoBehaviour:
@@ -329,6 +330,14 @@ MonoBehaviour:
     pitch: 0.65
     loop: 0
     playOnAwake: 0
+  - name: BGM1
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: ac699d8cc40c8f644ab5330e41d96588, type: 3}
+    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 0.3
+    pitch: 0.65
+    loop: 1
+    playOnAwake: 1
 --- !u!114 &2964856164721253087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb459f25472865a45a78c261576d5d47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menus: []
 --- !u!114 &2873579439693867739
 MonoBehaviour:
   m_ObjectHideFlags: 0
