@@ -286,7 +286,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.3
+    volume: 0.5
     pitch: 0.65
     loop: 0
     playOnAwake: 0
@@ -294,7 +294,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 2b21ef916f6943c439b71a7c74568878, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.3
+    volume: 0.5
     pitch: 0.65
     loop: 0
     playOnAwake: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.2
+    volume: 0.4
     pitch: 0.6
     loop: 0
     playOnAwake: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: df7087e4d8a8bb546bc08ce68632903f, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.3
+    volume: 0.45
     pitch: 0.65
     loop: 0
     playOnAwake: 0
@@ -332,12 +332,20 @@ MonoBehaviour:
     playOnAwake: 0
   - name: BGM1
     source: {fileID: 0}
-    clip: {fileID: 8300000, guid: e7ce4fe5ad46ded43978e29db6685870, type: 3}
+    clip: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 1
+    volume: 0.4
     pitch: 0.65
     loop: 1
     playOnAwake: 1
+  - name: BGM_Boss
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
+    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 0.4
+    pitch: 0.65
+    loop: 1
+    playOnAwake: 0
 --- !u!114 &2964856164721253087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a9982bf6a1b68841b755193da30bf2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentInputState: 0
 --- !u!114 &6763434984210058267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,6 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb459f25472865a45a78c261576d5d47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentMenuState: 0
   menus: []
 --- !u!114 &2873579439693867739
 MonoBehaviour:

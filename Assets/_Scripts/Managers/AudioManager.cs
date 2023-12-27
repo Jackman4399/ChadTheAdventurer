@@ -9,10 +9,6 @@ public class AudioManager : Singleton<AudioManager> {
 
     [SerializeField] private Sound[] sounds;
 
-    private void Start() {
-        Instance.Play("BGM1");
-    }
-
     protected override void Awake() {
         base.Awake();
 
