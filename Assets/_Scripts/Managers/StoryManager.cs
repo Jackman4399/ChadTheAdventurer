@@ -5,8 +5,7 @@ using UnityEngine;
 
 public enum StoryState {
 	Introduction,
-	CollectHerbs,
-    ExterminateWolfTribe,
+	CollectStrawberries,
 	EncounterGoblin,
 	GoblinSpare,
 	GoblinKill,
@@ -23,10 +22,10 @@ public class StoryManager : Singleton<StoryManager> {
 
 	public event Action<StoryState> OnStoryChanged;
 
-	[SerializeField] private StoryState initialStoryState;
     private StoryState currentStoryState;
+	[SerializeField] private StoryState initialStoryState;
+    public StoryState CurrentStoryState => currentStoryState;
 	public StoryState InitialStoryState => initialStoryState;
-	public StoryState CurrentStoryState => currentStoryState;
 
 	[SerializeField] private string proceedName = "proceed";
 

@@ -15,7 +15,10 @@ public class DialogueMenu : Menu {
     [SerializeField] private TMP_Text[] choiceTexts;
 
     public IEnumerator SetDialogue(Story story) {
-        dialogueText.text = story.Continue();
+        var nextDialogue = story.Continue();
+
+        if (nextDialogue.Length == 0) yield break;
+        dialogueText.text = nextDialogue;
 
         if (story.currentTags.Count != 0) nameText.text = story.currentTags[0];
 

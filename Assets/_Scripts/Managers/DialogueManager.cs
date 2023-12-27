@@ -36,14 +36,26 @@ public class DialogueManager : Singleton<DialogueManager> {
             SceneLoader.Instance.ChangeScene(sceneName);
         });
 
+        story.BindExternalFunction<string>("ChangeInput", (inputName) => {
+            InputManager.Instance.ChangeInput(inputName);
+        });
+
+        story.BindExternalFunction<string>("ChangeMenu", (menuName) => {
+            MenuManager.Instance.ChangeMenu(menuName);
+        });
+
         while (story.canContinue) yield return StartCoroutine(dialogueMenu.SetDialogue(story));
 
         story.UnbindExternalFunction("Proceed");
         story.UnbindExternalFunction("GetCurrentStoryState");
         story.UnbindExternalFunction("ChangeNextScene");
         story.UnbindExternalFunction("ChangeScene");
+        story.UnbindExternalFunction("ChangeInput");
+        story.UnbindExternalFunction("ChangeMenu");
 
+        if (InputManager.Instance.CurrentInputState == InputState.Dialogue) 
         InputManager.Instance.ChangeInput(inputState);
+        if (MenuManager.Instance.CurrentMenuState == MenuState.Dialogue)
         MenuManager.Instance.ChangeMenu(menuState);
     }
 

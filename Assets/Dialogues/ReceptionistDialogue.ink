@@ -6,10 +6,10 @@ INCLUDE GLOBAL.ink
 
 ~ CurrentStoryState = GetCurrentStoryState()
 
-{ CurrentStoryState :
-- "Introduction"    : -> Introduction
-- "CollectHerbs"    : -> CollectHerbs
-- else              : -> StoryStateNotRecognised
+{ CurrentStoryState         :
+- "Introduction"            : -> Introduction
+- "CollectStrawberries"     : -> CollectStrawberries
+- else                      : -> StoryStateNotRecognised
 }
 
 -> END
@@ -62,7 +62,7 @@ Do you want to take on this quest?
     
 - -> DONE
 
-=== CollectHerbs
+=== CollectStrawberries
 #Receptionist
 I hope you do well on your quest! We will reward you accordingly if you fulfill the objectives.
 
