@@ -6,10 +6,10 @@ INCLUDE GLOBAL.ink
 
 ~ CurrentStoryState = GetCurrentStoryState()
 
-{ CurrentStoryState :
-- "Introduction"    : -> Introduction
-- "CollectHerbs"    : -> CollectHerbs
-- else              : -> StoryStateNotRecognised
+{ CurrentStoryState         :
+- "Introduction"            : -> Introduction
+- "CollectStrawberries"     : -> CollectStrawberries
+- else                      : -> StoryStateNotRecognised
 }
 
 -> END
@@ -22,16 +22,20 @@ I don't really need to go out of town...
 Perhaps I should ask the guild for any quests...
 -> DONE
 
-== CollectHerbs
+== CollectStrawberries
 #Player
 Am I ready to go out to the forest?
 
 + [Yes.]
+    #Player
+    Let's go.
+    
+    ~ ChangeInput("GameplayWithoutDash")
+    ~ ChangeMenu("Gameplay")
     ~ ChangeNextScene()
 
 + [No.]
     #Player
     Maybe I'll take some time to prepare.
     
-
-- <> -> DONE
+- -> DONE

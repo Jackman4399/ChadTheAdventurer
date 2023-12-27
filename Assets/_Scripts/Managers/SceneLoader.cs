@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum SceneState { None, Main, TownIntro, Cave }
+public enum SceneState { None, Main, TownIntro, CollectStrawberries, Cave }
 
 public class SceneLoader : Singleton<SceneLoader> {
 
@@ -29,17 +29,12 @@ public class SceneLoader : Singleton<SceneLoader> {
         Debug.LogWarning("Unable to parse current scene.");
     }
 
-    public void ChangeNextScene() {
-        var nextScene = SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1);
-
-        if (Enum.TryParse(nextScene.name, false, out SceneState nextSceneState)) ChangeScene(nextSceneState);
-        else Debug.LogWarning("Unable to parse next scene.");
-    }
-
     public void ChangeScene(string sceneName) {
         if (Enum.TryParse(sceneName, false, out SceneState sceneState)) ChangeScene(sceneState);
         else Debug.LogWarning("Unable to parse given scene.");
     }
+
+    public void ChangeNextScene() => ChangeScene(currentSceneState + 1);
 
     public void ChangeScene(SceneState sceneState) {
 		if (sceneState == SceneState.None) return;
@@ -61,8 +56,10 @@ public class SceneLoader : Singleton<SceneLoader> {
 
     public void Crossfade(Action action) => Crossfade(SceneState.None, action);
 
-    private void Crossfade(SceneState sceneState, Action action) => 
-    StartCoroutine(CrossfadeCoroutine(sceneState, action));
+    private void Crossfade(SceneState sceneState, Action action) {
+        StopAllCoroutines();
+        StartCoroutine(CrossfadeCoroutine(sceneState, action));
+    }
 
 	private IEnumerator CrossfadeCoroutine(SceneState sceneState, Action action) {
         float transitionTime = sceneState == SceneState.None ? transitionTimeInScene : transitionTimeBetweenScenes;
@@ -72,6 +69,8 @@ public class SceneLoader : Singleton<SceneLoader> {
 		InputManager.Instance.ChangeInput(InputState.None);
 
 		// Fade In
+        crossfadeImage.color = new Color(0, 0, 0, 0);
+
 		while (crossfadeImage.color.a < 1) {
 			crossfadeImage.color += new Color(0, 0, 0, Time.deltaTime / transitionTime);
 			yield return null;
@@ -83,6 +82,8 @@ public class SceneLoader : Singleton<SceneLoader> {
         action?.Invoke();
 
 		// Fade Out
+        crossfadeImage.color = new Color(0, 0, 0, 1);
+
 		while (crossfadeImage.color.a > 0) {
 			crossfadeImage.color -= new Color(0, 0, 0, Time.deltaTime / transitionTime);
 			yield return null;
