@@ -27,12 +27,11 @@ Perhaps I should ask the guild for any quests...
 Am I ready to go out to the forest?
 
 + [Yes.]
-    //~ ChangeNextScene()
+    ~ ChangeNextScene()
 
 + [No.]
     #Player
+    Maybe I'll take some time to prepare.
     
 
-- 
-
--> DONE
+- <> -> DONE
