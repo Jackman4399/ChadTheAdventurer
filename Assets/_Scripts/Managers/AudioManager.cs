@@ -24,6 +24,8 @@ public class AudioManager : Singleton<AudioManager> {
 
             source.loop = sound.loop;
             source.playOnAwake = sound.playOnAwake;
+
+            if (sound.playOnAwake) source.Play();
         }
     }
 
