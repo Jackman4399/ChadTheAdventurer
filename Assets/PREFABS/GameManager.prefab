@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 2964856164721253087}
   - component: {fileID: 2347758753718956841}
   - component: {fileID: 6763434984210058267}
+  - component: {fileID: 1715656584741013641}
   - component: {fileID: 2873579439693867739}
   - component: {fileID: 305123876428434449}
   m_Layer: 0
@@ -258,6 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSceneState: 0
+  transitionTimeToCutscene: 0.75
   transitionTimeInScene: 0.25
   transitionTimeBetweenScenes: 1
 --- !u!114 &2055437480642026607
@@ -334,7 +336,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.4
+    volume: 0.25
     pitch: 0.65
     loop: 1
     playOnAwake: 1
@@ -342,7 +344,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.4
+    volume: 0.25
     pitch: 0.65
     loop: 1
     playOnAwake: 0
@@ -387,6 +389,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMenuState: 0
   menus: []
+--- !u!114 &1715656584741013641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8588660948899467326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a376659b5937694fb20b28bc3a4c97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2873579439693867739
 MonoBehaviour:
   m_ObjectHideFlags: 0

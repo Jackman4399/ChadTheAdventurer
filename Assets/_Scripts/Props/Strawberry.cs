@@ -2,43 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Strawberry : MonoBehaviour
-{
-
-    private bool collected = false;
+public class Strawberry : MonoBehaviour {
     
-    [SerializeField] private Animator animator;
+    [SerializeField] private LayerMask playerMask;
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        
-        if(other.gameObject.layer == LayerMask.NameToLayer("Player")){
+    [SerializeField] private string collectedName = "collected";
 
-            animator.SetTrigger("Collected");
-            
-            if(!collected) {
+    private Animator animator;
 
-                collected = true;
-                other.gameObject.GetComponent<StrawberryCounter>().AddBerry();
-
-            }
-
-            AudioManager.Instance.PlayOneShot("Collect");
-
-        }
-
+    private void Awake() {
+        animator = GetComponent<Animator>();
     }
 
-    private void Update() {
-        // Check if the animation is playing
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Collected"))
-        {
-            // Check if the animation is finished
-            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
-            {
-                // Delete the object
-                Destroy(gameObject);
-            }
-        }
+    private void OnTriggerEnter2D(Collider2D other) {
+        if((1 << other.gameObject.layer | playerMask) != playerMask) return;
+
+        animator.SetTrigger(collectedName);
+        PlayerDataManager.Instance.AddStrawberry();
+        AudioManager.Instance.PlayOneShot("Collect");
+    }
+
+    // For use within animation events
+    private void Disable() {
+        // Delete the object
+        Destroy(gameObject);
     }
 
 }
