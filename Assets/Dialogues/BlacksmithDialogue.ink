@@ -44,7 +44,7 @@ Sorry pal, I'm out of stock at the moment. You can come back later, and hopefull
 - else          :
     
     #Blacksmith
-    I've see you've taken up on the collecting strawberries quest!
+    I see you've taken up the strawberry collection quest!
     
 }
 
