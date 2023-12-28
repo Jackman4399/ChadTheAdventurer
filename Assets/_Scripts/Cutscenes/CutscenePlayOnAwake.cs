@@ -31,7 +31,6 @@ public class CutscenePlayOnAwake : MonoBehaviour {
     private void OnPlayableDirectorStopped(PlayableDirector director) {
         MenuManager.Instance.ChangeMenu(endMenuState);
         InputManager.Instance.ChangeInput(endInputState);
-            
     }
 
 

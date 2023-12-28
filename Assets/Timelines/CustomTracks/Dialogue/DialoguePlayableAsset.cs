@@ -12,7 +12,7 @@ public class DialoguePlayableAsset : PlayableAsset {
     public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) {
         var playable = ScriptPlayable<DialoguePlayableBehaviour>.Create(graph);
         var dialogueBehaviour = playable.GetBehaviour();
-
+        
         dialogueBehaviour.dialogueText = dialogueText;
 
         return playable;
