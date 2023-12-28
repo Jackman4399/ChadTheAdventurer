@@ -58037,11 +58037,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2055437480642026607, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: sounds.Array.data[7].volume
-      value: 0.35
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2055437480642026607, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: sounds.Array.data[8].volume
-      value: 0.35
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: InitialiseMenu
