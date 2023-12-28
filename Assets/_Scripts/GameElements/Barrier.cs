@@ -9,7 +9,7 @@ public class Barrier : MonoBehaviour
     private StrawberryCounter counter;
 
     //Change this to alter how many berries are needed for the invisible wall to go away
-    private int berriesNeeded = 1;
+    [SerializeField] private int berriesNeeded = 8;
 
     private void Start() {
         counter = FindObjectOfType<StrawberryCounter>();
