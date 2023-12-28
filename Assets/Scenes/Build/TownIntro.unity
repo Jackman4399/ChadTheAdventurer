@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 36447441}
   - component: {fileID: 36447442}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: CinemachineBrain
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19935,14 +19935,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4097672594048128256, guid: c7939637a05f0bb4e9c38aee057632b6, type: 3}
-      propertyPath: m_fontSize
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4097672594048128256, guid: c7939637a05f0bb4e9c38aee057632b6, type: 3}
-      propertyPath: m_fontSizeMax
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 4737262202033369888, guid: c7939637a05f0bb4e9c38aee057632b6, type: 3}
       propertyPath: m_Name
       value: DialogueMenu
@@ -37962,8 +37954,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9bc4b30e927844ba39c53eaf2543db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initInputState: 0
-  initMenuState: 0
   endInputState: 4
   endMenuState: 3
 --- !u!82 &1420613167
