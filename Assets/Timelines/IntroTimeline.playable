@@ -922,7 +922,7 @@ MonoBehaviour:
     m_Start: 5.0000000000000355
     m_ClipIn: 0
     m_Asset: {fileID: -565237188787331480}
-    m_Duration: 8.999999999999966
+    m_Duration: 9.999999999999964
     m_TimeScale: 1
     m_ParentTrack: {fileID: -5152782495555326132}
     m_EaseInDuration: 0
@@ -991,7 +991,7 @@ MonoBehaviour:
     m_Start: 17.3
     m_ClipIn: 0
     m_Asset: {fileID: 9047365216950553602}
-    m_Duration: 3
+    m_Duration: 4
     m_TimeScale: 1
     m_ParentTrack: {fileID: -5152782495555326132}
     m_EaseInDuration: 0
@@ -1093,7 +1093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset
   m_EditorClassIdentifier: 
-  dialogueText: Let's see what quests will the adventurer's guild offer today.
+  dialogueText: Let's see what quests the adventurer's guild has to offer today.
 --- !u!114 &-3959479694392294653
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1307,7 +1307,7 @@ MonoBehaviour:
     m_Start: 16.3
     m_ClipIn: 0
     m_Asset: {fileID: 6755688500839325374}
-    m_Duration: 4
+    m_Duration: 5
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1088462397949679622}
     m_EaseInDuration: 0
@@ -1652,7 +1652,7 @@ MonoBehaviour:
     m_Start: 11
     m_ClipIn: 0
     m_Asset: {fileID: -4621740504670588344}
-    m_Duration: 3.0000000000000018
+    m_Duration: 4
     m_TimeScale: 1
     m_ParentTrack: {fileID: -420764130265851348}
     m_EaseInDuration: 0
@@ -1703,7 +1703,7 @@ MonoBehaviour:
     m_Start: 17.3
     m_ClipIn: 0
     m_Asset: {fileID: -6230976149962856374}
-    m_Duration: 3
+    m_Duration: 4
     m_TimeScale: 1
     m_ParentTrack: {fileID: -420764130265851348}
     m_EaseInDuration: 0
@@ -2025,7 +2025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset
   m_EditorClassIdentifier: 
-  dialogueText: Player
+  dialogueText: Chad
 --- !u!114 &3609771493845465316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2212,7 +2212,7 @@ MonoBehaviour:
     m_Start: 5
     m_ClipIn: 0
     m_Asset: {fileID: 3305669873713295187}
-    m_Duration: 9.000000000000002
+    m_Duration: 10
     m_TimeScale: 1
     m_ParentTrack: {fileID: 4844441970425795982}
     m_EaseInDuration: 0
@@ -2281,7 +2281,7 @@ MonoBehaviour:
     m_Start: 17.3
     m_ClipIn: 0
     m_Asset: {fileID: -2230350967592192358}
-    m_Duration: 3
+    m_Duration: 4
     m_TimeScale: 1
     m_ParentTrack: {fileID: 4844441970425795982}
     m_EaseInDuration: 0

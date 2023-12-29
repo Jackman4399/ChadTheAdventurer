@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: I can kill them, but I'm only here to collect strawberries.
+  dialogueText: A goblin... I could kill it, but I'm only here to collect strawberries.
+    Plus, it sounds injured.
 --- !u!114 &-6450098219313834269
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -701,7 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Injured Goblin
+  dialogueText: ???
 --- !u!114 &1438739223824791592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -714,7 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Player
+  dialogueText: Chad
 --- !u!114 &3034557580701803752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1188,7 +1189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Maybe it's not necessary?
+  dialogueText: Maybe I can ignore it?
 --- !u!114 &5355929822885812804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1238,7 +1239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Player
+  dialogueText: Chad
 --- !u!114 &7829981531440170314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1251,7 +1252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Ugh... I really hope I don't die today...
+  dialogueText: Ugh... I really hope I don't die here...
 --- !u!114 &9081556747253545165
 MonoBehaviour:
   m_ObjectHideFlags: 1
