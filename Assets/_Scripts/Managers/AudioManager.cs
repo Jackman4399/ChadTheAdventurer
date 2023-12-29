@@ -60,4 +60,12 @@ public class AudioManager : Singleton<AudioManager> {
     public void StopAllSounds() {
         foreach (Sound sound in sounds) sound.source.Stop();
     }
+    
+    public bool IsPlaying(string name) {
+        Sound sound = GetSound(name);
+        if (sound != null) {
+            return sound.source.isPlaying;
+        }
+        return false;
+    }
 }

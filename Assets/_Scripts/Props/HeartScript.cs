@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HeartScript : MonoBehaviour
 {
-    public AudioSource heal;
 
     public int healAmount = 1;
 
