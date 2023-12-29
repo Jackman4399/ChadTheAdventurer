@@ -45,6 +45,18 @@ public class SceneLoader : Singleton<SceneLoader> {
 		if (sceneState == SceneState.None) return;
 		Crossfade(sceneState, null, TransitionType.BetweenScenes);
 		currentSceneState = sceneState;
+        //Should change BGM by seeing which scene it moves to
+        if(currentSceneState == SceneState.Main) {
+            AudioManager.Instance.StopAllSounds();
+            AudioManager.Instance.Play("BGM_MainMenu");
+        }
+        else if(currentSceneState == SceneState.Cave) {
+            AudioManager.Instance.StopAllSounds();
+            AudioManager.Instance.Play("BGM_Boss");
+        } 
+        else if(!AudioManager.Instance.IsPlaying("BGM1")){
+            AudioManager.Instance.Play("BGM1");
+        }
 	}
 
     // For use in timeline

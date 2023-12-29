@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: Waterfall5
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: -129205910, guid: 5641289f57c36b743ab344e4ec9f9750, type: 3}
+  - {fileID: -1699585121, guid: 5641289f57c36b743ab344e4ec9f9750, type: 3}
+  - {fileID: -1332155, guid: 5641289f57c36b743ab344e4ec9f9750, type: 3}
+  m_MinSpeed: 3
+  m_MaxSpeed: 3
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
