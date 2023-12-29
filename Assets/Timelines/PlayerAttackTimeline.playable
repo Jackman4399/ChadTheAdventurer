@@ -173,7 +173,7 @@ MonoBehaviour:
     m_Start: 7
     m_ClipIn: 0
     m_Asset: {fileID: 4533683178532549895}
-    m_Duration: 9
+    m_Duration: 10
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8769873492385590645}
     m_EaseInDuration: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset
   m_EditorClassIdentifier: 
-  dialogueText: Player
+  dialogueText: Chad
 --- !u!114 &-4041931342375184607
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset
   m_EditorClassIdentifier: 
-  dialogueText: Player
+  dialogueText: Chad
 --- !u!114 &-2780070741903221472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset
   m_EditorClassIdentifier: 
-  dialogueText: Arrow keys to attack in specified direction
+  dialogueText: Use Arrow keys to attack in the specified direction
 --- !u!114 &-1460233137364567236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset
   m_EditorClassIdentifier: 
-  dialogueText: I can kill them, but I'm only here to collect strawberries.
+  dialogueText: I could fight, but I'm only here to collect strawberries.
 --- !u!114 &-1304563065292886987
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset
   m_EditorClassIdentifier: 
-  dialogueText: Player
+  dialogueText: Chad
 --- !u!114 &-1158109063582545338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -592,7 +592,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: DialoguePlayableAsset
   - m_Version: 1
-    m_Start: 10
+    m_Start: 11.000000000000002
     m_ClipIn: 0
     m_Asset: {fileID: -2894330967045101550}
     m_Duration: 6
@@ -646,7 +646,7 @@ MonoBehaviour:
     m_Start: 8
     m_ClipIn: 0
     m_Asset: {fileID: -2780070741903221472}
-    m_Duration: 2
+    m_Duration: 3.0000000000000018
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1158109063582545338}
     m_EaseInDuration: 0
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset
   m_EditorClassIdentifier: 
-  dialogueText: Oh, two slimes!
+  dialogueText: Oh, slimes!
 --- !u!114 &1818210120420734273
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -927,7 +927,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: DialoguePlayableAsset
   - m_Version: 1
-    m_Start: 10
+    m_Start: 11.000000000000002
     m_ClipIn: 0
     m_Asset: {fileID: -1460233137364567236}
     m_Duration: 3
@@ -936,7 +936,7 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve: []
@@ -960,7 +960,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: DialoguePlayableAsset
   - m_Version: 1
-    m_Start: 13
+    m_Start: 14
     m_ClipIn: 0
     m_Asset: {fileID: 2919317468438657998}
     m_Duration: 3
@@ -968,7 +968,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 1818210120420734273}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
+    m_BlendInDuration: 0
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -1014,7 +1014,7 @@ MonoBehaviour:
     m_Start: 8
     m_ClipIn: 0
     m_Asset: {fileID: -2709635548367043524}
-    m_Duration: 2
+    m_Duration: 3.0000000000000018
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1818210120420734273}
     m_EaseInDuration: 0
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset
   m_EditorClassIdentifier: 
-  dialogueText: Hm? What are those at a distance...?
+  dialogueText: Hm?! What are those in the distance...?
 --- !u!114 &2617632674321175544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset
   m_EditorClassIdentifier: 
-  dialogueText: Maybe it's not necessary?
+  dialogueText: Maybe I can just run past them?
 --- !u!114 &4533683178532549895
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1292,7 +1292,7 @@ MonoBehaviour:
     m_Start: 8
     m_ClipIn: 0
     m_Asset: {fileID: 5080586622426559126}
-    m_Duration: 8
+    m_Duration: 9
     m_TimeScale: 1
     m_ParentTrack: {fileID: 5486885245710941462}
     m_EaseInDuration: 0

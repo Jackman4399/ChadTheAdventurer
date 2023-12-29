@@ -15,19 +15,19 @@ INCLUDE GLOBAL.ink
 -> END
 
 === Introduction
-#Player
+#Chad
 I don't really need to go out of town...
 
-#Player
+#Chad
 Perhaps I should ask the guild for any quests...
 -> DONE
 
 == CollectStrawberries
-#Player
+#Chad
 Am I ready to go out to the forest?
 
 + [Yes.]
-    #Player
+    #Chad
     Let's go.
     
     ~ ChangeInput("GameplayWithoutDash")
@@ -35,7 +35,7 @@ Am I ready to go out to the forest?
     ~ ChangeNextScene()
 
 + [No.]
-    #Player
-    Maybe I'll take some time to prepare.
+    #Chad
+    Maybe I'll take some more time to prepare.
     
 - -> DONE

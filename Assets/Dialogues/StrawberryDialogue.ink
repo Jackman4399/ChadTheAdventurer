@@ -4,10 +4,10 @@ INCLUDE GLOBAL.ink
 
 === main ===
 
-#Player
+#Chad
 I haven't collected enough strawberries.
 
-#Player
+#Chad
 I need {StrawberriesNeeded - StrawberriesCount} more.
 
 -> DONE
