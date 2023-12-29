@@ -1,19 +1,24 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum SceneState { None, Main, TownIntro, CollectStrawberries, Cave }
 
+public enum TransitionType { Cutscene, InScene, BetweenScenes }
+
 public class SceneLoader : Singleton<SceneLoader> {
 
     private Image crossfadeImage;
-    public Image CrossfadeImage => crossfadeImage;
 
 	[SerializeField] private SceneState currentSceneState;
 
+    [Header("Transition Times")]
+    [SerializeField, Tooltip("Transition time when a player triggers a cutscene in seconds.")] 
+    private float transitionTimeToCutscene = .75f; 
     [SerializeField, Tooltip("Transition time between different places in the same scene in seconds.")] 
     private float transitionTimeInScene = .25f;
     [SerializeField, Tooltip("Transition time between different scenes in seconds.")] 
@@ -38,7 +43,7 @@ public class SceneLoader : Singleton<SceneLoader> {
 
     public void ChangeScene(SceneState sceneState) {
 		if (sceneState == SceneState.None) return;
-		Crossfade(sceneState, null);
+		Crossfade(sceneState, null, TransitionType.BetweenScenes);
 		currentSceneState = sceneState;
 	}
 
@@ -54,15 +59,21 @@ public class SceneLoader : Singleton<SceneLoader> {
         );
     }
 
-    public void Crossfade(Action action) => Crossfade(SceneState.None, action);
+    public void Crossfade(Action action, TransitionType transitionType) => 
+    Crossfade(SceneState.None, action, transitionType);
 
-    private void Crossfade(SceneState sceneState, Action action) {
+    private void Crossfade(SceneState sceneState, Action action, TransitionType transitionType) {
         StopAllCoroutines();
-        StartCoroutine(CrossfadeCoroutine(sceneState, action));
+        StartCoroutine(CrossfadeCoroutine(sceneState, action, transitionType));
     }
 
-	private IEnumerator CrossfadeCoroutine(SceneState sceneState, Action action) {
-        float transitionTime = sceneState == SceneState.None ? transitionTimeInScene : transitionTimeBetweenScenes;
+	private IEnumerator CrossfadeCoroutine(SceneState sceneState, Action action, TransitionType transitionType) {
+        float transitionTime = transitionType switch {
+            TransitionType.Cutscene => transitionTimeToCutscene,
+            TransitionType.InScene => transitionTimeInScene,
+            TransitionType.BetweenScenes => transitionTimeBetweenScenes,
+            _ => 1,
+        };
 
 		var currentInputState = InputManager.Instance.CurrentInputState;
 

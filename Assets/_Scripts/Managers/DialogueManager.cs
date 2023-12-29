@@ -23,6 +23,8 @@ public class DialogueManager : Singleton<DialogueManager> {
         MenuManager.Instance.ChangeMenu(MenuState.Dialogue);
 
         story.variablesState["HaveVisited"] = haveVisited;
+        story.variablesState["StrawberriesCount"] = PlayerDataManager.Instance.StrawberriesCount;
+        story.variablesState["StrawberriesNeeded"] = PlayerDataManager.Instance.StrawberriesNeeded;
 
         story.BindExternalFunction("Proceed", () => StoryManager.Instance.Proceed());
 

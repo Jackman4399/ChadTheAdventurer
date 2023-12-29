@@ -33,15 +33,14 @@ public class CutsceneActivation : MonoBehaviour {
         MenuManager.Instance.ChangeMenu(MenuState.None);
         InputManager.Instance.ChangeInput(InputState.None);
 
-        director.Play();
-
-        Destroy(gameObject);
-
+        SceneLoader.Instance.Crossfade(director.Play, TransitionType.Cutscene);
     }
 
     void OnPlayableDirectorStopped(PlayableDirector director) {
         MenuManager.Instance.ChangeMenu(currentMenuState);
-        InputManager.Instance.ChangeInput(currentInputState);  
+        InputManager.Instance.ChangeInput(currentInputState);
+
+        Destroy(gameObject);
     }
 
 }

@@ -11,7 +11,7 @@ public class Teleporter : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         if ((1 << other.gameObject.layer | playerMask) != playerMask) return;
 
-        if (transform.childCount > 0) SceneLoader.Instance.Crossfade(TeleportPlayer);
+        if (transform.childCount > 0) SceneLoader.Instance.Crossfade(TeleportPlayer, TransitionType.InScene);
     }
 
     private void TeleportPlayer() {
