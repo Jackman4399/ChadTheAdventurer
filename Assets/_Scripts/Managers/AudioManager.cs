@@ -29,10 +29,43 @@ public class AudioManager : Singleton<AudioManager> {
         }
     }
 
+    private void Start() {
+        OnSceneChanged(SceneLoader.Instance.CurrentSceneState);
+
+        SceneLoader.Instance.OnSceneChanged += OnSceneChanged;
+    }
+
+    private void OnDestroy() {
+        SceneLoader.Instance.OnSceneChanged -= OnSceneChanged;
+    }
+
+    private void OnSceneChanged(SceneState sceneState) {
+        switch (sceneState) {
+            case SceneState.Main:
+                StopAllSounds();
+                Play("BGM_MainMenu");
+            break;
+
+            case SceneState.TownIntro:
+                StopAllSounds();
+                Play("BGM1");
+            break;
+
+            case SceneState.Cave:
+                StopAllSounds();
+                Play("BGM_Boss");
+            break;
+
+            default:
+                StopAllSounds();
+            break;
+        }
+    }
+
     private Sound GetSound(string name) {
         Sound sound = Array.Find(sounds, s => s.name == name);
 
-        if (sound == null) { Debug.LogWarning("Sound: " + name + " not found!"); return null; }
+        if (sound == null) { Debug.LogWarning("Sound: " + name + " not found! Returning null."); return null; }
         else return sound;
     }
 
@@ -63,9 +96,8 @@ public class AudioManager : Singleton<AudioManager> {
     
     public bool IsPlaying(string name) {
         Sound sound = GetSound(name);
-        if (sound != null) {
-            return sound.source.isPlaying;
-        }
-        return false;
+        if (sound == null) return false;
+
+        return sound.source.isPlaying;
     }
 }
