@@ -1,20 +1,21 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum SceneState { None, Main, TownIntro, CollectStrawberries, Cave }
+public enum SceneState { None, Main, TownIntro, CollectStrawberries, TownBeforeEmergencyQuest, Cave }
 
 public enum TransitionType { Cutscene, InScene, BetweenScenes }
 
 public class SceneLoader : Singleton<SceneLoader> {
 
+    public event Action<SceneState> OnSceneChanged;
+
     private Image crossfadeImage;
 
 	[SerializeField] private SceneState currentSceneState;
+    public SceneState CurrentSceneState => currentSceneState;
 
     [Header("Transition Times")]
     [SerializeField, Tooltip("Transition time when a player triggers a cutscene in seconds.")] 
@@ -42,21 +43,9 @@ public class SceneLoader : Singleton<SceneLoader> {
     public void ChangeNextScene() => ChangeScene(currentSceneState + 1);
 
     public void ChangeScene(SceneState sceneState) {
-		if (sceneState == SceneState.None) return;
+        if (sceneState == SceneState.None) return; 
 		Crossfade(sceneState, null, TransitionType.BetweenScenes);
 		currentSceneState = sceneState;
-        //Should change BGM by seeing which scene it moves to
-        if(currentSceneState == SceneState.Main) {
-            AudioManager.Instance.StopAllSounds();
-            AudioManager.Instance.Play("BGM_MainMenu");
-        }
-        else if(currentSceneState == SceneState.Cave) {
-            AudioManager.Instance.StopAllSounds();
-            AudioManager.Instance.Play("BGM_Boss");
-        } 
-        else if(!AudioManager.Instance.IsPlaying("BGM1")){
-            AudioManager.Instance.Play("BGM1");
-        }
 	}
 
     // For use in timeline
@@ -101,7 +90,10 @@ public class SceneLoader : Singleton<SceneLoader> {
 
 		crossfadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(crossfadeImage.color.a));
 
-		if (sceneState != SceneState.None) SceneManager.LoadScene(sceneState.ToString());
+		if (sceneState != SceneState.None) {
+            yield return SceneManager.LoadSceneAsync(sceneState.ToString());
+            OnSceneChanged?.Invoke(sceneState);
+        }
         action?.Invoke();
 
 		// Fade Out

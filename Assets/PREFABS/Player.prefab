@@ -730,7 +730,6 @@ GameObject:
   - component: {fileID: 2794337579178509303}
   - component: {fileID: 2647375979470088137}
   - component: {fileID: 6211804353453742191}
-  - component: {fileID: 1334543874458721630}
   m_Layer: 10
   m_Name: Hitbox
   m_TagString: Untagged
@@ -812,16 +811,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.76, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &1334543874458721630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8561044807410421883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb8f493b580fa343b796edcaa26d678, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  strawberries: 0
