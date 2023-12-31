@@ -9,6 +9,9 @@ INCLUDE GLOBAL.ink
 { CurrentStoryState         :
 - "Introduction"            : -> Introduction
 - "CollectStrawberries"     : -> CollectStrawberries
+- "GoblinSpare"             : -> GoblinSpare
+- "GoblinKill"              : -> GoblinKill
+- "ClaimWeapon"             : -> ClaimWeapon
 - else                      : -> StoryStateNotRecognised
 }
 
@@ -63,9 +66,92 @@ Do you want to take on this quest?
 - -> DONE
 
 === CollectStrawberries
+
 #Receptionist
 I hope you do well on your quest! We will reward you accordingly if you fulfill the objectives.
 
 #Receptionist
 In case you forgot, you need to find 8 strawberries scattered around the forest located outside of town.
+
+-> DONE
+
+=== GoblinSpare
+
+#Receptionist
+Hello! Welcome back!
+    
+#Receptionist
+How was the quest? Did you managed to complete it?
+    
+#Chad
+I did.
+    
+#Receptionist
+Great! Now, if you could hand over the strawberries, we will reward you with a better weapon from your current one.
+    
+#Chad
+Oh, that's the reward? That's Awesome!
+    
+#Chad
+Here are the strawberries.
+    
+#Receptionist
+...
+    
+#Receptionist
+Okay! I can confirm there are 8 strawberries. You can claim the weapon at the blacksmith's weapon shop.
+    
+#Chad
+Okay! Thank you.
+    
+~ Proceed()
+
+-> DONE
+
+=== GoblinKill
+
+#Receptionist
+Hello! Welcome back!
+    
+#Receptionist
+How was the quest? Did you managed to complete it?
+    
+#Chad
+I did.
+    
+#Receptionist
+Great! Now, if you could hand over the strawberries, we will reward you with the best weapon that we have.
+    
+#Chad
+Oh, that's the reward? That's Awesome!
+    
+#Chad
+Here are the strawberries.
+    
+#Receptionist
+...
+    
+#Receptionist
+Okay! I can confirm there are 8 strawberries. You can claim the weapon at the blacksmith's weapon shop.
+    
+#Chad
+Okay! Thank you.
+
+~ Proceed()
+
+-> DONE
+
+=== ClaimWeapon
+
+#Receptionist
+Hello again!
+
+#Receptionist
+You can claim the reward which is <>
+{ 
+- GetChoice("GoblinChoice") == 1: a better
+- GetChoice("GoblinChoice") == 2: the best
+} 
+<> weapon at the blacksmith's weapon shop.
+
 -> DONE

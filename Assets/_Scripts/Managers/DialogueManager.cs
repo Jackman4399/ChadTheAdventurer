@@ -23,6 +23,7 @@ public class DialogueManager : Singleton<DialogueManager> {
         MenuManager.Instance.ChangeMenu(MenuState.Dialogue);
 
         story.variablesState["HaveVisited"] = haveVisited;
+        
         story.variablesState["StrawberriesCount"] = PlayerDataManager.Instance.StrawberriesCount;
         story.variablesState["StrawberriesNeeded"] = PlayerDataManager.Instance.StrawberriesNeeded;
 
@@ -30,6 +31,10 @@ public class DialogueManager : Singleton<DialogueManager> {
 
         story.BindExternalFunction("GetCurrentStoryState", () => { 
             return StoryManager.Instance.CurrentStoryState.ToString();
+        });
+
+        story.BindExternalFunction<string>("GetChoice", (choiceName) => { 
+            return StoryManager.Instance.GetChoice(choiceName);
         });
 
         story.BindExternalFunction("ChangeNextScene", () => SceneLoader.Instance.ChangeNextScene());
@@ -50,6 +55,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 
         story.UnbindExternalFunction("Proceed");
         story.UnbindExternalFunction("GetCurrentStoryState");
+        story.UnbindExternalFunction("GetChoice");
         story.UnbindExternalFunction("ChangeNextScene");
         story.UnbindExternalFunction("ChangeScene");
         story.UnbindExternalFunction("ChangeInput");

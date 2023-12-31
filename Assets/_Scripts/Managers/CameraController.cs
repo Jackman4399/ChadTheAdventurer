@@ -2,8 +2,9 @@ using UnityEngine;
 
 public enum CameraState { 
     None, 
-    TownCamera, 
+    TownCamera,
     GuildCamera, 
+    HomeCamera,
     PathToForestCamera, 
     ForestCamera, 
     ForestZoomedCamera, 

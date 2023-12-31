@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum SceneState { None, Main, TownIntro, CollectStrawberries, TownBeforeEmergencyQuest, Cave }
+public enum SceneState { None, Main, TownIntro, CollectStrawberries, 
+TownBeforeEmergencyQuest, TownEmergencyQuest, LoseEmergencyQuest, Cave }
 
 public enum TransitionType { Cutscene, InScene, BetweenScenes }
 

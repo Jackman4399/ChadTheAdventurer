@@ -9,6 +9,7 @@ public enum StoryState {
 	EncounterGoblin,
 	GoblinSpare,
 	GoblinKill,
+    ClaimWeapon,
 	EmergencyQuest,
 	IgnoreEmergencyQuest,
 	ParticipateEmergencyQuest,
@@ -23,8 +24,8 @@ public class StoryManager : Singleton<StoryManager> {
 	public event Action<StoryState> OnStoryChanged;
 
     private StoryState currentStoryState;
-	[SerializeField] private StoryState initialStoryState;
     public StoryState CurrentStoryState => currentStoryState;
+	[SerializeField] private StoryState initialStoryState;
 	public StoryState InitialStoryState => initialStoryState;
 
 	[SerializeField] private string proceedName = "proceed";
@@ -44,16 +45,34 @@ public class StoryManager : Singleton<StoryManager> {
         currentStoryState = initialStoryState;
 
         choices = new Choice[] {
-            new(ChoiceState.GoblinChoice),
-            new(ChoiceState.EmergencyQuestChoice),
-            new(ChoiceState.BossChoice),
+            new(ChoiceState.GoblinChoice, 0),
+            new(ChoiceState.EmergencyQuestChoice, 0),
+            new(ChoiceState.BossChoice, 0),
         };
+
+        if (initialStoryState == StoryState.GoblinSpare) choices[0].choiceNumber = 1;
+        else if (initialStoryState == StoryState.GoblinKill) choices[0].choiceNumber = 2;
+
+        // Change goblin choice here
+        else if (initialStoryState > StoryState.EncounterGoblin) choices[0].choiceNumber = 1;
 
         foreach (var choice in choices)
         storyStateMachine.SetInteger(choice.ChoiceState.ToString(), choice.choiceNumber);
 
         isSkipping = true;
 	}
+
+    private void Start() {
+        SceneLoader.Instance.OnSceneChanged += OnSceneChanged;
+    }
+
+    private void OnDestroy() {
+        SceneLoader.Instance.OnSceneChanged -= OnSceneChanged;
+    }
+
+    private void OnSceneChanged(SceneState sceneState) {
+        if (sceneState == SceneState.Main) currentStoryState = StoryState.Introduction;
+    }
 
 	public void ChangeStoryState(StoryState storyState) {
 		currentStoryState = storyState;
@@ -66,6 +85,18 @@ public class StoryManager : Singleton<StoryManager> {
 		Choice choice = Array.Find(choices, c => c.ChoiceState == choiceState);
 		storyStateMachine.SetInteger(choice.ChoiceState.ToString(), choiceNumber + 1);
 	}
+
+    public int GetChoice(string choiceName) {
+        if (!Enum.TryParse(choiceName, false, out ChoiceState choiceState)) {
+            Debug.LogWarning("Cannot parse the given choice.");
+            return 0;
+        } else return GetChoice(choiceState);
+        
+    }
+
+    public int GetChoice(ChoiceState choiceState) {
+        return Array.Find(choices, c => c.ChoiceState == choiceState).choiceNumber;
+    }
 
 	public void DisableSkip() => isSkipping = false;
 

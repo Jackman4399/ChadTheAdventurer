@@ -17,8 +17,8 @@ public class EnemyHealth : Enemy {
         currentLives = maxLives;
     }
 
-    public void TakeDamage(Vector2 direction) {
-        currentLives--;
+    public void TakeDamage(int amount, Vector2 direction) {
+        currentLives -= amount;
         OnHit?.Invoke(currentLives, direction);
         if (currentLives == 0) agent.isStopped = true;
     }

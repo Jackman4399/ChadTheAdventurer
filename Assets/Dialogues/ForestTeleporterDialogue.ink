@@ -9,6 +9,10 @@ INCLUDE GLOBAL.ink
 { CurrentStoryState         :
 - "Introduction"            : -> Introduction
 - "CollectStrawberries"     : -> CollectStrawberries
+- "GoblinSpare"             : -> NoForest
+- "GoblinKill"              : -> NoForest
+- "ClaimWeapon"             : -> NoForest
+- "EmergencyQuest"          : -> NoForest
 - else                      : -> StoryStateNotRecognised
 }
 
@@ -22,7 +26,7 @@ I don't really need to go out of town...
 Perhaps I should ask the guild for any quests...
 -> DONE
 
-== CollectStrawberries
+=== CollectStrawberries
 #Chad
 Am I ready to go out to the forest?
 
@@ -39,3 +43,10 @@ Am I ready to go out to the forest?
     Maybe I'll take some more time to prepare.
     
 - -> DONE
+
+=== NoForest
+
+#Chad
+I have no business outside of town for now.
+
+-> DONE

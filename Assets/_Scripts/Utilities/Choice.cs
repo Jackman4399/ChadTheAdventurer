@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public enum ChoiceState { GoblinChoice, EmergencyQuestChoice, BossChoice }
 
-[System.Serializable]
+[Serializable]
 public class Choice {
 
     [SerializeField] private ChoiceState choiceState;
     public ChoiceState ChoiceState => choiceState;
+    
     public int choiceNumber;
 
-    public Choice(ChoiceState choiceState) {
+    public Choice(ChoiceState choiceState, int choiceNumber) {
         this.choiceState = choiceState;
+        this.choiceNumber = choiceNumber;
     }
 
 }
