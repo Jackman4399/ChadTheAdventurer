@@ -20,7 +20,8 @@ public class DialogueMenu : Menu {
         if (nextDialogue.Length == 0) yield break;
         dialogueText.text = nextDialogue;
 
-        if (story.currentTags.Count != 0) nameText.text = story.currentTags[0];
+        if (story.currentTags.Count > 0) nameText.text = story.currentTags[0];
+        else nameText.text = "";
 
         if (story.currentChoices.Count > choiceButtons.Length) {
             Debug.LogWarning("Current choices exceed number of buttons, skipping...");
@@ -45,8 +46,8 @@ public class DialogueMenu : Menu {
                 
                 choiceButtons[i].onClick.AddListener(() => {
                     story.ChooseChoiceIndex(index);
-                    ChoiceState choiceState = ChoiceState.GoblinChoice;
-                    if (Enum.TryParse(story.currentTags[0], out choiceState)) 
+                    if (story.currentTags.Count > 1)
+                    if (Enum.TryParse(story.currentTags[1], out ChoiceState choiceState))
                     StoryManager.Instance.MakeChoice(choiceState, index);
                 });
 

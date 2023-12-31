@@ -277,7 +277,7 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
+  m_UpdateMethod: 1
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
@@ -3168,20 +3168,16 @@ MonoBehaviour:
   - {fileID: 1922627330}
   - {fileID: 1446049243}
   m_Instructions:
-  - m_FullHash: -1980839724
-    m_VirtualCamera: {fileID: 0}
+  - m_FullHash: -492821973
+    m_VirtualCamera: {fileID: 846598280}
     m_ActivateAfter: 0
     m_MinDuration: 0
-  - m_FullHash: -1270619413
-    m_VirtualCamera: {fileID: 0}
+  - m_FullHash: 1575639282
+    m_VirtualCamera: {fileID: 1922627330}
     m_ActivateAfter: 0
     m_MinDuration: 0
-  - m_FullHash: 25013257
-    m_VirtualCamera: {fileID: 0}
-    m_ActivateAfter: 0
-    m_MinDuration: 0
-  - m_FullHash: -2067195770
-    m_VirtualCamera: {fileID: 0}
+  - m_FullHash: 810433108
+    m_VirtualCamera: {fileID: 1446049243}
     m_ActivateAfter: 0
     m_MinDuration: 0
   m_DefaultBlend:
@@ -3193,7 +3189,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  m_CustomBlends: {fileID: 11400000, guid: 0bbe285e9347c334297bd139963619ae, type: 2}
+  m_CustomBlends: {fileID: 0}
   m_ParentHash:
   - m_Hash: -492821973
     m_ParentHash: -1210012921

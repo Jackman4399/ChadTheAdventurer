@@ -17,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Build/CollectStrawberries.unity
     guid: 65d5bd9ae55dc614dbc4b3be1a11e56c
+  - enabled: 1
+    path: Assets/Scenes/Build/TownBeforeEmergencyQuest.unity
+    guid: c938bca18ab7d2844831d9562022c3a9
+  - enabled: 1
+    path: Assets/Scenes/Build/TownEmergencyQuest.unity
+    guid: 8502fc6af5a9f4148976108eea20beb4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 00c9db32ed803f14c8788dd1b6a3e3c6, type: 2}
