@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum SceneState { None, Main, TownIntro, CollectStrawberries, TownBeforeEmergencyQuest, Cave }
+public enum SceneState { None, Initialisation, Main, TownIntro, Forest, 
+TownBeforeEmergencyQuest, TownEmergencyQuest, LoseEmergencyQuest, Cave }
 
 public enum TransitionType { Cutscene, InScene, BetweenScenes }
 
@@ -35,40 +36,29 @@ public class SceneLoader : Singleton<SceneLoader> {
         Debug.LogWarning("Unable to parse current scene.");
     }
 
-    public void ChangeScene(string sceneName) {
-        if (Enum.TryParse(sceneName, false, out SceneState sceneState)) ChangeScene(sceneState);
+    public void ChangeScene(string sceneName, bool turnOnInput) {
+        if (Enum.TryParse(sceneName, false, out SceneState sceneState)) ChangeScene(sceneState, turnOnInput);
         else Debug.LogWarning("Unable to parse given scene.");
     }
 
-    public void ChangeNextScene() => ChangeScene(currentSceneState + 1);
+    public void ChangeNextScene(bool turnOnInput) => ChangeScene(currentSceneState + 1, turnOnInput);
 
-    public void ChangeScene(SceneState sceneState) {
+    public void ChangeScene(SceneState sceneState, bool turnOnInput) {
         if (sceneState == SceneState.None) return; 
-		Crossfade(sceneState, null, TransitionType.BetweenScenes);
+		Crossfade(sceneState, null, TransitionType.BetweenScenes, turnOnInput);
 		currentSceneState = sceneState;
 	}
 
-    // For use in timeline
-    public void ChangeBackgroundFade(float alpha) {
-        if (alpha > 1 || alpha < 0) return;
-
-        crossfadeImage.color = new Color(
-            crossfadeImage.color.r,
-            crossfadeImage.color.g,
-            crossfadeImage.color.b,
-            alpha
-        );
-    }
-
     public void Crossfade(Action action, TransitionType transitionType) => 
-    Crossfade(SceneState.None, action, transitionType);
+    Crossfade(SceneState.None, action, transitionType, true);
 
-    private void Crossfade(SceneState sceneState, Action action, TransitionType transitionType) {
+    private void Crossfade(SceneState sceneState, Action action, TransitionType transitionType, bool turnOnInput) {
         StopAllCoroutines();
-        StartCoroutine(CrossfadeCoroutine(sceneState, action, transitionType));
+        StartCoroutine(CrossfadeCoroutine(sceneState, action, transitionType, turnOnInput));
     }
 
-	private IEnumerator CrossfadeCoroutine(SceneState sceneState, Action action, TransitionType transitionType) {
+	private IEnumerator CrossfadeCoroutine(SceneState sceneState, Action action, 
+    TransitionType transitionType, bool turnOnInput) {
         float transitionTime = transitionType switch {
             TransitionType.Cutscene => transitionTimeToCutscene,
             TransitionType.InScene => transitionTimeInScene,
@@ -106,7 +96,19 @@ public class SceneLoader : Singleton<SceneLoader> {
 
 		crossfadeImage.color = new Color(0, 0, 0, Mathf.Clamp01(crossfadeImage.color.a));
 
-		InputManager.Instance.ChangeInput(currentInputState);
+		if (turnOnInput) InputManager.Instance.ChangeInput(currentInputState);
 	}
+
+    // For use in timeline
+    public void ChangeBackgroundFade(float alpha) {
+        if (alpha > 1 || alpha < 0) return;
+
+        crossfadeImage.color = new Color(
+            crossfadeImage.color.r,
+            crossfadeImage.color.g,
+            crossfadeImage.color.b,
+            alpha
+        );
+    }
 
 }

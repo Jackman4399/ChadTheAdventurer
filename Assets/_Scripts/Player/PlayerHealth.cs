@@ -45,8 +45,13 @@ public class PlayerHealth : Player {
         OnLivesChanged?.Invoke(currentLives);
 
         //Prevent negative health
-        if(currentLives == 0) OnDied?.Invoke();
-        else {
+        if(currentLives == 0) {
+            OnDied?.Invoke(); 
+            invulnerable = true;
+
+            MenuManager.Instance.ChangeMenu(MenuState.Lose);
+            InputManager.Instance.ChangeInput(InputState.Menu);
+        } else {
             OnHit?.Invoke(currentLives, direction);
             StartCoroutine(HitInvunerableCoroutine());
         }

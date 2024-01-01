@@ -5,6 +5,7 @@ using Ink.Runtime;
 using System.Reflection;
 
 public class WaitForInput : CustomYieldInstruction {
+    
     public override bool keepWaiting { get { return flag; } }
     private bool flag;
 
@@ -12,4 +13,5 @@ public class WaitForInput : CustomYieldInstruction {
         flag = true;
         inputAction.performed += context => flag = false;
     }
+
 }

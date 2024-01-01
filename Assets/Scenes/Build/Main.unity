@@ -3394,6 +3394,10 @@ PrefabInstance:
       propertyPath: sounds.Array.data[9].playOnAwake
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
+      propertyPath: InitialiseScene
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5452050118715914677, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8536,8 +8540,8 @@ SceneRoots:
   - {fileID: 1681981589}
   - {fileID: 7645093195816177989}
   - {fileID: 3608232694387666292}
-  - {fileID: 1127479676}
   - {fileID: 733135488}
   - {fileID: 1707807260}
   - {fileID: 6392140652702913705}
   - {fileID: 1450044373}
+  - {fileID: 1127479676}
