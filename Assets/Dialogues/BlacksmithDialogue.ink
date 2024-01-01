@@ -20,7 +20,7 @@ INCLUDE GLOBAL.ink
 === NoBusiness
 
 #Blacksmith
-Sorry pal, but I'm out of stock at the moment. You can come back later, and hopefully I will have some goods to sell!
+Sorry pal, but I'm out of stock at the moment. You can come back later, and hopefully I might have some goods to sell!
 
 -> DONE
 
@@ -64,10 +64,10 @@ Sorry pal, but I'm out of stock at the moment. You can come back later, and hope
 === AfterEncounteredGoblin
 
 #Blacksmith
-Hey pal! Glad to see you're not hurt from your quest.
+Hey pal! Glad to see you're back all safe and sound!
     
 #Blacksmith
-You can go and claim your reward from the guild staff.
+I left your reward with the guild staff. Go claim it there.
 
 -> DONE
 
@@ -78,11 +78,11 @@ Here you go! This is <>
 { GetChoice("GoblinChoice"):
 - 1: 
 
-a better weapon from your current one.
+a slight upgrade from your current one.
 
 - 2: 
 
-the best weapon the guild has.
+the best weapon these old hands could forge.
 
 }
 
@@ -104,15 +104,15 @@ the best weapon
 - 2: 
 
     #Blacksmith
-    The best weapon have more damage compared to any other weapon available right now.
+    This weapon could rival even the toughest armour, slicing through steel like paper.
 
 }
 
 #Blacksmith
-Hope you enjoy using the new weapon you got!
+Take care of your new weapon!
 
 #Chad
-Thank you! I'll be sure to use it.
+Thank you! I'll be sure to use it well.
 
 ~ Proceed()
 

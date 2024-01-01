@@ -37,11 +37,11 @@ public class PlayerHealth : Player {
         OnLivesChanged?.Invoke(currentLives);
     }
 
-    public void TakeDamage(Vector2 direction) {
+    public void TakeDamage(Vector2 direction, int damage) {
         if (invulnerable) return;
 
         //Hurt the player
-        currentLives--;
+        currentLives =- damage;
         OnLivesChanged?.Invoke(currentLives);
 
         //Prevent negative health

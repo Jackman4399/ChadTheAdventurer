@@ -6,26 +6,29 @@ INCLUDE GLOBAL.ink
 ~ Proceed()
 
 #Goblin
-Ugh... I am so hurt right now...
+Ugh... This isn't good...
 
 #Chad
 Hm... a goblin that could talk is rare nowadays.
 
 #Goblin
-Human! Help me with my misery!
+Human! Please.. help me! I mean no harm! I just happened to be attacked by some wild animals...
+
+#Goblin
+You are the 3rd one passing by today... I can't hold on for much longer.
 
 #Chad #GoblinChoice
 (Should I save it?)
 
-+ [Spare the goblin.]
++ [Save the goblin.]
 
     #Chad
-    I'll save you, goblin.
+    Sure, I guess.
 
     #Goblin
-    Oh, human! I will remember this deed. As a bonus, I'll grant you an ability. An ability to dash!
+    Oh, human! I will remember this deed. As a bonus, I'll bestow you this charm from my clan. It'll make you faster!
 
-    You got an ability to dash!
+    You got "God of Wind's charm"!
 
     #CONTROLS
     Press SPACE while moving to dash
@@ -34,15 +37,15 @@ Human! Help me with my misery!
     Now, human, I have to go somewhere else for now, and rest assured. I will not cause mischief to your settlement.
 
     #Human
-    Okay, goblin. Have a nice trip.
+    Okay, goblin. Make it back home, you hear me?!
 
 + [Kill it!]
 
     #Chad
-    I'll kill you!
+    Nah, you look valuable...
 
     #Goblin
-    Nooo!
+    Nooo! Please!
 
     \*Goblin died*
 
