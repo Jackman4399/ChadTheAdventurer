@@ -24,7 +24,7 @@ public class EnemyAttacker : Enemy {
         if (!canAttack) return;
         if ((1 << other.gameObject.layer | controller.PlayerMask) != controller.PlayerMask) return;
         Vector2 direction = (other.transform.position - transform.position).normalized;
-        other.GetComponent<PlayerHealth>().TakeDamage(pushbackForce * direction);
+        other.GetComponent<PlayerHealth>().TakeDamage(pushbackForce * direction, 1);
     }
 
     public void DisableAttack() {
