@@ -40,7 +40,7 @@ public class BossIdle : StateMachineBehaviour
         }
 
         look.FacePlayer();
-        Vector2 target = new Vector2(player.position.x, rb.position.y);
+        Vector2 target = player.position;
         // Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
 
         agent.SetDestination(target);
@@ -56,7 +56,7 @@ public class BossIdle : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-        animator.ResetTrigger("MAttack");
+        //animator.ResetTrigger("MAttack");
        
     }
 }

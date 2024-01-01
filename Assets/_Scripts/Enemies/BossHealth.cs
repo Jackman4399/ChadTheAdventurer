@@ -25,17 +25,16 @@ public class BossHealth : Enemy {
 
         currentLives =- damage;
 
-        OnHit?.Invoke(currentLives, direction);
-        if (currentLives == 0) agent.isStopped = true;
-
+        OnHit?.Invoke(currentLives, direction); 
         if(currentLives <= 0) {
-
+            agent.isStopped = true;
             //Die animation
             GetComponent<Animator>().SetBool("IsDead", true);
 
-        } else if(maxLives/currentLives < 0.5) {
+        } else if(currentLives < 25) {
 
             GetComponent<Animator>().SetBool("BuffedState", true);
+            Debug.Log("TEST");
 
         }
     }

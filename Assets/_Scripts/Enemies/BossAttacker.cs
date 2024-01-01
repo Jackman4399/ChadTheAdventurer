@@ -8,7 +8,7 @@ public class BossAttacker : MonoBehaviour
 	public int laserDamage = 2;
 
 	public Vector3 attackOffset;
-	public float attackRange = 1f;
+	public float meleeRange = 1f;
 	public LayerMask attackMask;
 
 	//Where projectiles fire from
@@ -29,7 +29,7 @@ public class BossAttacker : MonoBehaviour
 		pos += transform.right * attackOffset.x;
 		pos += transform.up * attackOffset.y;
 
-		Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+		Collider2D colInfo = Physics2D.OverlapCircle(pos, meleeRange, attackMask);
 		if (colInfo != null)
 		{
 			var player = LocatePlayer();
@@ -91,6 +91,6 @@ public class BossAttacker : MonoBehaviour
 		pos += transform.right * attackOffset.x;
 		pos += transform.up * attackOffset.y;
 
-		Gizmos.DrawWireSphere(pos, attackRange);
+		Gizmos.DrawWireSphere(pos, meleeRange);
 	}
 }
