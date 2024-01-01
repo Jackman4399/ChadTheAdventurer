@@ -118,7 +118,7 @@ Hello! Welcome back!
 How was the quest? Did you managed to complete it?
     
 #Chad
-I did. And I found a golbin and kill it.
+I did. And I found a golbin and killed it.
 
 #Receptionist
 Oh, really? We actually have a bounty on the goblin, and whoever kills it gets the best weapon that we have!
@@ -197,7 +197,7 @@ I'm sorry but I can't do it...
 I am prepared!
 
 #Receptionist
-Okay! Off you go!
+Okay! We will you briefly explain what will you need to do along with few other adventurers.
 
 ~ Proceed()
 

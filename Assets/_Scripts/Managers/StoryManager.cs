@@ -51,11 +51,11 @@ public class StoryManager : Singleton<StoryManager> {
             new(ChoiceState.BossChoice, 0),
         };
 
-        if (initialStoryState == StoryState.GoblinSpare) choices[0].choiceNumber = 1;
-        else if (initialStoryState == StoryState.GoblinKill) choices[0].choiceNumber = 2;
+        if (initialStoryState == StoryState.GoblinSpare) MakeChoice(ChoiceState.GoblinChoice, 1);
+        else if (initialStoryState == StoryState.GoblinKill) MakeChoice(ChoiceState.GoblinChoice, 2);
 
         // Change goblin choice here
-        else if (initialStoryState > StoryState.EncounterGoblin) choices[0].choiceNumber = 1;
+        else if (initialStoryState > StoryState.EncounterGoblin) MakeChoice(ChoiceState.GoblinChoice, 1);
 
         isSkipping = true;
 	}
@@ -89,7 +89,7 @@ public class StoryManager : Singleton<StoryManager> {
 
 	public void MakeChoice(ChoiceState choiceState, int choiceNumber) {
 		Choice choice = Array.Find(choices, c => c.ChoiceState == choiceState);
-		storyStateMachine.SetInteger(choice.ChoiceState.ToString(), choiceNumber + 1);
+		storyStateMachine.SetInteger(choice.ChoiceState.ToString(), choice.choiceNumber = choiceNumber);
 	}
 
     public int GetChoice(string choiceName) {

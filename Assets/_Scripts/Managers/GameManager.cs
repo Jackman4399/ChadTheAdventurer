@@ -8,6 +8,9 @@ public class GameManager : PersistentSingleton<GameManager> {
     private void Start() {
         InputManager.Instance.ChangeInput(InitialiseInput);
         MenuManager.Instance.ChangeMenu(InitialiseMenu);
+
+        if (SceneLoader.Instance.CurrentSceneState == SceneState.Initialisation)
+        SceneLoader.Instance.ChangeNextScene(true);
     }
 
 }

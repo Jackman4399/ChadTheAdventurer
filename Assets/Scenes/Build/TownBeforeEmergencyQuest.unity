@@ -3168,15 +3168,11 @@ MonoBehaviour:
   - {fileID: 1922627330}
   - {fileID: 1446049243}
   m_Instructions:
-  - m_FullHash: -1485147038
+  - m_FullHash: 400840355
     m_VirtualCamera: {fileID: 846598280}
     m_ActivateAfter: 0
     m_MinDuration: 0
-  - m_FullHash: 1387232144
-    m_VirtualCamera: {fileID: 1922627330}
-    m_ActivateAfter: 0
-    m_MinDuration: 0
-  - m_FullHash: 1972661277
+  - m_FullHash: -989180196
     m_VirtualCamera: {fileID: 1446049243}
     m_ActivateAfter: 0
     m_MinDuration: 0
@@ -3191,12 +3187,12 @@ MonoBehaviour:
       m_RotationOrder: 4
   m_CustomBlends: {fileID: 0}
   m_ParentHash:
-  - m_Hash: -1485147038
-    m_ParentHash: 1227313973
-  - m_Hash: 1972661277
-    m_ParentHash: 1227313973
-  - m_Hash: 1387232144
-    m_ParentHash: 1227313973
+  - m_Hash: 400840355
+    m_ParentHash: 756556552
+  - m_Hash: -989180196
+    m_ParentHash: 756556552
+  - m_Hash: -1099163756
+    m_ParentHash: 756556552
 --- !u!4 &191060579
 Transform:
   m_ObjectHideFlags: 0
