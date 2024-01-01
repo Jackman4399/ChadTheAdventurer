@@ -37,10 +37,12 @@ public class DialogueManager : Singleton<DialogueManager> {
             return StoryManager.Instance.GetChoice(choiceName);
         });
 
-        story.BindExternalFunction("ChangeNextScene", () => SceneLoader.Instance.ChangeNextScene());
+        story.BindExternalFunction<bool>("ChangeNextScene", (turnOnInput) => 
+            SceneLoader.Instance.ChangeNextScene(turnOnInput)
+        );
 
-        story.BindExternalFunction<string>("ChangeScene", (sceneName) => {
-            SceneLoader.Instance.ChangeScene(sceneName);
+        story.BindExternalFunction<string, bool>("ChangeScene", (sceneName, turnOnInput) => {
+            SceneLoader.Instance.ChangeScene(sceneName, turnOnInput);
         });
 
         story.BindExternalFunction<string>("ChangeInput", (inputName) => {

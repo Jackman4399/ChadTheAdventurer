@@ -36,7 +36,7 @@ Am I ready to go out to the forest?
     
     ~ ChangeInput("GameplayWithoutDash")
     ~ ChangeMenu("Gameplay")
-    ~ ChangeNextScene()
+    ~ ChangeNextScene(true)
 
 + [No.]
     #Chad

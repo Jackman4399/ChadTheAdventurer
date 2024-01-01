@@ -8,7 +8,8 @@ public enum CameraState {
     PathToForestCamera, 
     ForestCamera, 
     ForestZoomedCamera, 
-    EncounterCamera }
+    EncounterCamera 
+}
 
 public class CameraController : Singleton<CameraController> {
 

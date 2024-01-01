@@ -1,8 +1,8 @@
 EXTERNAL GetCurrentStoryState()
 EXTERNAL GetChoice(choiceName)
 EXTERNAL Proceed()
-EXTERNAL ChangeNextScene()
-EXTERNAL ChangeScene(sceneName)
+EXTERNAL ChangeNextScene(turnOnInput)
+EXTERNAL ChangeScene(sceneName, turnOnInput)
 EXTERNAL ChangeInput(inputName)
 EXTERNAL ChangeMenu(menuName)
 

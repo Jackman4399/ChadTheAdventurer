@@ -43,6 +43,7 @@ public class StoryManager : Singleton<StoryManager> {
 		storyStateMachine = GetComponent<Animator>();
 
         currentStoryState = initialStoryState;
+        storyStateMachine.Play(initialStoryState.ToString());
 
         choices = new Choice[] {
             new(ChoiceState.GoblinChoice, 0),
@@ -56,9 +57,6 @@ public class StoryManager : Singleton<StoryManager> {
         // Change goblin choice here
         else if (initialStoryState > StoryState.EncounterGoblin) choices[0].choiceNumber = 1;
 
-        foreach (var choice in choices)
-        storyStateMachine.SetInteger(choice.ChoiceState.ToString(), choice.choiceNumber);
-
         isSkipping = true;
 	}
 
@@ -71,7 +69,15 @@ public class StoryManager : Singleton<StoryManager> {
     }
 
     private void OnSceneChanged(SceneState sceneState) {
-        if (sceneState == SceneState.Main) currentStoryState = StoryState.Introduction;
+        if (sceneState == SceneState.Main) {
+            currentStoryState = StoryState.Introduction;
+            storyStateMachine.Play(currentStoryState.ToString());
+
+            foreach (var choice in choices) {
+                choice.choiceNumber = 0;
+                storyStateMachine.SetInteger(choice.ChoiceState.ToString(), 0);
+            }
+        }
     }
 
 	public void ChangeStoryState(StoryState storyState) {

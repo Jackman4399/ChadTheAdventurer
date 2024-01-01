@@ -118,6 +118,6 @@ Thank you! I'll be sure to use it.
 
 ~ ChangeInput("SoftGameplay")
 ~ ChangeMenu("SoftGameplay")
-~ ChangeNextScene()
+~ ChangeNextScene(false)
 
 -> DONE
