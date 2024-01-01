@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BossIdle : StateMachineBehaviour
 {
@@ -11,6 +12,8 @@ public class BossIdle : StateMachineBehaviour
     Rigidbody2D rb;
 
     private LookAtPlayer look;
+
+    private NavMeshAgent agent;
     
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -20,6 +23,11 @@ public class BossIdle : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         look = animator.GetComponent<LookAtPlayer>();
+
+        agent = animator.GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+		agent.updateUpAxis = false;
+        agent.speed = speed;
        
     }
 
@@ -33,8 +41,9 @@ public class BossIdle : StateMachineBehaviour
 
         look.FacePlayer();
         Vector2 target = new Vector2(player.position.x, rb.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
-        rb.MovePosition(newPos);
+        // Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+
+        agent.SetDestination(target);
 
 
         if (Vector2.Distance(player.position, rb.position) <= meleeRange) {
