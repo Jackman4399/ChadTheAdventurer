@@ -46077,7 +46077,7 @@ GameObject:
   - component: {fileID: 523894380}
   - component: {fileID: 523894379}
   m_Layer: 0
-  m_Name: PathToForestTeleporter
+  m_Name: ForestTeleporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46098,7 +46098,7 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 1024
-  switchCameraTo: 4
+  switchCameraTo: 5
 --- !u!61 &523894380
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -58442,7 +58442,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 0
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -59008,13 +59008,13 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 0
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5.98
+    OrthographicSize: 6
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -59060,7 +59060,7 @@ Animator:
   m_GameObject: {fileID: 826373327}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a4cd13c30d2047f42952ace47b60f906, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3c91afe34584a504a95bf0d5fce64bf1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -59092,7 +59092,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_AnimatedTarget: {fileID: 826373328}
-  m_LayerIndex: 1
+  m_LayerIndex: 0
   m_ShowDebugText: 0
   m_ChildCameras:
   - {fileID: 1666749669}
@@ -59100,19 +59100,19 @@ MonoBehaviour:
   - {fileID: 274625369}
   - {fileID: 2027526490}
   m_Instructions:
-  - m_FullHash: -1980839724
+  - m_FullHash: -2017625436
     m_VirtualCamera: {fileID: 1666749669}
     m_ActivateAfter: 0
     m_MinDuration: 0
-  - m_FullHash: -1270619413
+  - m_FullHash: -1838760137
     m_VirtualCamera: {fileID: 1661271663}
     m_ActivateAfter: 0
     m_MinDuration: 0
-  - m_FullHash: 25013257
+  - m_FullHash: 254680697
     m_VirtualCamera: {fileID: 274625369}
     m_ActivateAfter: 0
     m_MinDuration: 0
-  - m_FullHash: -2067195770
+  - m_FullHash: 1145775018
     m_VirtualCamera: {fileID: 2027526490}
     m_ActivateAfter: 0
     m_MinDuration: 0
@@ -59127,14 +59127,14 @@ MonoBehaviour:
       m_RotationOrder: 4
   m_CustomBlends: {fileID: 11400000, guid: 0bbe285e9347c334297bd139963619ae, type: 2}
   m_ParentHash:
-  - m_Hash: -1980839724
-    m_ParentHash: -1657909922
-  - m_Hash: -2067195770
-    m_ParentHash: -1657909922
-  - m_Hash: -1270619413
-    m_ParentHash: -1657909922
-  - m_Hash: 25013257
-    m_ParentHash: -1657909922
+  - m_Hash: -2017625436
+    m_ParentHash: 756556552
+  - m_Hash: 1145775018
+    m_ParentHash: 756556552
+  - m_Hash: -1838760137
+    m_ParentHash: 756556552
+  - m_Hash: 254680697
+    m_ParentHash: 756556552
 --- !u!4 &826373330
 Transform:
   m_ObjectHideFlags: 0
@@ -60752,7 +60752,7 @@ Tilemap:
       - {fileID: -1985900998, guid: 5641289f57c36b743ab344e4ec9f9750, type: 3}
       - {fileID: 1755997394, guid: 5641289f57c36b743ab344e4ec9f9750, type: 3}
       - {fileID: 653078730, guid: 5641289f57c36b743ab344e4ec9f9750, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 18, y: 19, z: 0}
@@ -60802,7 +60802,7 @@ Tilemap:
       - {fileID: 574545081, guid: 5641289f57c36b743ab344e4ec9f9750, type: 3}
       - {fileID: 468381855, guid: 5641289f57c36b743ab344e4ec9f9750, type: 3}
       - {fileID: -1670533734, guid: 5641289f57c36b743ab344e4ec9f9750, type: 3}
-      m_AnimationSpeed: 3.0000002
+      m_AnimationSpeed: 3
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 17, y: 21, z: 0}
@@ -60822,7 +60822,7 @@ Tilemap:
       - {fileID: -1305828831, guid: 5641289f57c36b743ab344e4ec9f9750, type: 3}
       - {fileID: -600171039, guid: 5641289f57c36b743ab344e4ec9f9750, type: 3}
       - {fileID: 2096729832, guid: 5641289f57c36b743ab344e4ec9f9750, type: 3}
-      m_AnimationSpeed: 3
+      m_AnimationSpeed: 3.0000002
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 19, y: 21, z: 0}
@@ -79618,7 +79618,7 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 1024
-  switchCameraTo: 6
+  switchCameraTo: 7
 --- !u!61 &1253004031
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -121218,6 +121218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameplayMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 5751871870259431002, guid: 31e2d5c7b6616f844948b4a4d034fd94, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6287340879626715882, guid: 31e2d5c7b6616f844948b4a4d034fd94, type: 3}
       propertyPath: playerHealth
       value: 
@@ -121307,6 +121311,111 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31e2d5c7b6616f844948b4a4d034fd94, type: 3}
+--- !u!1001 &7158522097195557739
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1081099242320946797, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_text
+      value: You got killed by a monster.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541384812881466794, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_text
+      value: You DIED!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867138699963265895, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
+      propertyPath: m_Name
+      value: LoseMenu
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -121314,6 +121423,7 @@ SceneRoots:
   - {fileID: 655594943}
   - {fileID: 826373330}
   - {fileID: 4817069059858181305}
+  - {fileID: 7158522097195557739}
   - {fileID: 2135675126}
   - {fileID: 770864709}
   - {fileID: 1789875400}

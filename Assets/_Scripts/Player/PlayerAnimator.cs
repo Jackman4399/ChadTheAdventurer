@@ -102,18 +102,23 @@ public class PlayerAnimator : Player {
         animator.SetTrigger(diedName);
     }
 
-    // Use from within the animation events
+    // For use from within the animation events
     private void AttackDirection(Direction direction) => OnAttack?.Invoke(direction);
 
-    // Use from within the animation events
+    // For use from within the animation events
     private void EnableGameplay() {
         InputManager.Instance.ChangeInput(gameplayInputState);
     }
 
-    // Use from within the animation events
+    // For use from within the animation events
     private void DisableGameplay() {
         gameplayInputState = InputManager.Instance.CurrentInputState;
         InputManager.Instance.ChangeInput(InputState.None);
+    }
+
+    // For use from within the animation events
+    private void DisablePlayer() {
+        transform.parent.gameObject.SetActive(false);
     }
 
 }

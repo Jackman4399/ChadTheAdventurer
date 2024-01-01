@@ -39,10 +39,10 @@ public class MenuManager : Singleton<MenuManager> {
         foreach (var menu in menus) {
             if (menu.MenuState == menuState) {
                 menu.enabled = true;
-                currentMenuState = menuState;
             } else menu.enabled = false;
         }
 
+        currentMenuState = menuState;
         OnMenuChanged?.Invoke();
     }
 

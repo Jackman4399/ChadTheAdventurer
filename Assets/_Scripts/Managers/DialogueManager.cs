@@ -23,6 +23,7 @@ public class DialogueManager : Singleton<DialogueManager> {
         MenuManager.Instance.ChangeMenu(MenuState.Dialogue);
 
         story.variablesState["HaveVisited"] = haveVisited;
+        
         story.variablesState["StrawberriesCount"] = PlayerDataManager.Instance.StrawberriesCount;
         story.variablesState["StrawberriesNeeded"] = PlayerDataManager.Instance.StrawberriesNeeded;
 
@@ -32,10 +33,16 @@ public class DialogueManager : Singleton<DialogueManager> {
             return StoryManager.Instance.CurrentStoryState.ToString();
         });
 
-        story.BindExternalFunction("ChangeNextScene", () => SceneLoader.Instance.ChangeNextScene());
+        story.BindExternalFunction<string>("GetChoice", (choiceName) => { 
+            return StoryManager.Instance.GetChoice(choiceName);
+        });
 
-        story.BindExternalFunction<string>("ChangeScene", (sceneName) => {
-            SceneLoader.Instance.ChangeScene(sceneName);
+        story.BindExternalFunction<bool>("ChangeNextScene", (turnOnInput) => {
+            SceneLoader.Instance.ChangeNextScene(turnOnInput);
+        });
+
+        story.BindExternalFunction<string, bool>("ChangeScene", (sceneName, turnOnInput) => {
+            SceneLoader.Instance.ChangeScene(sceneName, turnOnInput);
         });
 
         story.BindExternalFunction<string>("ChangeInput", (inputName) => {
@@ -50,6 +57,7 @@ public class DialogueManager : Singleton<DialogueManager> {
 
         story.UnbindExternalFunction("Proceed");
         story.UnbindExternalFunction("GetCurrentStoryState");
+        story.UnbindExternalFunction("GetChoice");
         story.UnbindExternalFunction("ChangeNextScene");
         story.UnbindExternalFunction("ChangeScene");
         story.UnbindExternalFunction("ChangeInput");

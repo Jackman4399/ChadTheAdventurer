@@ -2,12 +2,14 @@ using UnityEngine;
 
 public enum CameraState { 
     None, 
-    TownCamera, 
+    TownCamera,
     GuildCamera, 
+    HomeCamera,
     PathToForestCamera, 
     ForestCamera, 
     ForestZoomedCamera, 
-    EncounterCamera }
+    EncounterCamera 
+}
 
 public class CameraController : Singleton<CameraController> {
 

@@ -48,7 +48,7 @@ public class DialogueMenu : Menu {
                     story.ChooseChoiceIndex(index);
                     if (story.currentTags.Count > 1)
                     if (Enum.TryParse(story.currentTags[1], out ChoiceState choiceState))
-                    StoryManager.Instance.MakeChoice(choiceState, index);
+                    StoryManager.Instance.MakeChoice(choiceState, index + 1);
                 });
 
                 choiceButtons[i].gameObject.SetActive(true);

@@ -8,7 +8,7 @@ public class ProceedScript : MonoBehaviour {
         //Will only trigger if the tag matches
         if (trigger.gameObject.layer.Equals("Player")) {
             
-            SceneLoader.Instance.ChangeNextScene();
+            // SceneLoader.Instance.ChangeNextScene();
 
             //Uncomment and comment out the above to manually select scene
             //sceneLoader.LoadCertainScene(1);

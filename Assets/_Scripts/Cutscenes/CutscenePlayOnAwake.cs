@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
 public class CutscenePlayOnAwake : MonoBehaviour {
     private PlayableDirector director;
 
-    [SerializeField] private InputState endInputState;
-    [SerializeField] private MenuState endMenuState;
+    [SerializeField] protected InputState endInputState;
+    [SerializeField] protected MenuState endMenuState;
 
-    private void Awake() {
+    protected virtual void Awake() {
         director = GetComponent<PlayableDirector>();
     }
 

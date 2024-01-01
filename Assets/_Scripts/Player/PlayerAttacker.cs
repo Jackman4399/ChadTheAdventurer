@@ -43,7 +43,10 @@ public class PlayerAttacker : Player {
     private void OnTriggerEnter2D(Collider2D other) {
         if ((1 << other.gameObject.layer | enemyMask) != enemyMask) return;
         Vector2 direction = (other.transform.position - transform.position).normalized;
-        other.GetComponent<EnemyHealth>().TakeDamage(pushbackForce * direction);
+        if (StoryManager.Instance.Choices[0].choiceNumber < 2) 
+        other.GetComponent<EnemyHealth>().TakeDamage(1, pushbackForce * direction);
+        else if (StoryManager.Instance.Choices[0].choiceNumber == 2)
+        other.GetComponent<EnemyHealth>().TakeDamage(3, pushbackForce * direction);
     }
 
     private void InitialiseAttackListeners(bool enabled) {

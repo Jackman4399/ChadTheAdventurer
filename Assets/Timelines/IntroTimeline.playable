@@ -988,7 +988,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Active
   - m_Version: 1
-    m_Start: 17.3
+    m_Start: 17.5
     m_ClipIn: 0
     m_Asset: {fileID: 9047365216950553602}
     m_Duration: 4
@@ -1134,30 +1134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3a029c75e3eb54ea26875e2eb36199, type: 3}
   m_Name: CrossfadePlayableAsset
   m_EditorClassIdentifier: 
---- !u!114 &-3522599384478235316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0fc6f5187a81dc47999eefade6f0935, type: 3}
-  m_Name: Crossfade
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_AnimClip: {fileID: 0}
-  m_Locked: 0
-  m_Muted: 0
-  m_CustomPlayableFullTypename: 
-  m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
-  m_Children:
-  - {fileID: 5838370039150790659}
-  m_Clips: []
-  m_Markers:
-    m_Objects: []
 --- !u!114 &-2833512286090838702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1256,7 +1232,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 5704939246784442482}
-    m_Duration: 16.3
+    m_Duration: 16.5
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1088462397949679622}
     m_EaseInDuration: 0
@@ -1304,7 +1280,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Home Camera
   - m_Version: 1
-    m_Start: 16.3
+    m_Start: 16.5
     m_ClipIn: 0
     m_Asset: {fileID: 6755688500839325374}
     m_Duration: 5
@@ -1700,7 +1676,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: DialoguePlayableAsset
   - m_Version: 1
-    m_Start: 17.3
+    m_Start: 17.5
     m_ClipIn: 0
     m_Asset: {fileID: -6230976149962856374}
     m_Duration: 4
@@ -1784,7 +1760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 0
   m_Tracks:
-  - {fileID: -3522599384478235316}
+  - {fileID: 5838370039150790659}
   - {fileID: 4430421049344929939}
   - {fileID: 5570804769271831148}
   - {fileID: -3959479694392294653}
@@ -2278,7 +2254,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: DialoguePlayableAsset
   - m_Version: 1
-    m_Start: 17.3
+    m_Start: 17.5
     m_ClipIn: 0
     m_Asset: {fileID: -2230350967592192358}
     m_Duration: 4
@@ -2399,7 +2375,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82cd92ffc29383742932b27ca414c80f, type: 3}
-  m_Name: Playable Track
+  m_Name: Crossfade
   m_EditorClassIdentifier: 
   m_Version: 3
   m_AnimClip: {fileID: 0}
@@ -2407,11 +2383,11 @@ MonoBehaviour:
   m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
-  m_Parent: {fileID: -3522599384478235316}
+  m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 15.3
+    m_Start: 15.50000000000001
     m_ClipIn: 0
     m_Asset: {fileID: 3609771493845465316}
     m_Duration: 1
@@ -2420,7 +2396,7 @@ MonoBehaviour:
     m_EaseInDuration: 1
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendOutDuration: 0
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -2462,7 +2438,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CrossfadePlayableAsset
   - m_Version: 1
-    m_Start: 16.3
+    m_Start: 16.49999999999999
     m_ClipIn: 0
     m_Asset: {fileID: -2357308597545767477}
     m_Duration: 1
@@ -2470,7 +2446,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 5838370039150790659}
     m_EaseInDuration: 0
     m_EaseOutDuration: 1
-    m_BlendInDuration: -1
+    m_BlendInDuration: 0
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2

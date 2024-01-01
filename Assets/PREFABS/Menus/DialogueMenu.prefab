@@ -454,7 +454,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player
+  m_text: Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}
   m_sharedMaterial: {fileID: -2936030333718721094, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}
@@ -1168,9 +1168,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Good morning world! What a lovely day today!
-
-'
+  m_text: Dialogue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}
   m_sharedMaterial: {fileID: -2936030333718721094, guid: 0ec365892f3eb654da5dd36eaeb23e16, type: 2}

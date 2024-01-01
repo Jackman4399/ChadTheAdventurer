@@ -52,8 +52,9 @@ Human! Help me with my misery!
 - 
 
 ~ Proceed()
+
 ~ ChangeInput("SoftGameplay")
 ~ ChangeMenu("SoftGameplay")
-~ ChangeNextScene()
+~ ChangeNextScene(true)
 
 -> END
