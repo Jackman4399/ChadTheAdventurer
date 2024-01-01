@@ -82,16 +82,16 @@ In case you forgot, you need to find 8 strawberries scattered around the forest 
 Hello! Welcome back!
     
 #Receptionist
-How was the quest? Did you managed to complete it?
+How was the quest? Did you manage to complete it?
     
 #Chad
 I did.
     
 #Receptionist
-Great! Now, if you could hand over the strawberries, we will reward you with a better weapon from your current one.
+Great! Now, if you could hand over the strawberries, we will reward you with a weapon that's better than your current one.
     
 #Chad
-Oh, that's the reward? That's Awesome!
+Oh, that's the reward? Awesome!
     
 #Chad
 Here are the strawberries.
@@ -100,7 +100,7 @@ Here are the strawberries.
 ...
     
 #Receptionist
-Okay! I can confirm there are 8 strawberries. You can claim the weapon at the blacksmith's weapon shop.
+Okay! I counted 8 strawberries. You can claim the weapon at the blacksmith's weapon shop.
     
 #Chad
 Okay! Thank you.
@@ -118,16 +118,16 @@ Hello! Welcome back!
 How was the quest? Did you managed to complete it?
     
 #Chad
-I did. And I found a golbin and killed it.
-
-#Receptionist
-Oh, really? We actually have a bounty on the goblin, and whoever kills it gets the best weapon that we have!
+I did. I also killed a random goblin I encountered.
 
 #Chad
 Here's its head.
 
 #Receptionist
-Okay, I will now examine the suitable reward to give you for both completing the gathering strawberries quest and completing the bounty on the goblin.
+Oh my! This is the Green Tribes Leader! And whoever killed it would get the best weapon that we have!
+
+#Receptionist
+Okay then, I will now examine the suitable reward to give you for completing both the strawberry gathering quest and the bounty on the goblin.
     
 #Chad
 That's Awesome!
@@ -165,7 +165,7 @@ You can claim the reward which is <>
 { HaveVisited   :
 
 #Receptionist
-Hello again! I hope you made your mind.
+Hello again! I hope you made up your mind.
 
 - else          :
 
