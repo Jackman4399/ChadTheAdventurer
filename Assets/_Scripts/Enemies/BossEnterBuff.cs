@@ -26,7 +26,6 @@ public class BossEnterBuff : StateMachineBehaviour
 
         animator.GetComponent<BossHealth>().isInvulnerable = false;
         animator.GetComponent<NavMeshAgent>().isStopped = false;
-        //animator.GetComponent<NavMeshAgent>().speed = 0.5f;
 
     }
 }

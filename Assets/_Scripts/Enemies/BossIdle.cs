@@ -7,42 +7,29 @@ using UnityEngine.AI;
 
 public class BossIdle : StateMachineBehaviour
 {
-
-    public float speed = 2.5f;
+    public float normalSpeed = 2.5f; // Normal speed for phase 1
+    public float slowSpeed = 0.5f; // Slow speed for phase 2
     public float meleeRange = 3f;
-
     public float rangedRange = 1f;
     Transform player;
     Rigidbody2D rb;
-
     private LookAtPlayer look;
+    private NavMeshAgent agent; 
 
-    private NavMeshAgent agent;
-
-    public bool isBuffed = false;
-    
-
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         look = animator.GetComponent<LookAtPlayer>();
-
         agent = animator.GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
-		agent.updateUpAxis = false;
-        agent.speed = speed;
-
+        agent.updateUpAxis = false;
+        agent.speed = normalSpeed;
         agent.isStopped = false;
-       
     }
 
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
         if(player == null) {
             Debug.Log("Player not found!");
             return;
@@ -52,47 +39,38 @@ public class BossIdle : StateMachineBehaviour
         Vector2 target = player.position;
         agent.SetDestination(target);
 
-        if (!animator.GetBool("BuffedState")) {
-
-            if (!animator.GetBool("Switch")) {
-
-                if(Vector2.Distance(player.position, rb.position) <= meleeRange){
-
-                    animator.SetTrigger("MAttack");
-                    animator.SetBool("Switch", true);
-                }
-                
-
-            } else if (animator.GetBool("Switch")) {
-                agent.speed = 0;
-                animator.SetTrigger("RAttack");
-                animator.SetBool("Switch", false);
-    
-            }
-
+        // Stop moving when attacking
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("MAttack") || animator.GetCurrentAnimatorStateInfo(0).IsName("RAttack") || animator.GetCurrentAnimatorStateInfo(0).IsName("Laser")) {
+            agent.isStopped = true;
         } else {
+            agent.isStopped = false;
+        }
 
-            if (!animator.GetBool("Switch2")) {
-                
+        if (!animator.GetBool("BuffedState")) {
+            agent.speed = normalSpeed; // Set speed to normal in phase 1
+            if (UnityEngine.Random.value < 0.5f) { // Randomly pick between melee and ranged attack
+                if(Vector2.Distance(player.position, rb.position) <= meleeRange){
+                    animator.SetTrigger("MAttack");
+                }
+            } else {
                 animator.SetTrigger("RAttack");
-                animator.SetBool("Switch2", true);
-
-            } else if (animator.GetBool("Switch2")) {
-                
+            }
+        } else {
+            agent.speed = slowSpeed; // Set speed to slow in phase 2
+            if (UnityEngine.Random.value < 0.5f) { // Randomly pick between ranged and laser attack
+                animator.SetTrigger("RAttack");
+            } else {
                 animator.SetTrigger("Laser");
-                animator.SetBool("Switch2", false);
-
             }
         }
-        
     }
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
         animator.ResetTrigger("MAttack");
         animator.ResetTrigger("RAttack");
+        animator.ResetTrigger("Laser");
         agent.isStopped = true;
     }
 }
+
