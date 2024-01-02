@@ -24,6 +24,8 @@ You are the 3rd one passing by today... I can't hold on for much longer.
 
     #Chad
     Sure, I guess.
+    
+    ...
 
     #Goblin
     Oh, human! I will remember this deed. As a bonus, I'll bestow you this charm from my clan. It'll make you faster!
