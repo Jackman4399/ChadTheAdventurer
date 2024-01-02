@@ -41,7 +41,7 @@ public class PlayerHealth : Player {
         if (invulnerable) return;
 
         //Hurt the player
-        currentLives =- damage;
+        currentLives -= damage;
         OnLivesChanged?.Invoke(currentLives);
 
         //Prevent negative health
