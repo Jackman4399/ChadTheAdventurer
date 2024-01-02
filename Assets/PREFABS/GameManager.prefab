@@ -245,7 +245,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialiseInput: 1
   InitialiseMenu: 1
-  InitialiseScene: 1
 --- !u!114 &7662754684500877439
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BossEnterBuff : StateMachineBehaviour
 {
@@ -9,6 +10,7 @@ public class BossEnterBuff : StateMachineBehaviour
     {
 
         animator.GetComponent<BossHealth>().isInvulnerable = true;
+        animator.GetComponent<NavMeshAgent>().isStopped = true;
        
     }
 
@@ -23,6 +25,8 @@ public class BossEnterBuff : StateMachineBehaviour
     {
 
         animator.GetComponent<BossHealth>().isInvulnerable = false;
-       
+        animator.GetComponent<NavMeshAgent>().isStopped = false;
+        //animator.GetComponent<NavMeshAgent>().speed = 0.5f;
+
     }
 }

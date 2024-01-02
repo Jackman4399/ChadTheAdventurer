@@ -101,7 +101,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -157,7 +157,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3, y: 0.8}
+  m_Size: {x: 2.3, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &2781694001817817886
 MonoBehaviour:
@@ -171,3 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8100601c3ea9248b7f94e65360662f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  damage: 1
+  rb: {fileID: 6358176666354843484}

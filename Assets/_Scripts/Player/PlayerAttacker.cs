@@ -8,7 +8,7 @@ public class PlayerAttacker : Player {
     public event Action<Direction> OnAttackPressed;
 
     [SerializeField] private LayerMask enemyMask;
-
+    [SerializeField] private LayerMask bossMask;
     
     [SerializeField, Tooltip("How long should the attack trigger be enabled in physics steps.")] 
     private int attackDuration = 5;
@@ -41,12 +41,25 @@ public class PlayerAttacker : Player {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if ((1 << other.gameObject.layer | enemyMask) != enemyMask) return;
         Vector2 direction = (other.transform.position - transform.position).normalized;
-        if (StoryManager.Instance.Choices[0].choiceNumber < 2) 
-        other.GetComponent<EnemyHealth>().TakeDamage(1, pushbackForce * direction);
-        else if (StoryManager.Instance.Choices[0].choiceNumber == 2)
-        other.GetComponent<EnemyHealth>().TakeDamage(3, pushbackForce * direction);
+
+        if ((1 << other.gameObject.layer | enemyMask) == enemyMask) {
+            if (StoryManager.Instance.Choices[0].choiceNumber < 2) 
+                other.GetComponent<EnemyHealth>().TakeDamage(1, pushbackForce * direction);
+            else if (StoryManager.Instance.Choices[0].choiceNumber == 2)
+                other.GetComponent<EnemyHealth>().TakeDamage(3, pushbackForce * direction);
+        }
+
+        if ((1 << other.gameObject.layer | bossMask) == bossMask){
+
+            if (StoryManager.Instance.Choices[0].choiceNumber < 2) 
+                other.GetComponent<BossHealth>().TakeDamage(pushbackForce * direction, 1);
+            else if (StoryManager.Instance.Choices[0].choiceNumber == 2)
+                other.GetComponent<BossHealth>().TakeDamage(pushbackForce * direction, 5);
+
+        }
+        
+        
     }
 
     private void InitialiseAttackListeners(bool enabled) {

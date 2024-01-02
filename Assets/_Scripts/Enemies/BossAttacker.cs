@@ -8,7 +8,7 @@ public class BossAttacker : MonoBehaviour
 	public int laserDamage = 2;
 
 	public Vector3 attackOffset;
-	public float meleeRange = 1f;
+	public float meleeRange = 2f;
 	public LayerMask attackMask;
 
 	//Where projectiles fire from
@@ -20,11 +20,13 @@ public class BossAttacker : MonoBehaviour
 
 	public GameObject laserEffect;
 
-	private float pushbackForce = 1000;
+	private Vector2 player_pos;
+
+	private float pushbackForce = 2000;
 
 	public void MeleeAttack()
 	{
-		//Play sound here
+		AudioManager.Instance.PlayOneShot("Boss_Melee");
 		Vector3 pos = transform.position;
 		pos += transform.right * attackOffset.x;
 		pos += transform.up * attackOffset.y;
@@ -38,10 +40,13 @@ public class BossAttacker : MonoBehaviour
 		}
 	}
 
+	private void FixedUpdate() {
+		player_pos = LocatePlayer();
+	}
+
 	public void RangedAttack()
 	{
-		//Play sound here
-		Vector2 player_pos = LocatePlayer();
+		AudioManager.Instance.PlayOneShot("Boss_Ranged");
 
 		float angle = Mathf.Atan2(player_pos.y, player_pos.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle));
@@ -52,20 +57,20 @@ public class BossAttacker : MonoBehaviour
 
 	public void LaserAttack()
 	{
-		var direction = LocatePlayer();
-		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+		var player_pos = LocatePlayer();
+		float angle = Mathf.Atan2(player_pos.y, player_pos.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
 		Instantiate(laserEffect, laserPoint.position, rotation);
 
 		//Play sound here
-		StartCoroutine(ShootLaser(direction));
+		StartCoroutine(ShootLaser(player_pos));
 	}
 
 	IEnumerator ShootLaser(Vector2 direction) {
 		
 		yield return new WaitForSeconds(1);
-
+		AudioManager.Instance.PlayOneShot("Boss_Laser");
 		RaycastHit2D info = Physics2D.Raycast(laserPoint.position, direction);
 
 		if(info) {
