@@ -85,20 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Let's see what quests the adventurer's guild has to offer today.
---- !u!114 &-4799554024320061096
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
-  m_Name: DialoguePlayableAsset(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  dialogueText: Another day, another adventure!
+  dialogueText: I need to kill it before it sends out more monsters!
 --- !u!114 &-2802704210575524109
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -592,7 +579,7 @@ MonoBehaviour:
     m_Start: 5
     m_ClipIn: 0
     m_Asset: {fileID: 7468086429133494108}
-    m_Duration: 3
+    m_Duration: 5
     m_TimeScale: 1
     m_ParentTrack: {fileID: 7014722407246285906}
     m_EaseInDuration: 0
@@ -640,43 +627,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: DialoguePlayableAsset
   - m_Version: 1
-    m_Start: 8
-    m_ClipIn: 0
-    m_Asset: {fileID: -4799554024320061096}
-    m_Duration: 3
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 7014722407246285906}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: -1
-    m_BlendOutDuration: -1
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: DialoguePlayableAsset
-  - m_Version: 1
-    m_Start: 11
+    m_Start: 10
     m_ClipIn: 0
     m_Asset: {fileID: -5357603539868920608}
-    m_Duration: 4
+    m_Duration: 5
     m_TimeScale: 1
     m_ParentTrack: {fileID: 7014722407246285906}
     m_EaseInDuration: 0
@@ -761,7 +715,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Good morning world! What a lovely day today!
+  dialogueText: Finally, I've reached the boss of all the monsters that have been
+    raiding my town...
 --- !u!114 &7496545870621878252
 MonoBehaviour:
   m_ObjectHideFlags: 1
