@@ -367,6 +367,9 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 2048
+  bossMask:
+    serializedVersion: 2
+    m_Bits: 16384
   attackDuration: 5
   attackDelay: 0.5
   pushbackForce: 1000
@@ -732,7 +735,7 @@ GameObject:
   - component: {fileID: 6211804353453742191}
   m_Layer: 10
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

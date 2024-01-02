@@ -6,9 +6,9 @@ using UnityEngine.AI;
 
 public class BossHealth : Enemy {
 
-    public event Action<int, Vector2> OnHit;
-
     public bool isInvulnerable = false;
+
+    public new Rigidbody2D rigidbody;
 
     [SerializeField, Min(1)] private int maxLives = 50;
     [SerializeField] private int currentLives;
@@ -23,15 +23,16 @@ public class BossHealth : Enemy {
 
         if(isInvulnerable) return;
 
-        currentLives =- damage;
+        currentLives -= damage;
 
-        OnHit?.Invoke(currentLives, direction); 
+        if (currentLives > 0) rigidbody.AddForce(direction);
+
         if(currentLives <= 0) {
+
             agent.isStopped = true;
-            //Die animation
             GetComponent<Animator>().SetBool("IsDead", true);
 
-        } else if(currentLives < 25) {
+        } else if(((float) currentLives)/maxLives <= 0.5f) {
 
             GetComponent<Animator>().SetBool("BuffedState", true);
             Debug.Log("TEST");

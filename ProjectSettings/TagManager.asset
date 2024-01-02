@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - LevelLoader
+  - Hitbox
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Enemy
   - GreenSlime
   - CameraConfiner
-  - 
+  - Boss
   - 
   - 
   - 
