@@ -27,14 +27,17 @@ public class PlayerHealth : Player {
         currentLives = maxLives;
     }
 
-    public void Heal(int lives) {
+    public bool Heal(int lives) {
+        // checks if it overheals, do nothing if it does
+        if (currentLives + lives > maxLives) return false;
+
         //Heal the player
         currentLives += lives;
 
-        //Prevent overhealing
-        currentLives = Mathf.Clamp(currentLives, 0, maxLives);
-
+        // invoke current lives changed event
         OnLivesChanged?.Invoke(currentLives);
+
+        return true;
     }
 
     public void TakeDamage(Vector2 direction, int damage) {

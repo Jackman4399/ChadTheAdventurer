@@ -1,22 +1,25 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class BossHealth : Enemy {
 
+    public event Action<int, int> OnHit;
+
     public bool isInvulnerable = false;
 
-    public new Rigidbody2D rigidbody;
+    private new Rigidbody2D rigidbody;
 
-    public Animator animator;
+    private Animator animator;
 
     [SerializeField, Min(1)] private int maxLives = 50;
     [SerializeField] private int currentLives;
 
     private void Awake() {
         AssignAgent(GetComponentInParent<NavMeshAgent>);
+
+        rigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         currentLives = maxLives;
     }
@@ -27,16 +30,18 @@ public class BossHealth : Enemy {
 
         currentLives -= damage;
 
+        OnHit?.Invoke(currentLives, maxLives);
+
         if (currentLives > 0) rigidbody.AddForce(direction * knockback);
 
         if(currentLives <= 0) {
 
             agent.isStopped = true;
-            GetComponent<Animator>().SetBool("IsDead", true);
+            animator.SetBool("IsDead", true);
 
         } else if(((float) currentLives)/maxLives <= 0.5f) {
 
-            GetComponent<Animator>().SetBool("BuffedState", true);
+            animator.SetBool("BuffedState", true);
 
         }
     }

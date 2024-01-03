@@ -607,12 +607,12 @@ MonoBehaviour:
   - {fileID: 846598280}
   - {fileID: 1446049243}
   m_Instructions:
-  - m_FullHash: -1268597232
-    m_VirtualCamera: {fileID: 0}
+  - m_FullHash: 400840355
+    m_VirtualCamera: {fileID: 846598280}
     m_ActivateAfter: 0
     m_MinDuration: 0
-  - m_FullHash: 1111235936
-    m_VirtualCamera: {fileID: 0}
+  - m_FullHash: -989180196
+    m_VirtualCamera: {fileID: 1446049243}
     m_ActivateAfter: 0
     m_MinDuration: 0
   m_DefaultBlend:
@@ -10253,11 +10253,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2350302743963820333, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.24
+      value: 6.24
       objectReference: {fileID: 0}
     - target: {fileID: 2350302743963820333, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.96
+      value: -11.78
       objectReference: {fileID: 0}
     - target: {fileID: 2350302743963820333, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10293,19 +10293,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4537808895417779605, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
       propertyPath: idleDirection
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5550435028086616537, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5795422141433876167, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 4900000, guid: 134a29607fa84854c826b0e5f8434789, type: 3}
     - target: {fileID: 6042395661359184193, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
       propertyPath: m_Name
-      value: NPC0
+      value: Sarah
       objectReference: {fileID: 0}
     - target: {fileID: 6293972997562122238, guid: 447e46d53c6703345befb472fecda2f1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
