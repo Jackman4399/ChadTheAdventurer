@@ -40,11 +40,11 @@ public class BossIdle : StateMachineBehaviour
         agent.SetDestination(target);
 
         // Stop moving when attacking
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("MAttack") || animator.GetCurrentAnimatorStateInfo(0).IsName("RAttack") || animator.GetCurrentAnimatorStateInfo(0).IsName("Laser")) {
-            agent.isStopped = true;
-        } else {
-            agent.isStopped = false;
-        }
+        // if (animator.GetCurrentAnimatorStateInfo(0).IsName("MAttack") || animator.GetCurrentAnimatorStateInfo(0).IsName("RAttack") || animator.GetCurrentAnimatorStateInfo(0).IsName("Laser")) {
+        //     agent.isStopped = true;
+        // } else {
+        //     agent.isStopped = false;
+        // }
 
         if (!animator.GetBool("BuffedState")) {
             agent.speed = normalSpeed; // Set speed to normal in phase 1

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossAttacker : MonoBehaviour
@@ -23,6 +25,13 @@ public class BossAttacker : MonoBehaviour
 	private Vector2 player_pos;
 
 	private float pushbackForce = 2000;
+
+	private Animator animator;
+
+
+	private void Awake() {
+		animator = gameObject.GetComponent<Animator>();
+	}
 
 	public void MeleeAttack()
 	{
@@ -58,37 +67,21 @@ public class BossAttacker : MonoBehaviour
 
 	public void LaserAttack()
 	{
+
 		var direction = (player_pos - (Vector2) laserPoint.position).normalized;
 		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-		GameObject laser = Instantiate(laserEffect, laserPoint.position, rotation);
-		StartCoroutine(ShootLaser(player_pos, laser));
+		if (!animator.GetBool("OnCooldown")) Instantiate(laserEffect, laserPoint.position, rotation);
+		StartCoroutine(Cooldown());
 	}
 
-	IEnumerator ShootLaser(Vector2 direction, GameObject laser) {
-		
-		yield return new WaitForSeconds(1);
-		AudioManager.Instance.PlayOneShot("Boss_Laser");
-		// Get all objects hit by the laser
-		RaycastHit2D[] hits = Physics2D.RaycastAll(laserPoint.position, direction);
+    IEnumerator Cooldown()
+    {
+		animator.SetBool("OnCooldown", true);
 
-		foreach (RaycastHit2D hit in hits) {
-			var player = hit.transform.GetComponentInChildren<PlayerHealth>();
-			if (player != null) {
-				player.GetComponent<PlayerHealth>().TakeDamage(pushbackForce * direction, laserDamage);
-			}
-		}
-		Destroy(laser);
+        yield return new WaitForSeconds(5);
 
-	}
-
-	void OnDrawGizmosSelected()
-	{
-		Vector3 pos = transform.position;
-		pos += transform.right * attackOffset.x;
-		pos += transform.up * attackOffset.y;
-
-		Gizmos.DrawWireSphere(pos, meleeRange);
-	}
+		animator.SetBool("OnCooldown", false);
+    }
 }

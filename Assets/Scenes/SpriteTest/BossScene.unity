@@ -898,7 +898,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 200
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -948,7 +948,7 @@ MonoBehaviour:
   isInvulnerable: 0
   rigidbody: {fileID: 1122350054}
   animator: {fileID: 0}
-  maxLives: 50
+  maxLives: 10
   currentLives: 0
 --- !u!195 &1122350057
 NavMeshAgent:
