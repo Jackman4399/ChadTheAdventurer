@@ -17,7 +17,8 @@ public class Shard : MonoBehaviour
     {
         player_pos = GameObject.FindGameObjectWithTag("Player").transform.position;
         Vector2 direction = (player_pos - (Vector2)transform.position).normalized; // Calculate the direction towards the player
-        rb.velocity = direction * speed; // Move in the direction of the player
+        rb.velocity = direction * speed; // Move in the direction of the player 
+        StartCoroutine(Delete());
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -27,15 +28,14 @@ public class Shard : MonoBehaviour
         if(other.gameObject.tag.Equals("Player")) {
 
             other.GetComponentInChildren<PlayerHealth>().TakeDamage(pushbackForce * player_pos, damage);
-            Destroy(gameObject);  
-        } else {
-            StartCoroutine(Delete());
-        }
-
+            Destroy(gameObject);
+        } 
+        
+         
     }
 
     IEnumerator Delete() {
-        yield return new WaitForSeconds(2);
-        Destroy(gameObject);
+        yield return new WaitForSeconds(15);
+        if (gameObject != null) Destroy(gameObject);
     }
 }
