@@ -10,6 +10,8 @@ public class BossHealth : Enemy {
 
     public new Rigidbody2D rigidbody;
 
+    public Animator animator;
+
     [SerializeField, Min(1)] private int maxLives = 50;
     [SerializeField] private int currentLives;
 
@@ -19,13 +21,13 @@ public class BossHealth : Enemy {
         currentLives = maxLives;
     }
 
-    public void TakeDamage(Vector2 direction, int damage) {
+    public void TakeDamage(Vector2 direction, int damage, float knockback) {
 
         if(isInvulnerable) return;
 
         currentLives -= damage;
 
-        if (currentLives > 0) rigidbody.AddForce(direction);
+        if (currentLives > 0) rigidbody.AddForce(direction * knockback);
 
         if(currentLives <= 0) {
 
@@ -35,7 +37,6 @@ public class BossHealth : Enemy {
         } else if(((float) currentLives)/maxLives <= 0.5f) {
 
             GetComponent<Animator>().SetBool("BuffedState", true);
-            Debug.Log("TEST");
 
         }
     }

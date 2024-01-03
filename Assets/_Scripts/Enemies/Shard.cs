@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class Shard : MonoBehaviour
 {
-    [SerializeField, Min(0f)] private float speed = 1f;
+    [SerializeField, Min(0f)] private float speed = 8f;
     [SerializeField, Min(1)] private int damage = 1;
 
-
-
-    private float pushbackForce = 800;
+    private float pushbackForce = 100;
 
     public Rigidbody2D rb;
 
+    private Vector2 player_pos;
     // Start is called before the first frame update
     void Start()
     {
-        //TODO: Make it so that it works for 2D top down (360 degrees) rather than left-right
-        Vector2 player_pos = GameObject.FindGameObjectWithTag("Hitbox").transform.position;
-        rb.velocity = player_pos * speed;
+        player_pos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        Vector2 direction = (player_pos - (Vector2)transform.position).normalized; // Calculate the direction towards the player
+        rb.velocity = direction * speed; // Move in the direction of the player
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

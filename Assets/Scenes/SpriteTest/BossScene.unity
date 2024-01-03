@@ -193,7 +193,7 @@ Transform:
   m_GameObject: {fileID: 122284122}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.76, y: 1.08, z: 0}
+  m_LocalPosition: {x: 0.84, y: 1.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -947,6 +947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInvulnerable: 0
   rigidbody: {fileID: 1122350054}
+  animator: {fileID: 0}
   maxLives: 50
   currentLives: 0
 --- !u!195 &1122350057
@@ -7899,6 +7900,18 @@ PrefabInstance:
     - target: {fileID: 966972681199385437, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211804353453742191, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
+      propertyPath: m_Size.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211804353453742191, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
+      propertyPath: m_Size.y
+      value: 1.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211804353453742191, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7026618485197575769, guid: fd2e5e3d37cd859418074ad98ec73d70, type: 3}
       propertyPath: m_Name

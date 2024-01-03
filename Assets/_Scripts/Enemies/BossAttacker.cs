@@ -34,22 +34,23 @@ public class BossAttacker : MonoBehaviour
 		Collider2D colInfo = Physics2D.OverlapCircle(pos, meleeRange, attackMask);
 		if (colInfo != null)
 		{
-			var player = LocatePlayer();
+			var player = GameObject.FindGameObjectWithTag("Player").transform.position;;
 			var direction = (new Vector3(player.x, player.y, 0) - pos).normalized;
 			colInfo.GetComponent<PlayerHealth>().TakeDamage(pushbackForce * direction, meleeDamage);
 		}
 	}
 
 	private void FixedUpdate() {
-		player_pos = LocatePlayer();
+		player_pos = GameObject.FindGameObjectWithTag("Player").transform.position;
 	}
 
 	public void RangedAttack()
 	{
 		AudioManager.Instance.PlayOneShot("Boss_Ranged");
 
-		float angle = Mathf.Atan2(player_pos.y, player_pos.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+		var direction = (player_pos - (Vector2) firePoint.position).normalized;
+		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+		Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
 		Instantiate(shard, firePoint.position, rotation);
 		//Damage logic is in Shard.cs
@@ -57,36 +58,28 @@ public class BossAttacker : MonoBehaviour
 
 	public void LaserAttack()
 	{
-		var player_pos = LocatePlayer();
-		float angle = Mathf.Atan2(player_pos.y, player_pos.x) * Mathf.Rad2Deg;
+		var direction = (player_pos - (Vector2) laserPoint.position).normalized;
+		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-		Instantiate(laserEffect, laserPoint.position, rotation);
-
-		//Play sound here
-		StartCoroutine(ShootLaser(player_pos));
+		GameObject laser = Instantiate(laserEffect, laserPoint.position, rotation);
+		StartCoroutine(ShootLaser(player_pos, laser));
 	}
 
-	IEnumerator ShootLaser(Vector2 direction) {
+	IEnumerator ShootLaser(Vector2 direction, GameObject laser) {
 		
 		yield return new WaitForSeconds(1);
 		AudioManager.Instance.PlayOneShot("Boss_Laser");
-		RaycastHit2D info = Physics2D.Raycast(laserPoint.position, direction);
+		// Get all objects hit by the laser
+		RaycastHit2D[] hits = Physics2D.RaycastAll(laserPoint.position, direction);
 
-		if(info) {
-
-			var player = info.transform.GetComponentInChildren<PlayerHealth>();
+		foreach (RaycastHit2D hit in hits) {
+			var player = hit.transform.GetComponentInChildren<PlayerHealth>();
 			if (player != null) {
-        		player.GetComponent<PlayerHealth>().TakeDamage(pushbackForce * direction, laserDamage);
+				player.GetComponent<PlayerHealth>().TakeDamage(pushbackForce * direction, laserDamage);
 			}
 		}
-
-	}
-
-	private Vector2 LocatePlayer() {
-
-		Vector2 player_pos = GameObject.FindGameObjectWithTag("Player").transform.position;
-		return player_pos;
+		Destroy(laser);
 
 	}
 
