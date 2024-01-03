@@ -34,7 +34,7 @@ public class Laser : MonoBehaviour
 		foreach (RaycastHit2D hit in hits) {
 			var player = hit.transform.GetComponentInChildren<PlayerHealth>();
 			if (player != null) {
-				player.GetComponent<PlayerHealth>().TakeDamage(1000 * direction, 2);
+				player.GetComponent<PlayerHealth>().TakeDamage(2000 * direction, 2);
 			}
 		}
 
