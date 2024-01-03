@@ -678,6 +678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 1286510186249674753, guid: 80167dbd6a19f5247a45d3291aadbe24, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7712346997106983909, guid: 80167dbd6a19f5247a45d3291aadbe24, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.34
@@ -717,6 +721,10 @@ PrefabInstance:
     - target: {fileID: 7712346997106983909, guid: 80167dbd6a19f5247a45d3291aadbe24, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936709959178745301, guid: 80167dbd6a19f5247a45d3291aadbe24, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1160,8 +1168,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 319458377
-  m_SortingLayer: 3
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -249914614, guid: e96a4b20a794320438bef061dac22c75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1286,8 +1294,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInvulnerable: 0
-  rigidbody: {fileID: 1122350054}
-  animator: {fileID: 0}
   maxLives: 10
   currentLives: 0
 --- !u!195 &1122350057
@@ -1299,7 +1305,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1122350046}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 3.125
+  m_Radius: 0.01
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1308,8 +1314,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 6.25
-  m_BaseOffset: 3.125
+  m_Height: 1
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1 &1129261583

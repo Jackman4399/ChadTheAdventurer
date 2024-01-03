@@ -33,6 +33,10 @@ public class BossAttacker : MonoBehaviour
 		animator = gameObject.GetComponent<Animator>();
 	}
 
+    private void FixedUpdate() {
+		player_pos = GameObject.FindGameObjectWithTag("Player").transform.position;
+	}
+
 	public void MeleeAttack()
 	{
 		AudioManager.Instance.PlayOneShot("Boss_Melee");
@@ -47,10 +51,6 @@ public class BossAttacker : MonoBehaviour
 			var direction = (new Vector3(player.x, player.y, 0) - pos).normalized;
 			colInfo.GetComponent<PlayerHealth>().TakeDamage(pushbackForce * direction, meleeDamage);
 		}
-	}
-
-	private void FixedUpdate() {
-		player_pos = GameObject.FindGameObjectWithTag("Player").transform.position;
 	}
 
 	public void RangedAttack()

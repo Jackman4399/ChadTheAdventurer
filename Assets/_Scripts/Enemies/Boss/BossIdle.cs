@@ -22,6 +22,7 @@ public class BossIdle : StateMachineBehaviour
         player = look.player;
         rb = animator.GetComponent<Rigidbody2D>();
         agent = animator.GetComponent<NavMeshAgent>();
+
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.speed = normalSpeed;
@@ -39,26 +40,22 @@ public class BossIdle : StateMachineBehaviour
         agent.SetDestination(player.position);
 
         // Stop moving when attacking
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("MAttack") || 
-        animator.GetCurrentAnimatorStateInfo(0).IsName("RAttack") || 
-        animator.GetCurrentAnimatorStateInfo(0).IsName("Laser")) {
-            agent.isStopped = true;
-        } else {
-            agent.isStopped = false;
-        }
+        // if (animator.GetCurrentAnimatorStateInfo(0).IsName("MAttack") || 
+        // animator.GetCurrentAnimatorStateInfo(0).IsName("RAttack") || 
+        // animator.GetCurrentAnimatorStateInfo(0).IsName("Laser")) {
+        //     agent.isStopped = true;
+        // } else {
+        //     agent.isStopped = false;
+        // }
 
         if (!animator.GetBool("BuffedState")) {
             agent.speed = normalSpeed; // Set speed to normal in phase 1
-            if (UnityEngine.Random.value < 0.5f) { // Randomly pick between melee and ranged attack
-                if(Vector2.Distance(player.position, rb.position) <= meleeRange){
-                    animator.SetTrigger("MAttack");
-                }
-            } else {
-                animator.SetTrigger("RAttack");
-            }
+            if(Vector2.Distance(player.position, rb.position) <= meleeRange) 
+            animator.SetTrigger("MAttack");
+            else animator.SetTrigger("RAttack");
         } else {
             agent.speed = slowSpeed; // Set speed to slow in phase 2
-            if (UnityEngine.Random.value < 0.5f) { // Randomly pick between ranged and laser attack
+            if (UnityEngine.Random.Range(0, 1f) < 0.5f) { // Randomly pick between ranged and laser attack
                 animator.SetTrigger("RAttack");
             } else {
                 animator.SetTrigger("Laser");
