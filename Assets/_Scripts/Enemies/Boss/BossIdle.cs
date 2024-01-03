@@ -18,9 +18,9 @@ public class BossIdle : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        rb = animator.GetComponent<Rigidbody2D>();
         look = animator.GetComponent<LookAtPlayer>();
+        player = look.player;
+        rb = animator.GetComponent<Rigidbody2D>();
         agent = animator.GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -36,11 +36,12 @@ public class BossIdle : StateMachineBehaviour
         }
 
         look.FacePlayer();
-        Vector2 target = player.position;
-        agent.SetDestination(target);
+        agent.SetDestination(player.position);
 
         // Stop moving when attacking
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("MAttack") || animator.GetCurrentAnimatorStateInfo(0).IsName("RAttack") || animator.GetCurrentAnimatorStateInfo(0).IsName("Laser")) {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("MAttack") || 
+        animator.GetCurrentAnimatorStateInfo(0).IsName("RAttack") || 
+        animator.GetCurrentAnimatorStateInfo(0).IsName("Laser")) {
             agent.isStopped = true;
         } else {
             agent.isStopped = false;
