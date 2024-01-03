@@ -14,5 +14,5 @@ VAR StrawberriesNeeded = 0
 
 === StoryStateNotRecognised
 #ERROR
-ERROR: STORY STATE NOT RECOGNISED
+ERROR: STORY STATE { ~GetCurrentStoryState() } NOT RECOGNISED
 -> DONE

@@ -22,7 +22,10 @@ EditorBuildSettings:
     guid: c938bca18ab7d2844831d9562022c3a9
   - enabled: 1
     path: Assets/Scenes/Build/TownEmergencyQuest.unity
-    guid: 8502fc6af5a9f4148976108eea20beb4
+    guid: e9eb4de5eb988f74aaa04dbb00b6d598
+  - enabled: 1
+    path: Assets/Scenes/Build/LoseEmergencyQuest.unity
+    guid: a1cca1345e8f9834483ae46f13e32be8
   - enabled: 1
     path: Assets/Scenes/Build/Cave.unity
     guid: 81549c512f877a44a9292b953797305b
