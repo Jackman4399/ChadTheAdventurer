@@ -947,6 +947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInvulnerable: 0
   rigidbody: {fileID: 1122350054}
+  animator: {fileID: 0}
   maxLives: 50
   currentLives: 0
 --- !u!195 &1122350057

@@ -37,7 +37,6 @@ public class BossHealth : Enemy {
         } else if(((float) currentLives)/maxLives <= 0.5f) {
 
             GetComponent<Animator>().SetBool("BuffedState", true);
-            Debug.Log("TEST");
 
         }
     }

@@ -41,15 +41,16 @@ public class BossAttacker : MonoBehaviour
 	}
 
 	private void FixedUpdate() {
-		player_pos = GameObject.FindGameObjectWithTag("Hitbox").transform.position;
+		player_pos = GameObject.FindGameObjectWithTag("Player").transform.position;
 	}
 
 	public void RangedAttack()
 	{
 		AudioManager.Instance.PlayOneShot("Boss_Ranged");
 
-		float angle = Mathf.Atan2(player_pos.y, player_pos.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+		var direction = (player_pos - (Vector2) firePoint.position).normalized;
+		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+		Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
 		Instantiate(shard, firePoint.position, rotation);
 		//Damage logic is in Shard.cs
@@ -57,7 +58,8 @@ public class BossAttacker : MonoBehaviour
 
 	public void LaserAttack()
 	{
-		float angle = Mathf.Atan2(player_pos.y, player_pos.x) * Mathf.Rad2Deg;
+		var direction = (player_pos - (Vector2) laserPoint.position).normalized;
+		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
 		GameObject laser = Instantiate(laserEffect, laserPoint.position, rotation);
