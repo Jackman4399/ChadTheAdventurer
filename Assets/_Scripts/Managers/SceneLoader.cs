@@ -39,17 +39,22 @@ public class SceneLoader : Singleton<SceneLoader> {
     }
 
     // used in signal receiver from GameManager
-    public void ChangeScene(string sceneName) => ChangeScene(sceneName, true);
+    public void ChangeScene(string sceneName) {
+        Debug.Log("Signal trasmitted to change scene to: " + sceneName);
+        ChangeScene(sceneName, true);
+    }
 
     public void ChangeNextScene(bool turnOnInput) => ChangeScene(currentSceneState + 1, turnOnInput);
 
     public void ChangeScene(string sceneName, bool turnOnInput) {
-        if (Enum.TryParse(sceneName, false, out SceneState sceneState)) ChangeScene(sceneState, turnOnInput);
-        else Debug.LogWarning("Unable to parse given scene.");
+        if (Enum.TryParse(sceneName, false, out SceneState sceneState)) {
+            Debug.Log("Scene successfully parsed: " + sceneName + ", switching scenes...");
+            ChangeScene(sceneState, turnOnInput);
+        } else Debug.LogWarning("Unable to parse given scene.");
     }
 
     public void ChangeScene(SceneState sceneState, bool turnOnInput) {
-        if (sceneState == SceneState.None) return; 
+        if (sceneState == SceneState.None) return;
 		Crossfade(sceneState, null, TransitionType.BetweenScenes, turnOnInput);
 		currentSceneState = sceneState;
 	}

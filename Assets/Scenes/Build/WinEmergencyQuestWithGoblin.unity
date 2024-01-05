@@ -270,11 +270,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1081099242320946797, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_text
-      value: 'With the help of the goblin you saved, you managed to defeat the boss,
-        and the town is saved!
-
-
-        What goes around comes around, after all!'
+      value: You successfully defeated the boss, which in turn saves the town!
       objectReference: {fileID: 0}
     - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_Pivot.x
@@ -362,7 +358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541384812881466794, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_text
-      value: TRUE ENDING
+      value: GOOD ENDING
       objectReference: {fileID: 0}
     - target: {fileID: 7867138699963265895, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_Name

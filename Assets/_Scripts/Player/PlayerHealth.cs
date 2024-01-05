@@ -55,8 +55,7 @@ public class PlayerHealth : Player {
             if (StoryManager.Instance.CurrentStoryState == 
             StoryState.ParticipateEmergencyQuest) {
                 StoryManager.Instance.MakeChoice(ChoiceState.BossChoice, 2);
-            StoryManager.Instance.Proceed();
-
+                StoryManager.Instance.Proceed();
             }
 
             OnDied?.Invoke(); 

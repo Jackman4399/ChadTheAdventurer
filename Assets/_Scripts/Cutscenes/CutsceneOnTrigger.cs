@@ -9,10 +9,13 @@ public class CutsceneOnTrigger : CutsceneOnEvent {
 
     [SerializeField] private MenuState additionalMenu;
 
+    [SerializeField] private CameraState switchCameraTo;
+
     protected override void OnPlayableDirectorStopped(PlayableDirector director) {
         base.OnPlayableDirectorStopped(director);
 
         MenuManager.Instance.EnableMenu(additionalMenu);
+        CameraController.Instance.ChangeCamera(switchCameraTo);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

@@ -22,7 +22,7 @@ public abstract class CutsceneOnEvent : MonoBehaviour {
         director.stopped -= OnPlayableDirectorStopped;
     }
 
-    protected void PlayCutscene() {
+    protected virtual void PlayCutscene() {
         currentMenuState = MenuManager.Instance.CurrentMenuState;
         currentInputState = InputManager.Instance.CurrentInputState;
 

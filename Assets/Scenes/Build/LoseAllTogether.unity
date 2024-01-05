@@ -260,7 +260,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36447436}
   m_Enabled: 1
---- !u!1001 &418344222
+--- !u!1001 &323538888
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -270,11 +270,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1081099242320946797, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_text
-      value: 'With the help of the goblin you saved, you managed to defeat the boss,
-        and the town is saved!
+      value: 'You did not managed to defeat the boss. As a consequence, he continues
+        to ambush the town until it was destroyed.
 
 
-        What goes around comes around, after all!'
+        Better luck next time!'
       objectReference: {fileID: 0}
     - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_Pivot.x
@@ -358,11 +358,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2006105438434711457, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: menuState
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2541384812881466794, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_text
-      value: TRUE ENDING
+      value: BAD ENDING 2
       objectReference: {fileID: 0}
     - target: {fileID: 7867138699963265895, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_Name
@@ -509,5 +509,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 2029195147}
   - {fileID: 36447439}
-  - {fileID: 418344222}
   - {fileID: 839149125}
+  - {fileID: 323538888}

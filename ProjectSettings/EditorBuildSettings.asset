@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Build/Cave.unity
     guid: 81549c512f877a44a9292b953797305b
+  - enabled: 1
+    path: Assets/Scenes/Build/WinEmergencyQuest.unity
+    guid: be422ca391952f74ea7c2e73350923c9
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 00c9db32ed803f14c8788dd1b6a3e3c6, type: 2}

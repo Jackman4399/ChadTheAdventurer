@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
 public class CutsceneOnPlayerDied : CutsceneOnEvent {
@@ -30,5 +31,20 @@ public class CutsceneOnPlayerDied : CutsceneOnEvent {
         base.OnDisable();
 
         playerHealth.OnDied -= PlayCutscene;
+    }
+
+    protected override void PlayCutscene() {
+        base.PlayCutscene();
+
+        StoryManager.Instance.Proceed();
+    }
+
+    protected override void OnPlayableDirectorStopped(PlayableDirector director) {
+        base.OnPlayableDirectorStopped(director);
+
+        if (StoryManager.Instance.GetChoice(ChoiceState.GoblinChoice) == 1)
+        SceneLoader.Instance.ChangeScene(SceneState.WinEmergencyQuestWithGoblin, true);
+        else if (StoryManager.Instance.GetChoice(ChoiceState.GoblinChoice) == 2)
+        SceneLoader.Instance.ChangeScene(SceneState.LoseAllTogether, true);
     }
 }
