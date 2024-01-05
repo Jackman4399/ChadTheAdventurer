@@ -32,5 +32,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Build/WinEmergencyQuest.unity
     guid: be422ca391952f74ea7c2e73350923c9
+  - enabled: 1
+    path: Assets/Scenes/Build/WinEmergencyQuestWithGoblin.unity
+    guid: 03f3868e80929af468e693dd3fcd653b
+  - enabled: 1
+    path: Assets/Scenes/Build/LoseAllTogether.unity
+    guid: 0bfd6c686ef9a8b4287e9c9afb3787ae
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 00c9db32ed803f14c8788dd1b6a3e3c6, type: 2}
