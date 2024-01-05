@@ -270,7 +270,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1081099242320946797, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_text
-      value: You successfully defeated the boss, which in turn saves the town!
+      value: Chad successfully defeated the boss, saving the town as the brave hero!
       objectReference: {fileID: 0}
     - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_Pivot.x

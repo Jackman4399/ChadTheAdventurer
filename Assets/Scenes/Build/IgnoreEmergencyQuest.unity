@@ -270,7 +270,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1081099242320946797, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_text
-      value: You did not participate in the emergency quest. As a result, your town
+      value: Chad did not participate in the emergency quest. As a result, his town
         got destroyed...
       objectReference: {fileID: 0}
     - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
