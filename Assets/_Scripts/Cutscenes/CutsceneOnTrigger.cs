@@ -14,8 +14,8 @@ public class CutsceneOnTrigger : CutsceneOnEvent {
     protected override void OnPlayableDirectorStopped(PlayableDirector director) {
         base.OnPlayableDirectorStopped(director);
 
-        MenuManager.Instance.EnableMenu(additionalMenu);
-        CameraController.Instance.ChangeCamera(switchCameraTo);
+        if (additionalMenu != MenuState.None) MenuManager.Instance.EnableMenu(additionalMenu);
+        if (switchCameraTo != CameraState.None) CameraController.Instance.ChangeCamera(switchCameraTo);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

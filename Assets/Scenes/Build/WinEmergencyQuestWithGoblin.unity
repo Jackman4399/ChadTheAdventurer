@@ -270,7 +270,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1081099242320946797, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_text
-      value: Chad successfully defeated the boss, saving the town as the brave hero!
+      value: 'With the help of the goblin Chad saved, he managed to defeat the boss,
+        saving the town!
+
+
+        What goes around comes around, after all!'
       objectReference: {fileID: 0}
     - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_Pivot.x
@@ -358,7 +362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2541384812881466794, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_text
-      value: GOOD ENDING
+      value: TRUE ENDING
       objectReference: {fileID: 0}
     - target: {fileID: 7867138699963265895, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_Name
