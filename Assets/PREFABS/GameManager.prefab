@@ -279,7 +279,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.6
+    volume: 1
     pitch: 0.65
     loop: 0
     playOnAwake: 0
@@ -287,7 +287,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.5
+    volume: 1
     pitch: 0.65
     loop: 0
     playOnAwake: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 2b21ef916f6943c439b71a7c74568878, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.5
+    volume: 1
     pitch: 0.65
     loop: 0
     playOnAwake: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 566d2ea6240b489479a6e9fd608c2621, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.4
+    volume: 1
     pitch: 0.6
     loop: 0
     playOnAwake: 0
@@ -311,7 +311,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: df7087e4d8a8bb546bc08ce68632903f, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.45
+    volume: 1
     pitch: 0.65
     loop: 0
     playOnAwake: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.6
+    volume: 1
     pitch: 0.65
     loop: 0
     playOnAwake: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.6
+    volume: 1
     pitch: 0.65
     loop: 0
     playOnAwake: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.25
+    volume: 1
     pitch: 0.65
     loop: 1
     playOnAwake: 0
@@ -343,7 +343,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.25
+    volume: 1
     pitch: 0.65
     loop: 1
     playOnAwake: 0
@@ -351,7 +351,39 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 89f935015cc98724a862a586326fdf21, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.25
+    volume: 1
+    pitch: 0.65
+    loop: 1
+    playOnAwake: 0
+  - name: Boss_Intro
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 24eaeae153b524bb6a55fdcc7ee3c735, type: 3}
+    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 0.6
+    pitch: 0.65
+    loop: 0
+    playOnAwake: 0
+  - name: Boss_Ranged
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: df0e60887b63f45c7801a38fccae1f8f, type: 3}
+    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 0.4
+    pitch: 0.65
+    loop: 1
+    playOnAwake: 0
+  - name: Boss_Laser
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: de812cfb519929c4aad9d296f655c81d, type: 3}
+    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 0.5
+    pitch: 0.65
+    loop: 1
+    playOnAwake: 0
+  - name: Boss_Melee
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: b7b5a6156961bac44a67504d42ce6fcf, type: 3}
+    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 0.5
     pitch: 0.65
     loop: 1
     playOnAwake: 0

@@ -3,30 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class CutsceneActivation : MonoBehaviour {
+public abstract class CutsceneOnEvent : MonoBehaviour {
 
-    private PlayableDirector director;
+    protected PlayableDirector director;
 
-    [SerializeField] private LayerMask playerMask;
+    protected InputState currentInputState;
+    protected MenuState currentMenuState;
 
-    private InputState currentInputState;
-    private MenuState currentMenuState;
-
-    private void Awake() {
+    protected virtual void Awake() {
         director = GetComponent<PlayableDirector>();
     }
 
-    private void OnEnable() {
+    protected virtual void OnEnable() {
         director.stopped += OnPlayableDirectorStopped;
     }
 
-    private void OnDisable() {
+    protected virtual void OnDisable() {
         director.stopped -= OnPlayableDirectorStopped;
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        if((1 << other.gameObject.layer | playerMask) != playerMask) return;
-
+    protected virtual void PlayCutscene() {
         currentMenuState = MenuManager.Instance.CurrentMenuState;
         currentInputState = InputManager.Instance.CurrentInputState;
 
@@ -36,7 +32,7 @@ public class CutsceneActivation : MonoBehaviour {
         SceneLoader.Instance.Crossfade(director.Play, TransitionType.Cutscene);
     }
 
-    void OnPlayableDirectorStopped(PlayableDirector director) {
+    protected virtual void OnPlayableDirectorStopped(PlayableDirector director) {
         MenuManager.Instance.ChangeMenu(currentMenuState);
         InputManager.Instance.ChangeInput(currentInputState);
 

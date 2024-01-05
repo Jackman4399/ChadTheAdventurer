@@ -11,6 +11,7 @@ public enum CameraState {
     EncounterCamera,
     EntranceCamera,
     ArenaCamera,
+    ArenaWithBossCamera,
 }
 
 public class CameraController : Singleton<CameraController> {

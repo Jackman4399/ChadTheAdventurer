@@ -5,6 +5,7 @@ using UnityEngine.AI;
 public class BossHealth : Enemy {
 
     public event Action<int, int> OnHit;
+    public event Action OnDied;
 
     public bool isInvulnerable = false;
 
@@ -38,6 +39,14 @@ public class BossHealth : Enemy {
 
             agent.isStopped = true;
             animator.SetBool("IsDead", true);
+
+            StoryManager.Instance.MakeChoice(ChoiceState.BossChoice, 1);
+            StoryManager.Instance.Proceed();
+
+            MenuManager.Instance.ChangeMenu(MenuState.Win);
+            InputManager.Instance.ChangeInput(InputState.Menu);
+
+            OnDied?.Invoke();
 
         } else if(((float) currentLives)/maxLives <= 0.5f) {
 

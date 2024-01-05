@@ -607,12 +607,16 @@ MonoBehaviour:
   - {fileID: 846598280}
   - {fileID: 1446049243}
   m_Instructions:
-  - m_FullHash: 400840355
-    m_VirtualCamera: {fileID: 846598280}
+  - m_FullHash: -1268597232
+    m_VirtualCamera: {fileID: 0}
     m_ActivateAfter: 0
     m_MinDuration: 0
-  - m_FullHash: -989180196
-    m_VirtualCamera: {fileID: 1446049243}
+  - m_FullHash: 1111235936
+    m_VirtualCamera: {fileID: 0}
+    m_ActivateAfter: 0
+    m_MinDuration: 0
+  - m_FullHash: 1332738988
+    m_VirtualCamera: {fileID: 0}
     m_ActivateAfter: 0
     m_MinDuration: 0
   m_DefaultBlend:
@@ -6722,15 +6726,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: InitialiseMenu
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: InitialiseInput
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2347329707256932898, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
-      propertyPath: InitialiseScene
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2964856164721253087, guid: 101e2eaf4a112e94587ff9e59e6a2c45, type: 3}
       propertyPath: initialStoryState
