@@ -15,7 +15,7 @@ Hm... a goblin that could talk is rare nowadays.
 Human! Please.. help me! I mean no harm! I just happened to be attacked by some wild animals...
 
 #Goblin
-You are the 3rd one passing by today... I can't hold on for much longer.
+You are the third one passing by today... I can't hold on for much longer.
 
 #Chad #GoblinChoice
 (Should I save it?)

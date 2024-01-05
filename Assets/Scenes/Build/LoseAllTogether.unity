@@ -270,8 +270,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1081099242320946797, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_text
-      value: 'You did not managed to defeat the boss. As a consequence, he continues
-        to ambush the town until it was destroyed.
+      value: 'Chad did not manage to defeat the boss. As a consequence, it moved
+        on to the town, completely eradicating it.
 
 
         Better luck next time!'

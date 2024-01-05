@@ -170,7 +170,7 @@ Hello again! I hope you made up your mind.
 - else          :
 
 #Receptionist
-Hello, Chad! I see you're interested in taking on this quest.
+Hello, Chad! The guild needs your help. We need you to investigate an ominous energy emitting from the nearby cave... 
 
 }
 
@@ -180,7 +180,7 @@ Would you like to take on this emergency quest?
 + [I am not strong enough...]
 
 #Receptionist
-Oh no! How will the town survive this monster attack...
+Oh no! Alright then... Hopefully nothing bad happens.. We'll try to find someone else.
 
 #Chad
 I'm sorry but I can't do it...
@@ -194,10 +194,10 @@ I'm sorry but I can't do it...
 + [I am ready!]
 
 #Chad
-I am prepared!
+Let's do this!
 
 #Receptionist
-Okay! We will you briefly explain what will you need to do along with few other adventurers.
+Okay! We will briefly explain what you will need to do.
 
 ~ Proceed()
 
@@ -206,6 +206,6 @@ Okay! We will you briefly explain what will you need to do along with few other 
 + [I still need some time to think.]
 
 #Receptionist
-That's okay. If you've made a decision you can come back and talk to me, but we would prefer it if you participate in this emergency quest!
+That's okay. If you've made a decision you can come back and talk to me, but make a decison soon! Who knows how dangerous that ominous presence is...
 
 - -> DONE
