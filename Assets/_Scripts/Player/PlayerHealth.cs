@@ -48,7 +48,7 @@ public class PlayerHealth : Player {
         OnLivesChanged?.Invoke(currentLives);
 
         //Prevent negative health
-        if(currentLives == 0) {
+        if(currentLives <= 0) {
             MenuManager.Instance.ChangeMenu(MenuState.Lose);
             InputManager.Instance.ChangeInput(InputState.Menu);
 

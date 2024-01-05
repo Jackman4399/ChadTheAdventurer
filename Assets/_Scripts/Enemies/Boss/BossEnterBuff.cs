@@ -11,7 +11,6 @@ public class BossEnterBuff : StateMachineBehaviour
 
         animator.GetComponent<BossHealth>().isInvulnerable = true;
         animator.GetComponent<NavMeshAgent>().isStopped = true;
-        animator.GetComponent<Rigidbody2D>().isKinematic = true;
        
     }
 
@@ -27,7 +26,6 @@ public class BossEnterBuff : StateMachineBehaviour
 
         animator.GetComponent<BossHealth>().isInvulnerable = false;
         animator.GetComponent<NavMeshAgent>().isStopped = false;
-        animator.GetComponent<Rigidbody2D>().isKinematic = false;
 
     }
 }
