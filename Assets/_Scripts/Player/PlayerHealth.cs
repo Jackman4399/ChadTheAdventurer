@@ -49,11 +49,18 @@ public class PlayerHealth : Player {
 
         //Prevent negative health
         if(currentLives == 0) {
-            OnDied?.Invoke(); 
-            invulnerable = true;
-
             MenuManager.Instance.ChangeMenu(MenuState.Lose);
             InputManager.Instance.ChangeInput(InputState.Menu);
+
+            if (StoryManager.Instance.CurrentStoryState == 
+            StoryState.ParticipateEmergencyQuest) {
+                StoryManager.Instance.MakeChoice(ChoiceState.BossChoice, 2);
+            StoryManager.Instance.Proceed();
+
+            }
+
+            OnDied?.Invoke(); 
+            invulnerable = true;
         } else {
             OnHit?.Invoke(currentLives, direction);
             StartCoroutine(HitInvunerableCoroutine());

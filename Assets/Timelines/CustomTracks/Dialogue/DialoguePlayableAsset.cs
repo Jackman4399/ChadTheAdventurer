@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.Playables;
 
-[System.Serializable]
+[Serializable]
 public class DialoguePlayableAsset : PlayableAsset {
 
     [SerializeField] private string dialogueText;

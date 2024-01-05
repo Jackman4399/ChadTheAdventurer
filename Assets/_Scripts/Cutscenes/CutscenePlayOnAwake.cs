@@ -31,7 +31,6 @@ public class CutscenePlayOnAwake : MonoBehaviour {
         InputManager.Instance.ChangeInput(endInputState);
     }
 
-
     //Will trigger when director starts
     private void OnPlayableDirectorPlayed(PlayableDirector director) {
         MenuManager.Instance.ChangeMenu(MenuState.None);

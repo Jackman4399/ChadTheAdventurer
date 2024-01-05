@@ -28,7 +28,7 @@ public class DialogueTrackMixer : PlayableBehaviour {
             dialogueText = input.dialogueText;
         }
 
-       dialogue.text = dialogueText;
+        dialogue.text = dialogueText;
     }
 
 }
