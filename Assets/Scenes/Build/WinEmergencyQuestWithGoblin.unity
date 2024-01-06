@@ -270,7 +270,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1081099242320946797, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_text
-      value: 'With the help of the goblin Chad saved, he managed to defeat the boss,
+      value: 'With the help of the goblin Chad saved, he managed to defeat the monster,
         saving the town!
 
 

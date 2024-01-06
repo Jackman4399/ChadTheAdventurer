@@ -26,6 +26,7 @@ public class BossAttacker : MonoBehaviour
 
 	private float pushbackForce = 2000;
 
+	//Animator for object
 	private Animator animator;
 
 

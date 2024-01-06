@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: So you are the that "ominous" energy...
+  dialogueText: So you are that "ominous" energy...
 --- !u!114 &-3344590738448907190
 MonoBehaviour:
   m_ObjectHideFlags: 1

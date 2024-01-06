@@ -170,7 +170,7 @@ Hello again! I hope you made up your mind.
 - else          :
 
 #Receptionist
-Hello, Chad! The guild needs your help. We need you to investigate an ominous energy emitting from the nearby cave... 
+Hello, Chad! The guild needs your help. We need you to purify an ominous energy emitting from the nearby cave... 
 
 }
 
@@ -206,6 +206,6 @@ Okay! We will briefly explain what you will need to do.
 + [I still need some time to think.]
 
 #Receptionist
-That's okay. If you've made a decision you can come back and talk to me, but make a decison soon! Who knows how dangerous that ominous presence is...
+That's okay. If you've made a decision you can come back and talk to me, but make it soon! Who knows how dangerous that ominous presence is...
 
 - -> DONE

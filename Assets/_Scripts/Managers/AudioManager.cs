@@ -56,8 +56,7 @@ public class AudioManager : Singleton<AudioManager> {
                 Play("BGM_Boss");
             break;
 
-            default:
-                StopAllSounds();
+            default: //Should not stop any sounds
             break;
         }
     }

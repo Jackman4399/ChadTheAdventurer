@@ -823,7 +823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Attention citizens of town!
+  dialogueText: Attention citizens!
 --- !u!114 &-1040634170174747651
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -941,7 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset
   m_EditorClassIdentifier: 
-  dialogueText: An emergency quest? I have to take it!
+  dialogueText: This sounds quite urgent... I should participate.
 --- !u!114 &-197360466941990510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: We have received news that an ominous energy has been brewing, possibly
+  dialogueText: Our guildmaster has sensed an ominous energy has been brewing, possibly
     connected to the revival of an ancient monster.
 --- !u!114 &6943932051536011423
 MonoBehaviour:
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
   dialogueText: We have issued an emergency quest for any adventurers who are brave
-    enough!
+    enough to go deep into the caves!
 --- !u!114 &9153600549824130873
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -270,11 +270,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1081099242320946797, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_text
-      value: 'Chad did not manage to defeat the boss. As a consequence, it moved
-        on to the town, completely eradicating it.
+      value: 'Chad did not manage to defeat the ancient monster. As a consequence,
+        it moved on to the town, completely eradicating it.
 
 
-        Better luck next time!'
+        Better luck
+        next time (if there is next time)!'
       objectReference: {fileID: 0}
     - target: {fileID: 1773493255089350075, guid: b382ac1aa83dffa4781c8b4d163e5d3d, type: 3}
       propertyPath: m_Pivot.x

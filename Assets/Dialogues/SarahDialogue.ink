@@ -57,9 +57,9 @@ You can claim it at the blacksmith's weapon shop.
 === EmergencyQuest
 
 #Sarah
-Oh no! We'll be ambushed by monsters soon enough!
+Oh no! The town could be in great danger...
 
 #Sarah
-I hope there's a brave adventurer in this town that are strong enough or at least willing to participate in the quest to fight the monsters!
+Where is an adventurer that is brave enough to dwelve into the caves when you need them!
 
 -> DONE
