@@ -334,24 +334,24 @@ MonoBehaviour:
   - name: BGM1
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
-    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.7
+    outputAudioMixerGroup: {fileID: -5671069883788008715, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 1
     pitch: 0.65
     loop: 1
     playOnAwake: 0
   - name: BGM_Boss
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
-    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.7
+    outputAudioMixerGroup: {fileID: -5671069883788008715, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 1
     pitch: 0.65
     loop: 1
     playOnAwake: 0
   - name: BGM_MainMenu
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 89f935015cc98724a862a586326fdf21, type: 3}
-    outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.7
+    outputAudioMixerGroup: {fileID: -5671069883788008715, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
+    volume: 1
     pitch: 0.65
     loop: 1
     playOnAwake: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 24eaeae153b524bb6a55fdcc7ee3c735, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.6
+    volume: 1
     pitch: 0.65
     loop: 0
     playOnAwake: 0
@@ -367,7 +367,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: df0e60887b63f45c7801a38fccae1f8f, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.4
+    volume: 0.6
     pitch: 0.65
     loop: 1
     playOnAwake: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: de812cfb519929c4aad9d296f655c81d, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.5
+    volume: 0.75
     pitch: 0.65
     loop: 1
     playOnAwake: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: b7b5a6156961bac44a67504d42ce6fcf, type: 3}
     outputAudioMixerGroup: {fileID: -3904079243766305229, guid: 39e07604b2b31ba44a18291e388097af, type: 2}
-    volume: 0.5
+    volume: 0.75
     pitch: 0.65
     loop: 1
     playOnAwake: 0

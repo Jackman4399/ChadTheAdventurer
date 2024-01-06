@@ -27,7 +27,7 @@ MonoBehaviour:
   - m_From: Forest Zoomed Camera
     m_To: Forest Camera
     m_Blend:
-      m_Style: 7
+      m_Style: 1
       m_Time: 2
       m_CustomCurve:
         serializedVersion: 2
