@@ -49,11 +49,13 @@ public class PlayerHealth : Player {
 
         //Prevent negative health
         if(currentLives <= 0) {
-            MenuManager.Instance.ChangeMenu(MenuState.Lose);
-            InputManager.Instance.ChangeInput(InputState.Menu);
+            if (StoryManager.Instance.GetChoice(ChoiceState.GoblinChoice) == 1) 
+            MenuManager.Instance.ChangeMenu(MenuState.Win); 
+            else MenuManager.Instance.ChangeMenu(MenuState.Lose);
 
-            if (StoryManager.Instance.CurrentStoryState == 
-            StoryState.ParticipateEmergencyQuest) {
+            InputManager.Instance.ChangeInput(InputState.Menu);
+            
+            if (StoryManager.Instance.CurrentStoryState == StoryState.ParticipateEmergencyQuest) {
                 StoryManager.Instance.MakeChoice(ChoiceState.BossChoice, 2);
                 StoryManager.Instance.Proceed();
             }
