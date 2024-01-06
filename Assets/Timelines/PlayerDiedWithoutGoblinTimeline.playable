@@ -168,8 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: HAHAHA! You're no brave adventurer, and now I'm going to destroy
-    your town!
+  dialogueText: HAHAHA! You're no match for me, and now I'm going to destroy your
+    town!
 --- !u!114 &-7411122452864574990
 MonoBehaviour:
   m_ObjectHideFlags: 1

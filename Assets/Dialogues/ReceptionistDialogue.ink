@@ -49,7 +49,7 @@ Do you want to take on this quest?
     Great! Let me fill you in on the details of the quest.
     
     #Receptionist
-    The commision needs 8 strawberries found in the forest located outside of town. Pretty simple, right?
+    The commission needs 8 strawberries found in the forest located outside of town. Pretty simple, right?
     
     #Receptionist
     We haven't decided on what reward you will receive yet, but expect it to be ready once you've completed the quest!
@@ -127,7 +127,7 @@ Here's its head.
 Oh my! This is the Green Tribes Leader! And whoever killed it would get the best weapon that we have!
 
 #Receptionist
-Okay then, I will now examine the suitable reward to give you for completing both the strawberry gathering quest and the bounty on the goblin.
+Okay then, let me fetch a suitable reward to give you for completing both the strawberry gathering quest and the bounty on the goblin.
     
 #Chad
 That's Awesome!

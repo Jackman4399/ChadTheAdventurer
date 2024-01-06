@@ -67,7 +67,7 @@ Sorry pal, but I'm out of stock at the moment. You can come back later, and hope
 Hey pal! Glad to see you're back all safe and sound!
     
 #Blacksmith
-I left your reward with the guild staff. Go claim it there.
+I suggest you check in with the guild.
 
 -> DONE
 

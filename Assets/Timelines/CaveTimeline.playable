@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: I need to kill it before it sends out more monsters!
+  dialogueText: I need to stop it before it gets any worse!
 --- !u!114 &-2802704210575524109
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -715,8 +715,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Finally, I've reached the boss of all the monsters that have been
-    raiding my town...
+  dialogueText: Finally, I've reached the core of the energy that has been emitting
+    over the town...
 --- !u!114 &7496545870621878252
 MonoBehaviour:
   m_ObjectHideFlags: 1
