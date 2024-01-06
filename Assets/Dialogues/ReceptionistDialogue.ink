@@ -49,7 +49,7 @@ Do you want to take on this quest?
     Great! Let me fill you in on the details of the quest.
     
     #Receptionist
-    The commision needs 8 strawberries found in the forest located outside of town. Pretty simple, right?
+    The commission needs 8 strawberries found in the forest located outside of town. Pretty simple, right?
     
     #Receptionist
     We haven't decided on what reward you will receive yet, but expect it to be ready once you've completed the quest!
@@ -127,7 +127,7 @@ Here's its head.
 Oh my! This is the Green Tribes Leader! And whoever killed it would get the best weapon that we have!
 
 #Receptionist
-Okay then, I will now examine the suitable reward to give you for completing both the strawberry gathering quest and the bounty on the goblin.
+Okay then, let me fetch a suitable reward to give you for completing both the strawberry gathering quest and the bounty on the goblin.
     
 #Chad
 That's Awesome!
@@ -170,7 +170,7 @@ Hello again! I hope you made up your mind.
 - else          :
 
 #Receptionist
-Hello, Chad! The guild needs your help. We need you to investigate an ominous energy emitting from the nearby cave... 
+Hello, Chad! The guild needs your help. We need you to purify an ominous energy emitting from the nearby cave... 
 
 }
 
@@ -206,6 +206,6 @@ Okay! We will briefly explain what you will need to do.
 + [I still need some time to think.]
 
 #Receptionist
-That's okay. If you've made a decision you can come back and talk to me, but make a decison soon! Who knows how dangerous that ominous presence is...
+That's okay. If you've made a decision you can come back and talk to me, but make it soon! Who knows how dangerous that ominous presence is...
 
 - -> DONE

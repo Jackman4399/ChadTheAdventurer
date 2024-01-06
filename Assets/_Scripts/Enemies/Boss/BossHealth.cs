@@ -10,7 +10,8 @@ public class BossHealth : Enemy {
     public bool isInvulnerable = false;
 
     private new Rigidbody2D rigidbody;
-
+    
+    //Animator
     private Animator animator;
 
     [SerializeField, Min(1)] private int maxLives = 50;

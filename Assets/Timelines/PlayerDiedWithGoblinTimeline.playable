@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: No need, adventurer. I am simply here to repay the favour.
+  dialogueText: No need to thank me, my friend. I am simply here to repay the favour.
 --- !u!114 &-5747849861803243125
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Now then, I have somewhere to be now. So long, adventurer!
+  dialogueText: Now then, I have somewhere to be. So long, brave adventurer!
 --- !u!74 &-5440798115624579783
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -1447,7 +1447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Are you safe, human?
+  dialogueText: Are you safe, my dear friend?
 --- !u!114 &-2980042305547140042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1460,7 +1460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: HAHAHA! You're no brave adventurer, and now I'm going to destroy
+  dialogueText: HAHAHA! You're weaker than I thought, and now I'm going to destroy
     your town!
 --- !u!114 &-2754628231938312819
 MonoBehaviour:
@@ -1898,7 +1898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Indeed I am, and I'm here to pay back what you did to me.
+  dialogueText: Indeed I am, and I'm here to pay you back for what you did earlier.
 --- !u!114 &1969901419764265920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3093,7 +3093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: I am indebted...
+  dialogueText: I see... thank you...
 --- !u!114 &5113893469389402088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3780,7 +3780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Hold on, adventurer! I'm here to save you!
+  dialogueText: Hold on Chad, my friend! I'm here to save you!
 --- !u!114 &7101604898907445750
 MonoBehaviour:
   m_ObjectHideFlags: 1

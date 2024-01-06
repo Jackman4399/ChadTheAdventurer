@@ -286,25 +286,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -331,25 +313,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -806,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Otherwise my town will be destroyed!
+  dialogueText: Otherwise my town could be destroyed!
 --- !u!114 &-3080995105597184994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -859,7 +823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Attention citizens of town!
+  dialogueText: Attention citizens!
 --- !u!114 &-1040634170174747651
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -977,7 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset
   m_EditorClassIdentifier: 
-  dialogueText: An emergency quest? I have to take it!
+  dialogueText: This sounds quite urgent... I should participate.
 --- !u!114 &-197360466941990510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1037,8 +1001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: We have receive news that a monster raid will be commenced against
-    our town in the nearest time.
+  dialogueText: Our guildmaster has sensed an ominous energy has been brewing, possibly
+    connected to the revival of an ancient monster.
 --- !u!114 &6943932051536011423
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1051,8 +1015,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: We have issued an emergency quest for any brave adventurers to take
-    and face on!
+  dialogueText: We have issued an emergency quest for any adventurers who are brave
+    enough to go deep into the caves!
 --- !u!114 &9153600549824130873
 MonoBehaviour:
   m_ObjectHideFlags: 1

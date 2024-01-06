@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79d2446691d6ea46b38865809f30cae, type: 3}
   m_Name: DialoguePlayableAsset(Clone)
   m_EditorClassIdentifier: 
-  dialogueText: Finally! The boss is defeated, and the town is saved!
+  dialogueText: Finally! The monster is defeated, and the town is saved!
 --- !u!114 &-4879964875302619579
 MonoBehaviour:
   m_ObjectHideFlags: 1
