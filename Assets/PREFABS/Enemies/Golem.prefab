@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInvulnerable: 0
-  maxLives: 50
+  maxLives: 36
   currentLives: 0
 --- !u!195 &2023696413357022575
 NavMeshAgent:

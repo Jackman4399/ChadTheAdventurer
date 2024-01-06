@@ -53,9 +53,9 @@ public class PlayerAttacker : Player {
         if ((1 << other.gameObject.layer | bossMask) == bossMask){
 
             if (StoryManager.Instance.Choices[0].choiceNumber < 2) 
-                other.GetComponent<BossHealth>().TakeDamage(pushbackForce * direction, 1, 5f);
+                other.GetComponent<BossHealth>().TakeDamage(direction, 1, pushbackForce * 5);
             else if (StoryManager.Instance.Choices[0].choiceNumber == 2)
-                other.GetComponent<BossHealth>().TakeDamage(pushbackForce * direction, 5, 100f);
+                other.GetComponent<BossHealth>().TakeDamage(direction, 3, pushbackForce * 10);
 
         }
         
