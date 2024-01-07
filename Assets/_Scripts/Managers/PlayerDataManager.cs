@@ -14,6 +14,18 @@ public class PlayerDataManager : Singleton<PlayerDataManager> {
     private int strawberriesCount;
     public int StrawberriesCount => strawberriesCount;
 
+    private void Start() {
+        SceneLoader.Instance.OnSceneChanged += OnSceneChanged;
+    }
+
+    private void OnDestroy() {
+        SceneLoader.Instance.OnSceneChanged -= OnSceneChanged;
+    }
+
+    private void OnSceneChanged(SceneState sceneState) {
+        if (sceneState == SceneState.Main) strawberriesCount = 0;
+    }
+
     public void AddStrawberry() {
         strawberriesCount++;
         if (strawberriesCount == strawberriesNeeded) OnStrawberriesEnough?.Invoke();
