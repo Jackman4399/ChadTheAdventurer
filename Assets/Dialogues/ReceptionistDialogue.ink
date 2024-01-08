@@ -189,7 +189,7 @@ I'm sorry but I can't do it...
 
 ~ ChangeInput("Menu")
 ~ ChangeMenu("Lose")
-~ ChangeScene("LoseEmergencyQuest", true)
+~ ChangeScene("IgnoreEmergencyQuest", true)
 
 + [I am ready!]
 
